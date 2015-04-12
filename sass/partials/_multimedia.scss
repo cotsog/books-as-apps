@@ -1,0 +1,16 @@
+// MULTIMEDIA ELEMENT FORMATTING
+
+// iframe format for embedded content
+iframe {
+  display: block;
+  margin: 20px auto;
+  border-color: $red;
+  @include solid-thin;
+}
+
+// video tag format
+.video video {
+  margin: 20px auto;
+  border-color: $red;
+  @include solid-thin;
+}

@@ -1,0 +1,49 @@
+// Font Related Stuff
+
+// Font ligatures
+@mixin font-ligature() {
+  /* optional: for older browsers */
+  text-rendering: optimizeLegibility;
+  /* for iOS and Safari 6 */
+  -webkit-font-variant-ligatures: common-ligatures;
+  /* for up-to-date browsers, including IE10 and Opera 21 */
+  font-variant-ligatures: common-ligatures;
+}
+
+// Font Kerning
+@mixin font-kerning {
+  /* optional: for older browsers */
+  text-rendering: optimizeLegibility;
+  /* pre-Firefox 14+ */
+  -moz-font-feature-settings: "kern=1";
+  -webkit-font-feature-settings: "kern";
+  /* Firefox 14+ */
+  -moz-font-feature-settings: "kern";
+  /* standard */
+  font-feature-settings: "kern";
+  /* Safari 7+, Firefox 24+, Chrome 33(?)+, Opera 21+*/
+  font-kerning: normal;
+}
+
+// Font declaration for standard web
+@mixin font-declaration($font-family,  $font-file-name, $weight:normal, $style:normal) {
+  font-family: '#{$font-family}';
+  src:
+    local('#{$font-file-name}.ttf') format('truetype'),
+    url('#{$font-file-name}.ttf') format('truetype'),
+    url('#{$font-file-name}.woff') format('woff');
+  font-weight: $weight;
+  font-style: $style;
+
+}
+
+// Font declaration for ebook-related fonts for which we only need the local truetype font
+@mixin ebook-font-declaration($font-family,  $font-file-name, $weight:normal, $style:normal) {
+  font-family: '#{$font-family}';
+  src:
+    local('#{$font-file-name}.ttf') format('truetype');
+  font-weight: $weight;
+  font-style: $style;
+
+}
+
