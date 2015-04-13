@@ -1,3 +1,52 @@
+/**
+ *
+ *
+ */
+@import 'partials/normalize';
+@import '../bower_components/typeplate-starter-kit/scss/typeplate';
+// Tehcnically susy and breakpoint should not affect typlate but we'll have to test
+@import '../bower_components/susy/sass/susy';
+// Breakpoint support for sussy and for standalone queries
+@import '../bower_components/breakpoint/breakpoint/breakpoint';
+
+//Susy map for default settings
+$susy: (
+  columns: 16,
+  debug: (
+    image:show
+  ),
+  global-box-sizing: border-box,
+  container: 1140px,
+);
+
+@include border-box-sizing;
+
+.wrap {
+  @include container();
+  height: 100vh;
+}
+
+.sidebar-left {
+  background-color: rgba(102, 51, 153, 0.6);
+  @include span(3 of 16);
+  heigh: 100vh;
+}
+
+.main-content {
+  background-color: rgba(255, 0, 255, 0.6);
+  @include span(10 of 16);
+  heigh: 100vh;
+}
+
+.sidebar-right {
+  background-color: rgba(102, 51, 153, 0.6);
+  @include span(3 of 16);
+  heigh: 100vh;
+}
+
+
+
+// Dealing with boilerplate's browserupgrade warnining
 .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;

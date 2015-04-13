@@ -1,84 +1,92 @@
-var
-  // require gulp and gulp if plugin
-  gulp = require('gulp'),
-  gulpif = require('gulp-if'),
-  // SASS and SASS-Related plugins
-  sass = require('gulp-ruby-sass'),
-  sourcemaps = require('gulp-sourcemaps'),
-  scsslint = require('gulp-scsslint'),
-  // Plugins for tasks to run on transformed CSS
-  autoprefixer = require('gulp-autoprefixer'),
-  uncss = require('gulp-uncss-task'),
-  // js task plugins
-  jshint = require('gulp-jshint'),
-  stylish = require('jshint-stylish'),
-  uglify = require('gulp-uglify'),
-  concat = require('gulp-concat'),
-  // Plugins for other tasks
-  ghPages = require('gulp-gh-pages'),
-  coffee = require('gulp-coffee'),
-  shell = require('gulp-shell'),
-  webserver = require('gulp-webserver');
+var gulp = require('gulp');
+var gulpif = require('gulp-if')
+var sass = require('gulp-ruby-sass');
+var autoprefixer = ('gulp-autoprefixer');
+var coffe = ('gulp-coffee');
+var concat = ('gulp-concat');
+var ghPages = ('gulp-gh-pages');
+var jshint = ('gulp-jshint');
+var rimraf = ('gulp-rimraf');
+var shell = ('gulp-shell');
+var scsslint = require('gulp-scss-lint');
+var sourcemaps = ('gulp-sourcemaps');
+var uglify = ('gulp-uglify');
+var uncss = ('gulp-uncss-task');
+var webserver = ('gulp-webserver');
+var stylish = ('jshint-stylish');
+var parker = ('parker');
+var gulpparker = ('gulp-parker');
 
+var paths = {
+ scripts: ['scripts/**/*.js'],
+ libs: ['lib/**/*.js'],
+ styles: ['css/**/*.css'],
+ html: ['**/*.html'],
+ images: ['images/**/*'],
+};
+
+var bases = {
+  app: 'app/',
+  dist: 'dist/',
+};
 /**
  * Our primary task is to get SCSS transformed to CSS and to create the
  * corresponding sourcemaps
  *
- * Note that all SASS tasks require Ruby and the SASS Gem (3.4 or later)
- * to be installed
+ * Note that all SASS-related tasks require Ruby and the corresponding
+ * Gem (3.4 or later) to be installed
 */
 
-gulp.task('sass-app', function() {
-    return sass('./scss/{,*/}*.scss', {
+gulp.task('sass', [''], function() {
+    return sass('./sass/main.scss', {
       verbose: true,
-      sourcemap: true
+      lineNumbers: true,
+      noCache: true
     })
 .on('error', function (err) {
       console.error('Error', err.message);
    })
-    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./css'));
 });
 
 
 // SCSS Lint Task
-// Note that thsi task requires Ruby and the SCSS Lint gem to be installed
-gulp.task('scss-lint', function () {
-  gulp.src('./scss/{,*/}*.scss')
-    .pipe(scsslint())
-    .pipe(scsslint.reporter());
+// Note that this task requires Ruby and the SCSS Lint gem to be installed
+gulp.task('scsslint', [''], function() {
+  gulp.src('/scss/*.scss')
+    .pipe(scsslint());
 });
 
 // Gulp JSHINT Task
-gulp.task('jshint', function () {
+gulp.task('jshint', [''], function () {
   gulp.src(['**/*/js'])
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('jshint-stylish'));
 });
 
 // Uglify Task
-gulp.task('scripts', function () {
-  return gulp.src('**/*.js')
+gulp.task('scripts', [''], function () {
+  return gulp.src('js/**/*.js')
     .pipe(gulpif(options.env === 'production', uglify())) // only minify in production
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('jsvendor', function() {
+gulp.task('jsvendor', [''], function() {
   return gulp.src('js/vendor/**/*.js')
     .pipe(sourcemaps.init())
-    .pipe(gulpif(options.env === 'production', concat('all.js'))) // only in production
+    .pipe(gulpif(options.env === 'production', concat('vendor.js'))) // only in production
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist'));
 });
 
 // GH-Pages Task
-gulp.task('deploy', function () {
+gulp.task('deploy', [''], function () {
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
 });
 
-gulp.task('prefixfree', function () {
-  return gulp.src('./app/css/{,*/}*.css')
+gulp.task('prefixfree', [''], function () {
+  return gulp.src('./app/css/*.css')
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
@@ -86,7 +94,7 @@ gulp.task('prefixfree', function () {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('uncss', function () {
+gulp.task('uncss', [''], function () {
   gulp.src('./app/css/{,*/}*.css')
     .pipe(uncss({
       html: ['./app/{,*/}*.html']
@@ -102,7 +110,7 @@ gulp.task('coffee', function () {
     .pipe(gulp.dest('dist'))
 });
 
-gulp.task('example', function () {
+gulp.task('shell', function () {
   return gulp.src('*.js', {read: false})
     .pipe(shell([
       'echo <%= f(file.path) %>',
@@ -116,26 +124,55 @@ gulp.task('example', function () {
     }))
 });
 
-gulp.task('webserver', function() {
-  gulp.src('.')
+gulp.task('webserver', ['copy'], function() {
+  gulp.src('dist')
     .pipe(webserver({
-      path: '.',
       livereload: true,
       directoryListing: true,
       open: true
     }));
 });
 
+gulp.task('parker', [''], function() {
+  return gulp.src('./css/*.css')
+    .pipe(parker({
+      file: 'report.md',
+      title: 'Gulp test report'
+  }));
+});
 
-
-// Create Gulp Default Task
+// Create Gulp Tasks
 // ------------------------
-// Having watch within the task ensures that 'sass' has already ran before watching
-//
-// This setup is slightly different from the one on the blog post at
-// http://www.zell-weekeat.com/gulp-libsass-with-susy/#comment-1910185635
 gulp.task('default', ['sass'], function () {
-  gulp.watch('./scss/{,*/}*.scss', ['sass'])
+//  gulp.watch('./scss/{,*/}*.scss', ['sass'])
 });
 
 gulp.task('jshint', ['jshint'], function () {});
+
+gulp.task('processSass', ['scss-lint', 'sass'], function () {});
+
+gulp.task('clean', [''], function () {
+  return gulp.src('./dist/**/*', { read: false }) // much faster
+    .pipe(rimraf());
+});
+
+gulp.task('server', ['webserver'], function () {});
+
+// Copy all other files to dist directly
+gulp.task('copy', ['clean'], function() {
+ // Copy html
+ gulp.src(paths.html, {cwd: bases.app})
+ .pipe(gulp.dest(bases.dist));
+
+ // Copy styles
+ gulp.src(paths.styles, {cwd: bases.app})
+ .pipe(gulp.dest(bases.dist + 'styles'));
+
+ // Copy lib scripts, maintaining the original directory structure
+ gulp.src(paths.libs, {cwd: 'app/**'})
+ .pipe(gulp.dest(bases.dist));
+
+ // Copy extra html5bp files
+ gulp.src(paths.extras, {cwd: bases.app})
+ .pipe(gulp.dest(bases.dist));
+});

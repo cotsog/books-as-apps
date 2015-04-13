@@ -1,0 +1,685 @@
+@charset "UTF-8";
+/**
+ *
+ *
+ */
+/* line 45, ../sass/partials/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
+
+/* line 61, ../sass/partials/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/* line 74, ../sass/partials/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/* line 84, ../sass/partials/_normalize.scss */
+[hidden], template {
+  display: none; }
+
+/* line 97, ../sass/partials/_normalize.scss */
+html {
+  background: #fff;
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/* line 109, ../sass/partials/_normalize.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif; }
+
+/* line 119, ../sass/partials/_normalize.scss */
+body {
+  margin: 0; }
+
+/* line 132, ../sass/partials/_normalize.scss */
+a {
+  background: transparent; }
+  /* line 139, ../sass/partials/_normalize.scss */
+  a:focus {
+    outline: thin dotted; }
+  /* line 145, ../sass/partials/_normalize.scss */
+  a:hover, a:active {
+    outline: 0; }
+
+/* line 159, ../sass/partials/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* line 164, ../sass/partials/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0; }
+
+/* line 169, ../sass/partials/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0; }
+
+/* line 174, ../sass/partials/_normalize.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0; }
+
+/* line 179, ../sass/partials/_normalize.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0; }
+
+/* line 184, ../sass/partials/_normalize.scss */
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0; }
+
+/* line 192, ../sass/partials/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/* line 198, ../sass/partials/_normalize.scss */
+b,
+strong {
+  font-weight: bold; }
+
+/* line 211, ../sass/partials/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/* line 217, ../sass/partials/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/* line 233, ../sass/partials/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/* line 246, ../sass/partials/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/* line 254, ../sass/partials/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/* line 270, ../sass/partials/_normalize.scss */
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 279, ../sass/partials/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/* line 286, ../sass/partials/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 294, ../sass/partials/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* line 298, ../sass/partials/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* line 350, ../sass/partials/_normalize.scss */
+img {
+  border: 0; }
+
+/* line 359, ../sass/partials/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* line 369, ../sass/partials/_normalize.scss */
+figure {
+  margin: 0; }
+
+/* line 386, ../sass/partials/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/* line 397, ../sass/partials/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal; }
+
+/* line 411, ../sass/partials/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline; }
+
+/* line 426, ../sass/partials/_normalize.scss */
+button, input {
+  line-height: normal; }
+
+/* line 435, ../sass/partials/_normalize.scss */
+button,
+select {
+  text-transform: none; }
+
+/* line 448, ../sass/partials/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+/* line 461, ../sass/partials/_normalize.scss */
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+/* line 470, ../sass/partials/_normalize.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 479, ../sass/partials/_normalize.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+/* line 490, ../sass/partials/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 498, ../sass/partials/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+  /* line 506, ../sass/partials/_normalize.scss */
+  input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; }
+/* line 516, ../sass/partials/_normalize.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+/*!
+Typeplate : Starter Kit
+URL ........... http://typeplate.com
+Version ....... 2.1.0
+Github ........ https://github.com/typeplate/starter-kit
+Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+License ....... Creative Commmons Attribution 3.0
+License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+*/
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
+  unicode-range: U+0026; }
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia");
+  unicode-range: U+270C; }
+/* line 36, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+.typl8-tera, .typl8-giga, .typl8-mega, h1, .typl8-alpha, h2, .typl8-beta, h3, .typl8-gamma, h4, .typl8-delta, h5, .typl8-epsilon, .typl8-zeta, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+  color: #222; }
+
+/* line 19, ../bower_components/typeplate-starter-kit/scss/_typeplate-extends.scss */
+blockquote + figcaption cite {
+  display: block;
+  font-size: inherit;
+  text-align: right; }
+
+/* line 33, ../bower_components/typeplate-starter-kit/scss/_typeplate-extends.scss */
+body {
+  word-wrap: break-word; }
+
+/* line 37, ../bower_components/typeplate-starter-kit/scss/_typeplate-extends.scss */
+pre code {
+  word-wrap: normal; }
+
+/* line 4, ../bower_components/typeplate-starter-kit/scss/_typeplate-styles.scss */
+html {
+  font: normal 112.5%/1.65 serif; }
+
+/* line 12, ../bower_components/typeplate-starter-kit/scss/_typeplate-styles.scss */
+body {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  color: #444; }
+
+/* line 45, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+.typl8-tera {
+  font-size: 117px;
+  font-size: 6.5rem;
+  margin-bottom: 70.90909px;
+  margin-bottom: 3.93939rem; }
+
+/* line 45, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+.typl8-giga {
+  font-size: 90px;
+  font-size: 5rem;
+  margin-bottom: 54.54545px;
+  margin-bottom: 3.0303rem; }
+
+/* line 45, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+.typl8-mega, h1 {
+  font-size: 72px;
+  font-size: 4rem;
+  margin-bottom: 43.63636px;
+  margin-bottom: 2.42424rem; }
+
+/* line 45, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+.typl8-alpha, h2 {
+  font-size: 60px;
+  font-size: 3.33333rem;
+  margin-bottom: 36.36364px;
+  margin-bottom: 2.0202rem; }
+
+/* line 45, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+.typl8-beta, h3 {
+  font-size: 48px;
+  font-size: 2.66667rem;
+  margin-bottom: 29.09091px;
+  margin-bottom: 1.61616rem; }
+
+/* line 45, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+.typl8-gamma, h4 {
+  font-size: 36px;
+  font-size: 2rem;
+  margin-bottom: 21.81818px;
+  margin-bottom: 1.21212rem; }
+
+/* line 45, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+.typl8-delta, h5 {
+  font-size: 24px;
+  font-size: 1.33333rem;
+  margin-bottom: 14.54545px;
+  margin-bottom: 0.80808rem; }
+
+/* line 45, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+.typl8-epsilon {
+  font-size: 21px;
+  font-size: 1.16667rem;
+  margin-bottom: 12.72727px;
+  margin-bottom: 0.70707rem; }
+
+/* line 45, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+.typl8-zeta, h6 {
+  font-size: 18px;
+  font-size: 1rem;
+  margin-bottom: 10.90909px;
+  margin-bottom: 0.60606rem; }
+
+/* line 30, ../bower_components/typeplate-starter-kit/scss/_typeplate-styles.scss */
+p {
+  margin: auto auto 1.5em; }
+  /* line 33, ../bower_components/typeplate-starter-kit/scss/_typeplate-styles.scss */
+  p + p {
+    text-indent: 1.5em;
+    margin-top: -1.5em; }
+
+/* line 53, ../bower_components/typeplate-starter-kit/scss/_typeplate-styles.scss */
+small {
+  font-size: 65%; }
+
+/* line 63, ../bower_components/typeplate-starter-kit/scss/_typeplate-styles.scss */
+input,
+abbr,
+acronym,
+blockquote,
+code,
+kbd,
+q,
+samp,
+var {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
+
+/* line 79, ../bower_components/typeplate-starter-kit/scss/_typeplate-styles.scss */
+pre {
+  white-space: pre; }
+  /* line 82, ../bower_components/typeplate-starter-kit/scss/_typeplate-styles.scss */
+  pre code {
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap; }
+
+/* line 88, ../bower_components/typeplate-starter-kit/scss/_typeplate-styles.scss */
+code {
+  white-space: pre;
+  font-family: monospace; }
+
+/* line 97, ../bower_components/typeplate-starter-kit/scss/_typeplate-styles.scss */
+abbr {
+  -webkit-font-variant: small-caps;
+  -moz-font-variant: small-caps;
+  -ms-font-variant: small-caps;
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: gray; }
+  /* line 99, ../bower_components/typeplate-starter-kit/scss/_typeplate-styles.scss */
+  abbr[title]:hover {
+    cursor: help; }
+
+/* line 200, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+.typl8-drop-cap:first-letter {
+  float: left;
+  margin: 10px 10px 0 0;
+  padding: 0 20px;
+  font-size: 4em;
+  font-family: inherit;
+  line-height: 1;
+  text-indent: 0;
+  background: transparent;
+  color: inherit; }
+
+/* line 20, ../bower_components/typeplate-starter-kit/scss/_typeplate-helpers.scss */
+p + .typl8-drop-cap {
+  text-indent: 0;
+  margin-top: 0; }
+
+/**
+ * Lining Definition Style Markup
+ *
+  <dl class="typl8-lining">
+    <dt><b></b></dt>
+    <dd></dd>
+  </dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 235, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+.typl8-lining dt,
+.typl8-lining dd {
+  display: inline;
+  margin: 0; }
+/* line 244, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+.typl8-lining dt + dt:before,
+.typl8-lining dd + dt:before {
+  content: "\A";
+  white-space: pre; }
+/* line 253, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+.typl8-lining dd + dd:before {
+  content: ", "; }
+/* line 257, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+.typl8-lining dd:before {
+  content: ": ";
+  margin-left: -0.2rem; }
+
+/**
+ * Dictionary Definition Style Markup
+ *
+  <dl class="typl8-dictionary-style">
+    <dt><b></b></dt>
+    <dd></dd>
+  </dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 265, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+.typl8-dictionary-style dt {
+  display: inline;
+  counter-reset: definitions; }
+  /* line 269, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+  .typl8-dictionary-style dt + dt:before {
+    content: ", ";
+    margin-left: -0.2rem; }
+/* line 276, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+.typl8-dictionary-style dd {
+  display: block;
+  counter-increment: definitions; }
+  /* line 279, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+  .typl8-dictionary-style dd:before {
+    content: counter(definitions,decimal) ". "; }
+
+/**
+ * Blockquote Markup
+ *
+    <figure>
+      <blockquote cite="">
+        <p></p>
+      </blockquote>
+      <figcaption>
+        <cite>
+          <small><a href=""></a></small>
+        </cite>
+      </figcaption>
+    </figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Pull Quotes Markup
+ *
+  <aside class="typl8-pull-quote">
+    <blockquote>
+      <p></p>
+    </blockquote>
+  </aside>
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+/* line 100, ../bower_components/typeplate-starter-kit/scss/_typeplate-helpers.scss */
+.typl8-pull-quote {
+  position: relative;
+  padding: 1em; }
+  /* line 159, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+  .typl8-pull-quote:before, .typl8-pull-quote:after {
+    height: 1em;
+    opacity: 0.5;
+    position: absolute;
+    font-size: 4em;
+    color: #dc976e; }
+  /* line 168, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+  .typl8-pull-quote:before {
+    content: '“';
+    top: 0;
+    left: 0; }
+  /* line 174, ../bower_components/typeplate-starter-kit/scss/_typeplate-mixins.scss */
+  .typl8-pull-quote:after {
+    content: '”';
+    bottom: 0;
+    right: 0; }
+
+/**
+ * Figures Markup
+ *
+  <figure>
+    <figcaption>
+      <strong>Fig. X.X | </strong><cite title=""></cite>
+    </figcaption>
+  </figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Footnote Markup : Replace 'X' with your unique number for each footnote
+ *
+  <article>
+    <p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
+    <footer>
+      <ol class="foot-notes">
+        <li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
+      </ol>
+    </footer>
+  </article>
+ *
+ * Extend this object into your markup.
+ *
+ */
+@media (min-width: 0) {
+  /* line 9, ../bower_components/breakpoint/breakpoint/_core.scss */
+  body::before {
+    content: '{ "current" : "small", "all" : [small], "position" : 0 }';
+    display: none; } }
+/*! Grid based on https://github.com/necolas/griddle by Nicolas Gallagher (@necolas) */
+/* line 4, ../bower_components/breakpoint/breakpoint/_grid.scss */
+body {
+  font-size: 1em; }
+
+/* line 8, ../bower_components/breakpoint/breakpoint/_grid.scss */
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25em;
+  padding-right: 1.25em; }
+
+/* line 16, ../bower_components/breakpoint/breakpoint/_grid.scss */
+img {
+  max-width: 100%; }
+
+/* line 17, ../bower_components/breakpoint/breakpoint/_grid.scss */
+.no-js .responsive-image {
+  display: none; }
+
+/* line 21, ../bower_components/breakpoint/breakpoint/_grid.scss */
+.grid {
+  display: block;
+  padding: 0;
+  margin: 0 -0.625em;
+  text-align: left;
+  letter-spacing: -0.31em;
+  text-rendering: optimizespeed; }
+
+/* line 36, ../bower_components/breakpoint/breakpoint/_grid.scss */
+.opera:-o-prefocus,
+.grid {
+  word-spacing: -0.43em; }
+
+/* line 43, ../bower_components/breakpoint/breakpoint/_grid.scss */
+.grid > .grid {
+  overflow: hidden;
+  margin-right: 0;
+  margin-left: 0; }
+
+/* line 52, ../bower_components/breakpoint/breakpoint/_grid.scss */
+.grid__cell {
+  width: 100%;
+  display: -moz-inline-stack;
+  display: inline-block;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 0.625em;
+  /* controls vertical positioning of units */
+  vertical-align: top;
+  /* keeps unit content correctly aligned */
+  text-align: left;
+  /* reset text defaults */
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto; }
+
+/* line 81, ../bower_components/breakpoint/breakpoint/_grid.scss */
+.grid--center {
+  text-align: center; }
+
+/* line 86, ../bower_components/breakpoint/breakpoint/_grid.scss */
+.grid__cell--center {
+  display: block;
+  margin: 0 auto; }
+
+/* line 21, ../bower_components/susy/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 24, ../sass/main.scss */
+.wrap {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 80%, transparent 80%);
+  background-size: 6.32911%;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-position: left top;
+  height: 100vh; }
+  /* line 12, ../bower_components/susy/sass/susy/output/support/_clearfix.scss */
+  .wrap:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/* line 29, ../sass/main.scss */
+.sidebar-left {
+  background-color: rgba(102, 51, 153, 0.6);
+  width: 17.72152%;
+  float: left;
+  margin-right: 1.26582%;
+  heigh: 100vh; }
+
+/* line 35, ../sass/main.scss */
+.main-content {
+  background-color: rgba(255, 0, 255, 0.6);
+  width: 62.02532%;
+  float: left;
+  margin-right: 1.26582%;
+  heigh: 100vh; }
+
+/* line 41, ../sass/main.scss */
+.sidebar-right {
+  background-color: rgba(102, 51, 153, 0.6);
+  width: 17.72152%;
+  float: left;
+  margin-right: 1.26582%;
+  heigh: 100vh; }
+
+/* line 50, ../sass/main.scss */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }

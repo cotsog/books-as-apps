@@ -1,0 +1,21 @@
+{
+  "name": "web-book-experiment",
+  "version": "0.0.1",
+  "homepage": "https://github.com/caraya/books-as-apps",
+  "authors": [
+    "Carlos Araya <carlos.araya@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.2",
+    "breakpoint": "~4.6.4",
+    "typeplate-starter-kit": "~2.1.0"
+  }
+}
