@@ -20,18 +20,15 @@
 // http://web-design-weekly.com/2013/05/12/handy-sass-mixins/
 
 // CLEARFIX
-@mixin clearfix() {
-    &:before,
-    &:after {
-        content: "";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
+@mixin cf {
+  &:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
 }
 
-// BORDER RADUYS
+// BORDER RADIUS
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
           border-radius: $radius;

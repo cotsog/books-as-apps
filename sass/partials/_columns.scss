@@ -32,24 +32,3 @@
   column-span: $span;
 }
 
-/*
- * The classes below use the mixin to create 2 and 3-column layouts
- *
- * The 3-column layout adds a class to handle lists by removing the list
- * symbol and giving the class a top and bottom margin of 20px
-*/
-.columns2 {
-  width: 100%;
-	@include column-attribs (2, 20px);
-}
-
-.columns3 {
-  width: 100%;
-  @include column-attribs (3, 10px);
-
-  .listed {
-    list-style: none;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-}

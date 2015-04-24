@@ -26,9 +26,8 @@
         }
       },
 
-      // Takes all the files under js/ and selected files under lib
-      // and concatenates them together. I've chosen not to mangle
-      // the compressed file
+      // Takes all the files under js/ and concatenates
+      // them together. I've chosen not to mangle the compressed file
       uglify: {
         dist: {
           options: {
@@ -52,9 +51,9 @@
           },
           files: [ {
             expand: true,
-            cwd: 'scss',
+            cwd: 'sass',
             src: [ '*.scss'],
-            dest: 'dist/css',
+            dest: 'css',
             ext: '.css'
           }]
         },
@@ -64,16 +63,17 @@
           },
           files: [ {
             expand: true,
-            cwd: 'scss',
+            cwd: 'sass',
             src: [ '*.scss'],
-            dest: 'dist/css',
+            dest: 'css',
             ext: '.css'
           }]
         }
       },
 
-      // This task requires the scss-lint ruby gem to be installed on your system
-      // If you choose not to install it, comment out this task and the prep-css
+      // This task requires the scss-lint ruby gem to be
+      // installed on your system If you choose not to
+      // install it, comment out this task and the prep-css
       // and work-lint tasks below
       //
       // I've chosen not to fail on errors or warnings.
@@ -84,67 +84,70 @@
           'scss/modules/_variables.scss',
           'scss/partials/*.scss'],
         options: {
-          config: '.scss-lint.yml',
           force: true,
           colorizeOutput: true
         }
       },
 
+      // Autoprefixer will check caniuse.com's database and
+      // add the necessary prefixes to CSS elements as needed.
+      // This saves us from doing the work manually
       autoprefixer: {
         options: {
-          browsers: [ 'last 2' ]
+          browsers: [ 'last 2 versions', 'ie8', 'ie9' ]
         },
 
         files: {
           expand: true,
           flatten: true,
-          src: 'dist/**/*.css',
-          dest: 'dist/**/*.css'
+          src: 'css/*.css',
+          dest: 'css/*.css'
         }
       },
 
-      // CSS TASKS TO RUN AFTER CONVERSION
-      // Cleans the CSS based on what's used in the specified files
-      // See https://github.com/addyosmani/grunt-uncss for more
-      // information
+      // UNCSS will analyzes the your HTML pages and
+      // remove from the CSS all the classes that are
+      // not used in any of your HTML pages
+      //
+      // This task needs to be run in the processed CSS
+      // rather than the SCSS files
+      //
+      //See https://github.com/addyosmani/grunt-uncss
+      // for more information
       uncss: {
         dist: {
           files: {
-            'css/tidy.css': [ '*.html', '!docs.html']
+            'css/main.css': [ '*.html', '!docs.html']
           }
         }
       },
-
-      // OPTIONAL TASKS
-      // Tasks below have been set up but are currently not used.
-      // If you want them, uncomment the corresponding block below
 
       // COFFEESCRIPT
       // If you want to use coffeescript (http://coffeescript.org/)
       // instead of vanilla JS, uncoment the block below and change
       // the cwd value to the locations of your coffee files
       coffee: {
-        target1: {
+        files: {
           expand: true,
           flatten: true,
-          cwd: 'src/',
+          cwd: 'coffee',
           src: ['*.coffee'],
-          dest: 'build/',
+          dest: 'js/',
           ext: '.js'
         }
       },
 
       // GH-PAGES TASK
-      // Push the specified content into the repositories gh-pages branch
+      // Push the specified content into the repositories
+      // gh-pages branch
       'gh-pages': {
         options: {
           message: 'Content committed from Grunt gh-pages',
           base: 'dist/',
           dotfiles: true
         },
-          // These files will get pushed to the `
-          // gh-pages` branch (the default)
-          // We have to specifically remove node_modules
+        // These files will get pushed to the `
+        // gh-pages` branch (the default)
         src: ['**/*']
       },
 
@@ -160,9 +163,8 @@
         }
       },
 
-      // Copy the files from our repository into the dist directory
-      // have to figure out a way to have grunt copy stuff only
-      // if specific directories exist and are not empty
+      // Copy the files from our repository into the dist
+      // directory
       copy: {
         html: {
           files: [ {
@@ -184,11 +186,10 @@
       },
 
       // WATCH TASK
-      // Watch for changes on the js and scss files and perform
-      // the specified task
+      // Watch for changes on the js and scss files and
+      // perform the specified task
       watch: {
         options: {
-          nospawn: true
         },
         // Watch all javascript files and hint them
         js: {
@@ -196,8 +197,8 @@
           tasks: [ 'jshint']
         },
         sass: {
-          files: [ 'scss/*.scss'],
-          tasks: [ 'sass']
+          files: [ 'sass/*.scss'],
+          tasks: [ 'sass:dev']
         }
       },
     });

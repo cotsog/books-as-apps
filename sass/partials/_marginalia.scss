@@ -1,14 +1,12 @@
 // Formating for different types of marginalia content
 
-aside {
-  width: 100%;
-  padding-bottom: .5em;
-  padding-top: .5em;
-  border-top: 3px double #ddd;
-  border-bottom: 3px double #ddd;
-  color: #666;
-  line-height: 1.4em;
-  font-size: 1.8em;
+
+blockquote {
+  // border-left: 5px solid $red;
+  font-family: 'fira-sans-italic';
+  margin-bottom: 1em;
+  margin-left: 1em;
+  padding-left: 1em;
 }
 
 aside.pull {
@@ -17,21 +15,11 @@ aside.pull {
   margin-bottom: .5em;
 }
 
-blockquote {
-  margin-left: 1em;
-  margin-bottom: 1em;
-  font-style: italic;
-}
 
 .opening {
-  font-size: 2em;
-  text-align: center;
-  border-top: 3px double #ddd;
-  padding-top: 2em;
-  border-bottom: 3px double #ddd;
-  padding-bottom: 2em;
-  margin-bottom: 10em;
-  }
+  coor: $red;
+  font-size: 1.5em;
+  line-height: 1.2;
 }
 
 .margin-notes,

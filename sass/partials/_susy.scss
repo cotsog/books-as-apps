@@ -1,0 +1,36 @@
+// Susy map to tell it how to layout the content
+$susy: (
+  output: isolate,
+  columns: 16,
+  container: 1140px,
+  global-box-sizing: border-box,
+  debug: (image: show),
+  gutter-position: split
+  );
+
+@include border-box-sizing;
+
+// The wrapper for our content
+.wrap {
+  @include container();
+  height: 100%;
+}
+
+// The main content area
+.main-content {
+  background-color: rgba(255, 0, 255, .1);
+  @include span(10 at 4);
+  height: 100%;
+  @include cf;
+}
+
+aside {
+  @include span(3 of 16 at 11);
+  @include cf;
+  width: 100%;
+  border-top: 3px double #ddd;
+  border-bottom: 3px double #ddd;
+  color: #666;
+  line-height: 1.4em;
+  background-color: rgba(0, 255, 255, .1);
+}

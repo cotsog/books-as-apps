@@ -1,0 +1,490 @@
+/* line 55, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+/* line 63, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+audio, canvas, video {
+  display: inline-block; }
+
+/* line 74, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/* line 84, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+[hidden], template {
+  display: none; }
+
+/* line 97, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+html {
+  background: #fff;
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/* line 113, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+html, button, input, select, textarea {
+  font-family: sans-serif; }
+
+/* line 119, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+body {
+  margin: 0; }
+
+/* line 132, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+a {
+  background: transparent; }
+  /* line 139, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+  a:focus {
+    outline: thin dotted; }
+  /* line 146, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+  a:hover, a:active {
+    outline: 0; }
+
+/* line 159, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* line 164, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0; }
+
+/* line 169, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0; }
+
+/* line 174, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0; }
+
+/* line 179, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0; }
+
+/* line 184, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0; }
+
+/* line 192, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/* line 199, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+b, strong {
+  font-weight: bold; }
+
+/* line 211, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/* line 217, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/* line 236, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/* line 246, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/* line 254, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/* line 271, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 279, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/* line 287, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 294, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* line 298, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* line 350, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+img {
+  border: 0; }
+
+/* line 359, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* line 369, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+figure {
+  margin: 0; }
+
+/* line 386, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/* line 397, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal; }
+
+/* line 414, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline; }
+
+/* line 426, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+button, input {
+  line-height: normal; }
+
+/* line 436, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+button, select {
+  text-transform: none; }
+
+/* line 451, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+/* line 462, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+button[disabled], input[disabled] {
+  cursor: default; }
+
+/* line 470, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 479, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+/* line 490, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 498, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+  /* line 507, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+  input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; }
+/* line 517, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+@media (min-width: 0) {
+  /* line 9, /Users/carlos/code/books-as-apps/bower_components/breakpoint/breakpoint/_core.scss */
+  body::before {
+    content: '{ "current" : "small", "all" : [small], "position" : 0 }';
+    display: none; } }
+
+/*! Grid based on https://github.com/necolas/griddle by Nicolas Gallagher (@necolas) */
+/* line 4, /Users/carlos/code/books-as-apps/bower_components/breakpoint/breakpoint/_grid.scss */
+body {
+  font-size: 1em; }
+
+/* line 8, /Users/carlos/code/books-as-apps/bower_components/breakpoint/breakpoint/_grid.scss */
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25em;
+  padding-right: 1.25em; }
+
+/* line 16, /Users/carlos/code/books-as-apps/bower_components/breakpoint/breakpoint/_grid.scss */
+img {
+  max-width: 100%; }
+
+/* line 17, /Users/carlos/code/books-as-apps/bower_components/breakpoint/breakpoint/_grid.scss */
+.no-js .responsive-image {
+  display: none; }
+
+/* line 21, /Users/carlos/code/books-as-apps/bower_components/breakpoint/breakpoint/_grid.scss */
+.grid {
+  display: block;
+  padding: 0;
+  margin: 0 -0.625em;
+  text-align: left;
+  letter-spacing: -0.31em;
+  text-rendering: optimizespeed; }
+
+/* line 37, /Users/carlos/code/books-as-apps/bower_components/breakpoint/breakpoint/_grid.scss */
+.opera:-o-prefocus, .grid {
+  word-spacing: -0.43em; }
+
+/* line 43, /Users/carlos/code/books-as-apps/bower_components/breakpoint/breakpoint/_grid.scss */
+.grid > .grid {
+  overflow: hidden;
+  margin-right: 0;
+  margin-left: 0; }
+
+/* line 52, /Users/carlos/code/books-as-apps/bower_components/breakpoint/breakpoint/_grid.scss */
+.grid__cell {
+  width: 100%;
+  display: -moz-inline-stack;
+  display: inline-block;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 0.625em;
+  /* controls vertical positioning of units */
+  vertical-align: top;
+  /* keeps unit content correctly aligned */
+  text-align: left;
+  /* reset text defaults */
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto; }
+
+/* line 81, /Users/carlos/code/books-as-apps/bower_components/breakpoint/breakpoint/_grid.scss */
+.grid--center {
+  text-align: center; }
+
+/* line 86, /Users/carlos/code/books-as-apps/bower_components/breakpoint/breakpoint/_grid.scss */
+.grid__cell--center {
+  display: block;
+  margin: 0 auto; }
+
+/* This mixin will create column attributes for the element
+ * it's called in
+ *
+ * It uses variables to make life easier. Rather than code
+ * multiple attribute sets we use a single set that takes 2
+ * attributes and defaults the other 2.
+ *
+ * We use number of columns rather than width for convenience.
+ * Counting width means we have to do percentages or be very
+ * strict in the width of our content.
+ *
+ * See https://developer.mozilla.org/en-US/docs/Web/CSS/column-width
+ * for more information on specifying column width in CSS
+*/
+/* line 4, /Users/carlos/code/books-as-apps/sass/partials/_links.scss */
+a {
+  text-decoration: none; }
+  /* line 7, /Users/carlos/code/books-as-apps/sass/partials/_links.scss */
+  a [href]:hover {
+    background: #ffa; }
+
+/* line 16, /Users/carlos/code/books-as-apps/sass/partials/_links.scss */
+a[href^="http"] {
+  text-decoration: underline; }
+
+/* line 4, /Users/carlos/code/books-as-apps/sass/partials/_marginalia.scss */
+blockquote {
+  font-family: 'fira-sans-italic';
+  margin-bottom: 1em;
+  margin-left: 1em;
+  padding-left: 1em; }
+
+/* line 12, /Users/carlos/code/books-as-apps/sass/partials/_marginalia.scss */
+aside.pull {
+  margin-left: -20%;
+  margin-top: .2em;
+  margin-bottom: .5em; }
+
+/* line 19, /Users/carlos/code/books-as-apps/sass/partials/_marginalia.scss */
+.opening {
+  coor: #f44336;
+  font-size: 1.5em;
+  line-height: 1.5; }
+
+/* line 26, /Users/carlos/code/books-as-apps/sass/partials/_marginalia.scss */
+.margin-notes, .content-left {
+  width: 230px;
+  margin-left: -230px;
+  margin-right: 20px;
+  text-align: right;
+  font-size: .75em; }
+
+/* line 35, /Users/carlos/code/books-as-apps/sass/partials/_marginalia.scss */
+.margin-notes-right, .content-right {
+  width: 230px;
+  margin-left: 760px;
+  margin-right: -20px;
+  text-align: left;
+  font-size: .75em;
+  position: absolute; }
+
+/* line 44, /Users/carlos/code/books-as-apps/sass/partials/_marginalia.scss */
+.content-right {
+  width: 230px;
+  margin-left: 760px;
+  margin-right: -20px;
+  text-align: left;
+  font-size: .75em;
+  position: absolute; }
+
+/* line 54, /Users/carlos/code/books-as-apps/sass/partials/_marginalia.scss */
+.content-right ul, .content-left ul {
+  list-style: none; }
+
+/*
+  asides stuff
+*/
+/* line 61, /Users/carlos/code/books-as-apps/sass/partials/_marginalia.scss */
+aside.lowlight {
+  opacity: .3; }
+
+/* line 65, /Users/carlos/code/books-as-apps/sass/partials/_marginalia.scss */
+aside.lowlight:hover {
+  opacity: 1; }
+
+/* line 69, /Users/carlos/code/books-as-apps/sass/partials/_marginalia.scss */
+aside h3 {
+  text-align: center;
+  padding-left: 20px; }
+
+@font-face {
+  font-family: 'fira-sans-light';
+  src: url('../fonts/firasans-light-webfont.eot');
+  src: url('../fonts/firasans-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/firasans-light-webfont.woff2') format('woff2'), url('../fonts/firasans-light-webfont.woff') format('woff'), url('../fonts/firasans-light-webfont.ttf') format('truetype'), url('../fonts/firasans-light-webfont.svg\#fira-sans-light') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'fira-sans-bold';
+  src: url('../fonts/firasans-bold-webfont.eot');
+  src: url('../fonts/firasans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/firasans-bold-webfont.woff2') format('woff2'), url('../fonts/firasans-bold-webfont.woff') format('woff'), url('../fonts/firasans-bold-webfont.ttf') format('truetype'), url('../fonts/firasans-bold-webfont.svg\#fira-sans-bold') format('svg');
+  font-weight: 'weight: bold';
+  font-style: normal; }
+
+@font-face {
+  font-family: 'fira-sans-italic';
+  src: url('../fonts/firasans-lightitalic-webfont.eot');
+  src: url('../fonts/firasans-lightitalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/firasans-lightitalic-webfont.woff2') format('woff2'), url('../fonts/firasans-lightitalic-webfont.woff') format('woff'), url('../fonts/firasans-lightitalic-webfont.ttf') format('truetype'), url('../fonts/firasans-lightitalic-webfont.svg\#fira-sans-italic') format('svg');
+  font-weight: 'style: italics';
+  font-style: normal; }
+
+@font-face {
+  font-family: 'fira-sans-boldit';
+  src: url('../fonts/firasans-lightitalic-webfont.eot');
+  src: url('../fonts/firasans-lightitalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/firasans-lightitalic-webfont.woff2') format('woff2'), url('../fonts/firasans-lightitalic-webfont.woff') format('woff'), url('../fonts/firasans-lightitalic-webfont.ttf') format('truetype'), url('../fonts/firasans-lightitalic-webfont.svg\#fira-sans-boldit') format('svg');
+  font-weight: 'weight: bold';
+  font-style: 'style: italics'; }
+
+@font-face {
+  font-family: 'sourcecode-pro';
+  src: url('../sourcecodepro-medium-webfont.eot');
+  src: url('../sourcecodepro-medium-webfont.eot?#iefix') format('embedded-opentype'), url('../sourcecodepro-medium-webfont.woff2') format('woff2'), url('../sourcecodepro-medium-webfont.woff') format('woff'), url('../sourcecodepro-medium-webfont.ttf') format('truetype'), url('../sourcecodepro-medium-webfont.svg\#sourcecode-pro') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 34, /Users/carlos/code/books-as-apps/sass/main.scss */
+html {
+  color: #333;
+  font-family: 'fira-sans-light';
+  line-height: 1.3; }
+
+/* line 6, /Users/carlos/code/books-as-apps/sass/partials/_headings.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'fira-sans-bold';
+  hyphens: none; }
+
+/* line 11, /Users/carlos/code/books-as-apps/sass/partials/_headings.scss */
+h4 {
+  text-transform: uppercase;
+  letter-spacing: .1em; }
+
+/* line 2, /Users/carlos/code/books-as-apps/sass/partials/_styles.scss */
+strong {
+  font-family: 'fira-sans-bold'; }
+
+/* line 6, /Users/carlos/code/books-as-apps/sass/partials/_styles.scss */
+em {
+  font-family: 'fira-sans-italic'; }
+
+/* line 12, /Users/carlos/code/books-as-apps/sass/partials/_styles.scss */
+strong em, em strong {
+  font-family: 'fira-sans-boldit'; }
+
+/* line 50, /Users/carlos/code/books-as-apps/sass/main.scss */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* line 60, /Users/carlos/code/books-as-apps/sass/main.scss */
+img, video, object {
+  max-width: 100%; }
+
+/* line 65, /Users/carlos/code/books-as-apps/sass/main.scss */
+p p {
+  text-indent: 1em; }
+
+/* line 71, /Users/carlos/code/books-as-apps/sass/main.scss */
+.col2 {
+  width: 100%;
+  /* How many columns? */
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  /* Space between columns */
+  -moz-column-gap: 20px;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+  /* How do we fill the content of our columns, default is to balance */
+  -moz-column-fill: balance;
+  -webkit-column-fill: balance;
+  column-fill: balance;
+  /* Column span, defaul is not to span columns */
+  -moz-column-span: none;
+  -webkit-column-span: none;
+  column-span: none; }
+
+/* line 76, /Users/carlos/code/books-as-apps/sass/main.scss */
+.col3 {
+  width: 100%;
+  /* How many columns? */
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+  /* Space between columns */
+  -moz-column-gap: 10px;
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+  /* How do we fill the content of our columns, default is to balance */
+  -moz-column-fill: balance;
+  -webkit-column-fill: balance;
+  column-fill: balance;
+  /* Column span, defaul is not to span columns */
+  -moz-column-span: none;
+  -webkit-column-span: none;
+  column-span: none; }
+
+/*# sourceMappingURL=main.css.map */

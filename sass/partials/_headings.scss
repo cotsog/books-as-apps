@@ -1,38 +1,14 @@
-// Headings
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'fira-sans-bold';
   hyphens: none;
-}
-
-h1 {
-  text-align: center;
-}
-
-h2 {
-  margin-top: 60px;
-  margin-bottom: 40px;
-  padding-bottom: 10px;
-  margin-left: -60px;
-}
-
-h3 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 20px;
-  margin-bottom: 10px;
 }
 
 h4 {
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-// Chapter title style
-// We center the h1 chapter title
-
-// The title is always the first child of the section element
-section h1 {
-  text-align: center;
+  letter-spacing: .1em;
 }

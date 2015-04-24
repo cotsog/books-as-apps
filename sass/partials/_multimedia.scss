@@ -1,16 +1,13 @@
 // MULTIMEDIA ELEMENT FORMATTING
+// Note that the max-width trick for responsive elements
+// does not work in older versions of IE.
 
-// iframe format for embedded content
-iframe {
+iframe,
+img,
+video,
+object {
+  @include solid-thin;
+  border-color: $red;
   display: block;
-  margin: 20px auto;
-  border-color: $red;
-  @include solid-thin;
-}
-
-// video tag format
-.video video {
-  margin: 20px auto;
-  border-color: $red;
-  @include solid-thin;
+  max-width: 100%;
 }
