@@ -455,42 +455,9 @@ h3,
 h4,
 h5,
 h6 {
+  color: 555;
   font-family: 'museo-slab';
   hyphens: none;
-}
-
-h1 {
-  hyphens: none;
-  font-size-adjust: 0.5;
-  font-weight: bold;
-  font-style: normal;
-}
-h1 :not:first-child {
-  margin-top: 3em;
-}
-
-h2 {
-  font-size-adjust: 0.5;
-  font-weight: bold;
-  font-style: normal;
-  color: #555;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
-}
-
-h3 {
-  font-size-adjust: 0.5;
-  font-weight: bold;
-  font-style: normal;
-  color: #555;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
-}
-
-h4 {
-  font-size-adjust: 0.5;
-  font-weight: bold;
-  font-style: normal;
-  color: #555;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 
 h1 {
@@ -736,14 +703,6 @@ object {
   clear: both;
   display: block;
   max-width: 100%;
-}
-
-h1 + p::first-letter {
-  float: left;
-  font-size: 7em;
-  line-height: 0.8em;
-  margin-bottom: -0.1em;
-  padding-right: 0.1em;
 }
 
 p p {
