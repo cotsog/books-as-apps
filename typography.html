@@ -46,8 +46,35 @@
     hljs.initHighlightingOnLoad();
   </script>
   <script src="lib/vendor/modernizr-2.8.3.js"></script>
-  <script src="//use.typekit.net/fbk3lnx.js"></script>
-  <script>try{Typekit.load();}catch(e){}</script>
+  <script>
+    (function (d) {
+      var config = {
+          kitId: 'fbk3lnx',
+          scriptTimeout: 3000
+        },
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = '//use.typekit.net/' + config.kitId + '.js';
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || a && a != "complete" && a != "loaded") return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config)
+        } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
 </head>
 
 <body>
@@ -66,12 +93,13 @@
       <p>What I got out of multiple presentations about CSS, typography and new technologies coming and going away (saddly) is that the basics are still important. With that in mind I'll look at typography through a series of exercises. The exercises and be edited and will change the display of the associated text; you can then copy and paste the resulting CSS to your own CSS/SCSS stylesheet.</p>
 
       <blockquote>
-      <p>The first thing to learn is that all typefaces are different. What works for the typefaces I chose may or may not work for the typefaces you choose for your projects. Where possible I'll show the typefaces used in this page against other typefaces (most likely from the 'web safe' font set.)</p>
+        <p>The first thing to learn is that all typefaces are different. What works for the typefaces I chose may or may not work for the typefaces you choose for your projects. Where possible I'll show the typefaces used in this page against other typefaces (most likely from the 'web safe' font set.)</p>
       </blockquote>
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/r38al1w-h4k" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/r38al1w-h4k" frameborder="0" allowfullscreen></iframe>
 
-<iframe src="https://player.vimeo.com/video/34178417" width="600" height="337" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/34178417">Jason Santa Maria - On Web Typography</a> from <a href="https://vimeo.com/build">Build</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+      <iframe src="https://player.vimeo.com/video/34178417" width="600" height="337" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <p><a href="https://vimeo.com/34178417">Jason Santa Maria - On Web Typography</a> from <a href="https://vimeo.com/build">Build</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
     </div>
 
