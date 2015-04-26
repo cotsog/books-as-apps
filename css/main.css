@@ -1,4 +1,5 @@
-@import url("http://hello.myfonts.net/count/2e02d0");
+@import url("https://hello.myfonts.net/count/2e02d0");
+@import url("https://hello.myfonts.net/count/2e03fa");
 article,
 aside,
 details,
@@ -233,6 +234,75 @@ input[type="checkbox"], input[type="radio"] {
   padding: 0;
 }
 
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wrap {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, transparent 10%, rgba(102, 102, 255, 0.25) 10%, rgba(179, 179, 255, 0.25) 90%, transparent 90%);
+  background-size: 6.25%;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-position: left top;
+  height: 100%;
+}
+.wrap:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.social-buttons {
+  width: 17.5%;
+  float: left;
+  margin-left: 0.625%;
+  margin-right: 0.625%;
+  background-color: rgba(0, 0, 255, 0.1);
+  height: 100%;
+  margin-top: 15em;
+}
+
+.main-content {
+  background-color: rgba(255, 0, 255, 0.1);
+  width: 61.25%;
+  float: left;
+  margin-left: 19.375%;
+  margin-right: -100%;
+  height: 100%;
+}
+
+.main-content-simple {
+  background-color: rgba(255, 0, 255, 0.1);
+  width: 61.25%;
+  float: left;
+  margin-left: 0.625%;
+  margin-right: 0.625%;
+  height: 100%;
+}
+
+aside {
+  width: 17.5%;
+  float: left;
+  margin-left: 63.125%;
+  margin-right: -100%;
+  width: 100%;
+  border-top: 3px double #ddd;
+  border-bottom: 3px double #ddd;
+  color: #666;
+  line-height: 1.4em;
+  background-color: rgba(0, 255, 255, 0.1);
+}
+aside:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
 @media (min-width: 0) {
   body::before {
     content: '{ "current" : "small", "all" : [small], "position" : 0 }';
@@ -456,7 +526,7 @@ h4,
 h5,
 h6 {
   color: 555;
-  font-family: 'museo-slab';
+  font-family: 'MuseoSlab-500';
   hyphens: none;
 }
 
@@ -624,75 +694,6 @@ em strong {
   font-family: 'Stone-Humanist-SemiItalic';
 }
 
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.wrap {
-  max-width: 1140px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: linear-gradient(to right, transparent 10%, rgba(102, 102, 255, 0.25) 10%, rgba(179, 179, 255, 0.25) 90%, transparent 90%);
-  background-size: 6.25%;
-  background-origin: content-box;
-  background-clip: content-box;
-  background-position: left top;
-  height: 100%;
-}
-.wrap:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-.social-buttons {
-  width: 17.5%;
-  float: left;
-  margin-left: 0.625%;
-  margin-right: 0.625%;
-  background-color: rgba(0, 0, 255, 0.1);
-  height: 100%;
-  margin-top: 15em;
-}
-
-.main-content {
-  background-color: rgba(255, 0, 255, 0.1);
-  width: 61.25%;
-  float: left;
-  margin-left: 19.375%;
-  margin-right: -100%;
-  height: 100%;
-}
-
-.main-content-simple {
-  background-color: rgba(255, 0, 255, 0.1);
-  width: 61.25%;
-  float: left;
-  margin-left: 0.625%;
-  margin-right: 0.625%;
-  height: 100%;
-}
-
-aside {
-  width: 17.5%;
-  float: left;
-  margin-left: 63.125%;
-  margin-right: -100%;
-  width: 100%;
-  border-top: 3px double #ddd;
-  border-bottom: 3px double #ddd;
-  color: #666;
-  line-height: 1.4em;
-  background-color: rgba(0, 255, 255, 0.1);
-}
-aside:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
 iframe,
 img,
 video,
@@ -702,7 +703,12 @@ object {
   border-color: #f44336;
   clear: both;
   display: block;
+  margin: 1em auto;
   max-width: 100%;
+}
+
+.video-caption {
+  margin: 0.5em auto;
 }
 
 p p {
@@ -756,22 +762,23 @@ li {
   background: #00aced;
 }
 
-/*  Photo blocks
--------------------------------------- */
 figure {
   counter-increment: figure_count;
-  margin-bottom: 1em;
-  margin-top: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 figure figcaption {
-  font-weight: 700;
+  font-family: 'Stone-Humanist-SemiItalic', sans-serif;
   padding-bottom: 1em;
-  padding-top: .2em;
+  padding-top: .5em;
 }
 figure figcaption::before {
   content: "Figure " counter(figure_count) ": ";
 }
-figure img:hover {
+figure img {
+  max-width: 100%;
+}
+figure img :hover {
   border: 3px solid #f44336;
 }
 
