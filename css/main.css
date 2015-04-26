@@ -503,6 +503,13 @@ aside h3 {
   font-style: normal;
 }
 @font-face {
+  font-family: "MuseoSlab-500";
+  src: url("../fonts/2E03FA_0_0.eot");
+  src: url("../fonts/2E03FA_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E03FA_0_0.woff2") format("woff2"), url("../fonts/2E03FA_0_0.woff") format("woff"), url("../fonts/2E03FA_0_0.ttf") format("truetype"), url("../fonts/2E03FA_0_0.svg#wf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "sourcecodepro-medium-webfont";
   src: url("../fonts/sourcecodepro-medium-webfont.eot");
   src: url("../fonts/sourcecodepro-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcecodepro-medium-webfont.woff2") format("woff2"), url("../fonts/sourcecodepro-medium-webfont.woff") format("woff"), url("../fonts/sourcecodepro-medium-webfont.ttf") format("truetype"), url("../fonts/sourcecodepro-medium-webfont.svg#wf") format("svg");
