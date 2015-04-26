@@ -1,6 +1,9 @@
+.grunt
 fonts/webfonts
 .sass-cache/
 node_modules
 gulp
 node_modules
 bower_components
+/webfontloader-master/
+/webfontloader-master.zip

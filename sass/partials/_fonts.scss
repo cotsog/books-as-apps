@@ -34,7 +34,12 @@
          url('#{$font-file-name}.woff2') format('woff2'),
          url('#{$font-file-name}.woff') format('woff'),
          url('#{$font-file-name}.ttf') format('truetype'),
-         url('#{$font-file-name}.svg\##{$font-family}') format('svg');
+// working with myFonts requires the svg file to be formated like below
+// otherwise it will not work
+         url('#{$font-file-name}.svg#wf') format('svg');
+// However most other services (and doing it by hand) require the format
+// I've commented out. Keeping it for reference
+// url('#{$font-file-name}.svg\##{$font-family}') format('svg');
     font-weight: $weight;
     font-style: $style;
 

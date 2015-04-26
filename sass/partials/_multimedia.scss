@@ -8,6 +8,7 @@ video,
 object {
   @include solid-thin;
   border-color: $red;
+  clear:both;
   display: block;
   max-width: 100%;
 }

@@ -1,3 +1,26 @@
+// @import must be at top of file, otherwise CSS will not work
+@import url("http://hello.myfonts.net/count/2e02d0");
+// Webfonts and licenses
+//
+//* Webfont: StoneHumanistITCStd-Medium by ITC
+// * URL: http://www.myfonts.com/fonts/itc/stone-humanist-itc/std-medium/
+// *
+// * Webfont: StoneHumanistITCStd-MediumIta by ITC
+// * URL: http://www.myfonts.com/fonts/itc/stone-humanist-itc/std-medium-italic/
+// *
+// * Webfont: StoneHumanistITCStd-Semi by ITC
+// * URL: http://www.myfonts.com/fonts/itc/stone-humanist-itc/std-semibold/
+// *
+// * Webfont: StoneHumanistITCStd-SemiItalic by ITC
+// * URL: http://www.myfonts.com/fonts/itc/stone-humanist-itc/std-semibold-italic/
+// *
+// *
+// * License: http://www.myfonts.com/viewlicense?type=web&buildid=3015376
+// * Licensed pageviews: 250,000
+// * Webfonts copyright: Copyright 2005 International Typeface Corporation. All rights reserved.
+// *
+// * © 2015 MyFonts Inc
+
 // First load my set of mixins and partials
 @import 'partials/variables';
 @import 'partials/mixins';
@@ -20,20 +43,26 @@
 
 
 // Font inclusion
-// We use all 4 variations of Fira Sans
+// We use all 4 variations of StoneHumanistITCStd
 // for body text
-@include font-declaration('fira-sans-light', '../fonts/firasans-light-webfont');
-@include font-declaration('fira-sans-bold', '../fonts/firasans-bold-webfont', 'weight: bold');
-@include font-declaration('fira-sans-italic', '../fonts/firasans-lightitalic-webfont', 'style: italics');
-@include font-declaration('fira-sans-boldit', '../fonts/firasans-lightitalic-webfont', 'weight: bold', 'style: italics');
-// I use
-@include font-declaration('sourcecode-pro', '../sourcecodepro-medium-webfont');
+@include font-declaration('Stone-Humanist', '../fonts/2E02D0_0_0');
+@include font-declaration('Stone-Humanist-Ita', '../fonts/2E02D0_1_0');
+@include font-declaration('Stone-Humanist-Semi', '../fonts/2E02D0_2_0');
+@include font-declaration('Stone-Humanist-SemiItalic', '../fonts/2E02D0_3_0');
+// This is the font we use for code blocks (highlighted and editable)
+@include font-declaration('sourcecodepro-medium-webfont', '../sourcecodepro-medium-webfont');
 
-// Because we are using fonts for bold, italics and bold/italics
-// we have to tell the browser where to use them.
+//@include font-declaration('fira-sans-light', '../fonts/firasans-light-webfont');
+//@include font-declaration('fira-sans-bold', '../fonts/firasans-bold-webfont', 'weight: bold');
+//@include font-declaration('fira-sans-italic', '../fonts/firasans-lightitalic-webfont', 'style: italics');
+//@include font-declaration('fira-sans-boldit', '../fonts/firasans-lightitalic-webfont', 'weight: bold', 'style: italics');
+
+// @name html
+// @description Default settings for page/site/app
+//
 html {
   color: #333;
-  font-family: 'fira-sans-light';
+  font-family: 'Stone-Humanist';
   line-height: 1.3;
 }
 
@@ -43,12 +72,31 @@ html {
 // Import style to font mapping
 @import 'partials/styles';
 
-
 // Import susy related stuff
 @import 'partials/susy';
 
 // Import rules for multimedia content
 @import 'partials/multimedia';
+
+// Import modular scale
+@import 'partials/modular-scale';
+// Import vertical rythm
+@import 'partials/vertical-rhythms';
+
+// Import paragraph styles
+@import 'partials/paragraphs';
+
+// Experimental play with social media buttons
+@import 'partials/social';
+
+// Import image related selectors
+@import 'partials/images';
+
+// Import code related selectors
+@import 'partials/code';
+
+// Beginning work with media queries
+//@import 'partials/mq';
 
 // Dealing with boilerplate's browserupgrade warnining
 .browserupgrade {
@@ -58,19 +106,37 @@ html {
     padding: 0.2em 0;
 }
 
-p {
-  p {
-    text-indent: 1em;
-  }
-}
-
+// @name 2col class
+// @description Class for two column content
+//
+// @markup
+//   <div class="col2">2 column content goes here</button>
+//
 //The classes below use the colum mixin to create 2 and 3-column layouts
 .col2 {
   width: 100%;
   @include column-attribs (2, 20px);
 }
 
+// @name 3col class
+// @description Class for three column content
+//
+// @markup
+//   <div class="col3">3 column content goes here</button>
+//
 .col3 {
   width: 100%;
   @include column-attribs (3, 10px);
 }
+
+// @name Button
+// @description Your standard form button.
+//
+// @state :hover - Highlights when hovering.
+// @state :disabled - Dims the button when disabled.
+// @state .primary - Indicates button is the primary action.
+// @state .smaller - A smaller button
+//
+// @markup
+//   <button>This is a button</button>
+//

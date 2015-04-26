@@ -1,0 +1,17 @@
+div .code-example {
+  font-family: 'sourcecodepro-medium-webfont', monospace;
+  display: block;
+  background: #333;
+  color: white;
+  padding: 20px;
+  white-space: pre;
+}
+
+pre {
+  white-space: pre;
+
+  code {
+    font-family: 'sourcecodepro-medium-webfont', monospace;
+    font-size: 80%;
+  }
+}

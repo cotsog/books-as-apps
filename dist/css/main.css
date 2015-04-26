@@ -1,0 +1,677 @@
+@import url("http://hello.myfonts.net/count/2e02d0");
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden], template {
+  display: none;
+}
+
+html {
+  background: #fff;
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  background: transparent;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover, a:active {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+@media (min-width: 0) {
+  body::before {
+    content: '{ "current" : "small", "all" : [small], "position" : 0 }';
+    display: none;
+  }
+}
+/*! Grid based on https://github.com/necolas/griddle by Nicolas Gallagher (@necolas) */
+body {
+  font-size: 1em;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.no-js .responsive-image {
+  display: none;
+}
+
+.grid {
+  display: block;
+  padding: 0;
+  margin: 0 -0.625em;
+  text-align: left;
+  letter-spacing: -0.31em;
+  text-rendering: optimizespeed;
+}
+
+.opera:-o-prefocus,
+.grid {
+  word-spacing: -0.43em;
+}
+
+.grid > .grid {
+  overflow: hidden;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.grid__cell {
+  width: 100%;
+  display: -moz-inline-stack;
+  display: inline-block;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 0.625em;
+  /* controls vertical positioning of units */
+  vertical-align: top;
+  /* keeps unit content correctly aligned */
+  text-align: left;
+  /* reset text defaults */
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+}
+
+.grid--center {
+  text-align: center;
+}
+
+.grid__cell--center {
+  display: block;
+  margin: 0 auto;
+}
+
+/* This mixin will create column attributes for the element
+ * it's called in
+ *
+ * It uses variables to make life easier. Rather than code
+ * multiple attribute sets we use a single set that takes 2
+ * attributes and defaults the other 2.
+ *
+ * We use number of columns rather than width for convenience.
+ * Counting width means we have to do percentages or be very
+ * strict in the width of our content.
+ *
+ * See https://developer.mozilla.org/en-US/docs/Web/CSS/column-width
+ * for more information on specifying column width in CSS
+*/
+a {
+  text-decoration: none;
+}
+a [href]:hover {
+  background: #ffa;
+}
+
+a[href^="http"] {
+  text-decoration: underline;
+}
+
+blockquote {
+  border-left: 5px solid #f44336;
+  margin-bottom: 1.5em;
+  margin-left: 1em;
+  margin-top: 1.5em;
+  padding-left: 1em;
+}
+blockquote p {
+  font-family: 'Stone-Humanist-Ita';
+}
+
+aside.pull {
+  margin-left: -20%;
+  margin-top: .2em;
+  margin-bottom: .5em;
+}
+
+.opening {
+  coor: #f44336;
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+
+.margin-notes,
+.content-left {
+  width: 230px;
+  margin-left: -230px;
+  margin-right: 20px;
+  text-align: right;
+  font-size: .75em;
+}
+
+.margin-notes-right,
+.content-right {
+  width: 230px;
+  margin-left: 760px;
+  margin-right: -20px;
+  text-align: left;
+  font-size: .75em;
+  position: absolute;
+}
+
+.content-right {
+  width: 230px;
+  margin-left: 760px;
+  margin-right: -20px;
+  text-align: left;
+  font-size: .75em;
+  position: absolute;
+}
+
+.content-right ul,
+.content-left ul {
+  list-style: none;
+}
+
+/*
+  asides stuff
+*/
+aside.lowlight {
+  opacity: .3;
+}
+
+aside.lowlight:hover {
+  opacity: 1;
+}
+
+aside h3 {
+  text-align: center;
+  padding-left: 20px;
+}
+
+@font-face {
+  font-family: "Stone-Humanist";
+  src: url("../fonts/2E02D0_0_0.eot");
+  src: url("../fonts/2E02D0_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_0_0.woff2") format("woff2"), url("../fonts/2E02D0_0_0.woff") format("woff"), url("../fonts/2E02D0_0_0.ttf") format("truetype"), url("../fonts/2E02D0_0_0.svg#wf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Stone-Humanist-Ita";
+  src: url("../fonts/2E02D0_1_0.eot");
+  src: url("../fonts/2E02D0_1_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_1_0.woff2") format("woff2"), url("../fonts/2E02D0_1_0.woff") format("woff"), url("../fonts/2E02D0_1_0.ttf") format("truetype"), url("../fonts/2E02D0_1_0.svg#wf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Stone-Humanist-Semi";
+  src: url("../fonts/2E02D0_2_0.eot");
+  src: url("../fonts/2E02D0_2_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_2_0.woff2") format("woff2"), url("../fonts/2E02D0_2_0.woff") format("woff"), url("../fonts/2E02D0_2_0.ttf") format("truetype"), url("../fonts/2E02D0_2_0.svg#wf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Stone-Humanist-SemiItalic";
+  src: url("../fonts/2E02D0_3_0.eot");
+  src: url("../fonts/2E02D0_3_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_3_0.woff2") format("woff2"), url("../fonts/2E02D0_3_0.woff") format("woff"), url("../fonts/2E02D0_3_0.ttf") format("truetype"), url("../fonts/2E02D0_3_0.svg#wf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  color: #333;
+  font-family: 'Stone-Humanist';
+  line-height: 1.3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Stone-Humanist-Semi';
+  hyphens: none;
+}
+
+h1 {
+  margin-bottom: 1em;
+}
+
+h2, h3 {
+  margin-bottom: 1em;
+  margin-top: 3em;
+}
+
+h4 {
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+strong {
+  font-family: 'Stone-Humanist-Semi';
+}
+
+em {
+  font-family: 'Stone-Humanist-Ita';
+}
+
+strong em,
+em strong {
+  font-family: 'Stone-Humanist-SemiItalic';
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wrap {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, transparent 10%, rgba(102, 102, 255, 0.25) 10%, rgba(179, 179, 255, 0.25) 90%, transparent 90%);
+  background-size: 6.25%;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-position: left top;
+  height: 100%;
+}
+.wrap:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.social-buttons {
+  width: 17.5%;
+  float: left;
+  margin-left: 0.625%;
+  margin-right: 0.625%;
+  background-color: rgba(0, 0, 255, 0.1);
+  height: 100%;
+  margin-top: 15em;
+}
+
+.main-content {
+  background-color: rgba(255, 0, 255, 0.1);
+  width: 61.25%;
+  float: left;
+  margin-left: 0.625%;
+  margin-right: 0.625%;
+  height: 100%;
+}
+
+aside {
+  width: 17.5%;
+  float: left;
+  margin-left: 63.125%;
+  margin-right: -100%;
+  width: 100%;
+  border-top: 3px double #ddd;
+  border-bottom: 3px double #ddd;
+  color: #666;
+  line-height: 1.4em;
+  background-color: rgba(0, 255, 255, 0.1);
+}
+aside:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+iframe,
+img,
+video,
+object {
+  border-width: thin;
+  border-style: solid;
+  border-color: #f44336;
+  display: block;
+  max-width: 100%;
+}
+
+h1 + p::first-letter {
+  float: left;
+  font-size: 7em;
+  line-height: 0.8em;
+  margin-bottom: -0.1em;
+  padding-right: 0.1em;
+}
+
+p p {
+  text-indent: 2em;
+}
+
+ol {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+.profile-link {
+  background: #f2f2f2;
+  color: #4778b8;
+  display: block;
+  padding: 0.75em 1em;
+  text-decoration: none;
+}
+.profile-link:focus, .profile-link:hover {
+  color: #fff;
+}
+
+.profile-link--delicious:focus,
+.profile-link--delicious:hover {
+  background: #248cff;
+}
+
+.profile-link--github:focus,
+.profile-link--github:hover {
+  background: #4183c4;
+}
+
+.profile-link--googleplus:focus,
+.profile-link--googleplus:hover {
+  background: #dd4b39;
+}
+
+.profile-link--linkedin:focus,
+.profile-link--linkedin:hover {
+  background: #007bb6;
+}
+
+.profile-link--twitter:focus,
+.profile-link--twitter:hover {
+  background: #00aced;
+}
+
+/*  Photo blocks
+-------------------------------------- */
+figure {
+  counter-increment: figure_count;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+figure figcaption {
+  font-weight: 700;
+  padding-bottom: 1em;
+  padding-top: .2em;
+}
+figure figcaption::before {
+  content: "Figure " counter(figure_count) ": ";
+}
+figure img:hover {
+  border: 3px solid #f44336;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.col2 {
+  width: 100%;
+  /* How many columns? */
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  /* Space between columns */
+  -moz-column-gap: 20px;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+  /* How do we fill the content of our columns, default is to balance */
+  -moz-column-fill: balance;
+  -webkit-column-fill: balance;
+  column-fill: balance;
+  /* Column span, defaul is not to span columns */
+  -moz-column-span: none;
+  -webkit-column-span: none;
+  column-span: none;
+}
+
+.col3 {
+  width: 100%;
+  /* How many columns? */
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+  /* Space between columns */
+  -moz-column-gap: 10px;
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+  /* How do we fill the content of our columns, default is to balance */
+  -moz-column-fill: balance;
+  -webkit-column-fill: balance;
+  column-fill: balance;
+  /* Column span, defaul is not to span columns */
+  -moz-column-span: none;
+  -webkit-column-span: none;
+  column-span: none;
+}
+
+/*# sourceMappingURL=main.css.map */

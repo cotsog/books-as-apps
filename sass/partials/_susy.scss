@@ -16,12 +16,18 @@ $susy: (
   height: 100%;
 }
 
+.social-buttons {
+  @include span(3 of 16);
+  background-color: rgba(0, 0, 255, .1);
+  height:100%;
+  margin-top: 15em;
+}
+
 // The main content area
 .main-content {
   background-color: rgba(255, 0, 255, .1);
-  @include span(10 at 4);
-  height: 100%;
-  @include cf;
+  @include span(10 of 16 at 4);
+  height:100%;
 }
 
 aside {

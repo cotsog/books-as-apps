@@ -1,16 +1,5 @@
-/* Paragraph styles
- *
- * We use these generic styles to play with what we can do with a paragraph.
-*/
-h1 + p::first-line {
-  text-transform: uppercase;
-  font-size: 1.25em;
-  text-indent: 0;
-}
-
-/*
- * Dropcap the first letter of the first paragraph
-*/
+// Paragraph styles
+// Dropcap the first letter of the first paragraph
 h1 + p::first-letter {
   float: left;
   font-size: 7em;
@@ -19,10 +8,9 @@ h1 + p::first-letter {
   padding-right: 0.1em;
 }
 
-/*
- * Indent all paragraphs but the first, we're doing too much with it already
-*/
-
-p + p {
+// Indent all paragraphs but the first
+p {
+  p {
     text-indent: 2em;
+  }
 }

@@ -137,6 +137,44 @@
         }
       },
 
+      // Starting to think about how to best document SCSS and CSS
+      // This looks promising
+      // See https://github.com/darcyclarke/DSS for information
+//      dss: {
+//        docs: {
+//          files: {
+//            'docs/': 'sass/**/*.scss'
+//          },
+//          options: {
+//            parsers: {
+//              // Finds @link in comment blocks
+//              link: function(i, line, block){
+//                // Replace link with HTML wrapped version
+//                var exp = \/(b(https?|ftp|file):\/\/[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])\/ig;
+//                line.replace(exp, "<a href='$1'>$1</a>");
+//                return line;
+//              }
+//            }
+//          }
+//        }
+//      },
+
+      // BABEL
+      // Babel allows you to transpile ES6 to current ES5 without needing
+      // a plugin or anything installed in your application. This will
+      // eventually go away when I'm happy with ES6 support in browsers
+      // See http://babeljs.io/ for more information.
+      babel: {
+        options: {
+            sourceMap: true
+        },
+        dist: {
+            files: {
+                'es6/*.js': 'src/*.js'
+            }
+        }
+      },
+
       // GH-PAGES TASK
       // Push the specified content into the repositories
       // gh-pages branch
@@ -166,10 +204,11 @@
       // Copy the files from our repository into the dist
       // directory
       copy: {
-        html: {
+        dist: {
           files: [ {
             expand: true,
             src: [
+              'fonts/**/*',
               'css/**/*',
               'lib/**/*',
               'js/**/*',
@@ -182,7 +221,7 @@
 
       // Clean the build directory
       clean: {
-        all: [ 'dist/']
+        all: [ 'dist/' ]
       },
 
       // WATCH TASK
@@ -211,6 +250,10 @@
       [ 'jshint' ]
     );
 
+    grunt.task.registerTask(
+      'publish',
+      [ 'clean:all', 'copy:dist', 'gh-pages' ]
+    );
     grunt.task.registerTask(
       'lint-all',
       [ 'scsslint', 'jshint']
