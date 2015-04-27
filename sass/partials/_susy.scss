@@ -30,6 +30,12 @@ $susy: (
   height:100%;
 }
 
+// The main content area
+.main-content-simple{
+  background-color: rgba(255, 0, 255, .1);
+  @include span(10 of 16);
+  height:100%;
+}
 aside {
   @include span(3 of 16 at 11);
   @include cf;

@@ -1,12 +1,12 @@
 // Paragraph styles
 // Dropcap the first letter of the first paragraph
-h1 + p::first-letter {
-  float: left;
-  font-size: 7em;
-  line-height: 0.8em;
-  margin-bottom: -0.1em;
-  padding-right: 0.1em;
-}
+//h1 + p::first-letter {
+//  float: left;
+//  font-size: 7em;
+//  line-height: 0.8em;
+//  margin-bottom: -0.1em;
+//  padding-right: 0.1em;
+//}
 
 // Indent all paragraphs but the first
 p {

@@ -16,43 +16,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'museo-slab';
+  color: 555;
+  font-family: 'MuseoSlab-500';
   hyphens: none;
 }
 
-h1 {
-  hyphens: none;
-  font-size-adjust: 0.5;
-  font-weight: bold;
-  font-style: normal;
-  :not:first-child {
-    margin-top: 3em;
-  }
-}
-
-h2 {
-  font-size-adjust: 0.5;
-  font-weight: bold;
-  font-style: normal;
-  color: #555;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
-}
-
-h3 {
-  font-size-adjust: 0.5;
-  font-weight: bold;
-  font-style: normal;
-  color: #555;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
-}
-
-h4 {
-  font-size-adjust: 0.5;
-  font-weight: bold;
-  font-style: normal;
-  color: #555;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
-}
 //TYPOGRAPHY
 
 h1 {

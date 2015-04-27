@@ -1,6 +1,8 @@
 /*global module */
 /*global require */
 (function () {
+  var path = require('path');
+
   'use strict';
   module.exports = function (grunt) {
     // require it at the top and pass in the grunt instance
@@ -229,22 +231,48 @@
       // perform the specified task
       watch: {
         options: {
+          livereload: true
         },
         // Watch all javascript files and hint them
+        all: {
+          files: [ 'sass/*.scss'],
+          tasks: [ 'sass:dev'],
+        },
         js: {
           files: [ 'Gruntfile.js', 'js/{,*/}*.js'],
-          tasks: [ 'jshint']
+          tasks: [ 'jshint'],
+          options: {
+            livereload: true,
+          },
         },
         sass: {
           files: [ 'sass/*.scss'],
-          tasks: [ 'sass:dev']
+          tasks: [ 'sass:dev'],
+          options: {
+            livereload: true,
+          },
         }
       },
+
+      // grunt-open will open your browser at the project's URL
+      open: {
+        all: {
+          // Gets the port from the connect configuration
+          path: 'http://localhost:<%= express.all.options.port%>'
+        }
+      },
+
     });
     // closes initConfig
 
     // CUSTOM TASKS
     // Usually a combination of one or more tasks defined above
+
+    grunt.task.registerTask(
+      'local-server',
+      [ 'express', 'open', 'watch:all' ]
+    );
+
     grunt.task.registerTask(
       'lint',
       [ 'jshint' ]

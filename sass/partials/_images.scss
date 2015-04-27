@@ -1,27 +1,26 @@
-/*  Photo blocks
--------------------------------------- */
-
-
 figure {
   counter-increment: figure_count;
-  margin-bottom: 1em;
-  margin-top: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
 
   figcaption {
-    font-weight: 700;
+    font-family: 'Stone-Humanist-SemiItalic', sans-serif;
     padding-bottom: 1em;
-    padding-top: .2em;
+    padding-top: .5em;
   }
 
   figcaption::before {
     content: 'Figure ' counter(figure_count) ': ';
   }
 
-  img:hover {
-    border: 3px solid $red;
+  img {
+    max-width: 100%;
+
+    :hover {
+      border: 3px solid $red;
+    }
   }
 }
-
 
 .iconmelon,
 .im {
