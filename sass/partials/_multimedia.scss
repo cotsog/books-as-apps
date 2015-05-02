@@ -3,7 +3,6 @@
 // does not work in older versions of IE.
 
 video,
-img,
 object {
   @include solid-thin;
   border-color: $red;

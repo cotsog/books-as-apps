@@ -1,8 +1,6 @@
 /*global module */
 /*global require */
 (function () {
-  var path = require('path');
-
   'use strict';
   module.exports = function (grunt) {
     // require it at the top and pass in the grunt instance
@@ -139,28 +137,6 @@
         }
       },
 
-      // Starting to think about how to best document SCSS and CSS
-      // This looks promising
-      // See https://github.com/darcyclarke/DSS for information
-//      dss: {
-//        docs: {
-//          files: {
-//            'docs/': 'sass/**/*.scss'
-//          },
-//          options: {
-//            parsers: {
-//              // Finds @link in comment blocks
-//              link: function(i, line, block){
-//                // Replace link with HTML wrapped version
-//                var exp = \/(b(https?|ftp|file):\/\/[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])\/ig;
-//                line.replace(exp, "<a href='$1'>$1</a>");
-//                return line;
-//              }
-//            }
-//          }
-//        }
-//      },
-
       // BABEL
       // Babel allows you to transpile ES6 to current ES5 without needing
       // a plugin or anything installed in your application. This will
@@ -234,10 +210,6 @@
           livereload: true
         },
         // Watch all javascript files and hint them
-        all: {
-          files: [ 'sass/*.scss'],
-          tasks: [ 'sass:dev'],
-        },
         js: {
           files: [ 'Gruntfile.js', 'js/{,*/}*.js'],
           tasks: [ 'jshint'],
@@ -254,11 +226,31 @@
         }
       },
 
+      connect: {
+        draft: {
+          options: {
+            base: '.',
+            port: 2509,
+            keepalive: true,
+            livereload: true,
+
+          }
+        },
+        production: {
+          options: {
+            base: 'dist',
+            keepalive: true,
+            livereload: true,
+            port: 2510,
+          }
+        }
+      },
+
       // grunt-open will open your browser at the project's URL
       open: {
         all: {
           // Gets the port from the connect configuration
-          path: 'http://localhost:<%= express.all.options.port%>'
+          path: 'http://0.0.0.0:2509'
         }
       },
 
@@ -270,7 +262,7 @@
 
     grunt.task.registerTask(
       'local-server',
-      [ 'express', 'open', 'watch:all' ]
+      [ 'connect', 'open' ]
     );
 
     grunt.task.registerTask(

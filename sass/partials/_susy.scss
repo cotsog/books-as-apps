@@ -4,7 +4,7 @@ $susy: (
   columns: 16,
   container: 1140px,
   global-box-sizing: border-box,
-  debug: (image: show),
+  //debug: (image: show),
   gutter-position: split
   );
 
@@ -18,14 +18,14 @@ $susy: (
 
 .social-buttons {
   @include span(3 of 16);
-  background-color: rgba(0, 0, 255, .1);
+  //background-color: rgba(0, 0, 255, .1);
   height:100%;
   margin-top: 15em;
 }
 
 // The main content area
 .main-content {
-  background-color: rgba(255, 0, 255, .1);
+  //background-color: rgba(255, 0, 255, .1);
   @include span(10 of 16 at 4);
   height:100%;
 }

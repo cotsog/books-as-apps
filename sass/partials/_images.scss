@@ -1,3 +1,7 @@
+section {
+  counter-increment: section_count;
+}
+
 figure {
   counter-increment: figure_count;
   margin-top: 2em;
@@ -5,20 +9,16 @@ figure {
 
   figcaption {
     font-family: 'Stone-Humanist-SemiItalic', sans-serif;
-    padding-bottom: 1em;
-    padding-top: .5em;
+    margin-top: -.25em;
   }
 
   figcaption::before {
-    content: 'Figure ' counter(figure_count) ': ';
+    content: 'Figure ' counter(section_count) '-' counter(figure_count) ': ';
   }
 
   img {
+    margin-left: inherit;
     max-width: 100%;
-
-    :hover {
-      border: 3px solid $red;
-    }
   }
 }
 
