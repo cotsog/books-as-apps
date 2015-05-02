@@ -137,7 +137,15 @@ div#example2 {
 
           <p>Notice, in particular, how Verdana's characters are wider and therefore make the line have less content when compared with Stone Humanist. As a further experiment change the front in Example 2-2 from Verdana to Arial and see the difference.</p>
 
-        <h3>Generic font families versus Named typefaces</h3>
+      <h3>&quot;Web Safe&quot; Fonts</h3>
+
+      <p>Ever since browsers started using fonts they;ve been able to use fonts available on the user's system. These are the &quot;web safe&quot; fonts.</p>
+
+      <p><a href="http://www.cssfontstack.com/">CSS Font Stack</a> presents a list of some of the most common desktop fonts that are installed in Macintosh and Windows operating systems. As you can see there are a few fonts that are really safe to use across platforms.</p>
+
+      <p>This is yet another consideration when building our font stack. If we build backups other than generic fonts we need to be careful to pick fonts that are wide used or pick 2 or more options to cover both Windows and Macintosh cases.</p>
+
+        <h3>Generic font families</h3>
 
           <p>Most of the time we have a certain font selected for our project and most of the time they will work ok. But what happens when they don't?</p>
 
@@ -161,11 +169,9 @@ div#example2 {
             <dt><strong>monospace</strong></dt>
             <dd>The sole criterion of a monospace font is that all glyphs have the same fixed width. (This can make some scripts, such as Arabic, look most peculiar.) The effect is similar to a manual typewriter, and is often used to set samples of computer code.</dd>
           </dl>
-      <h3>&quot;Web Safe&quot; Fonts</h3>
 
-      <p>Ever since browsers started using fonts they;ve been able to use fonts available on the user's system. These are the &quot;web safe&quot; fonts.</p>
+          <p>Using a generic family as the last item in your font stack is always a good idea. The system is guaranteed to be available and you can style your content with this consideration in mind. It also makes your CSS less succeptuble to slow connections or network failures.</p>
 
-      <p><a href="http://www.cssfontstack.com/">CSS Font Stack</a> presents a list of some of the most common desktop fonts that are installed in Macintosh and Windows operating systems. As you can see there are a few fonts that are really safe to use across platforms.</p>
       <h3>Additional Considerations</h3>
 
       <h4>Font size</h4>
