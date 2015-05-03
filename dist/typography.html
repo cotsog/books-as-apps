@@ -65,52 +65,174 @@
 
       <blockquote>
         <p>The first thing to learn is that all typefaces are different. What works for the typefaces I chose may or may not work for the typefaces you choose for your projects. Where possible I'll show the typefaces used in this page against other typefaces (most likely from the 'web safe' font set.)</p>
-
-        <p>I'm also not convinced of the font I'm using for headings. I'll continue testing and see if there are other fonts that work better.</p>
       </blockquote>
+      <section>
 
-     <h2>Getting Started: definitions and typeface attributes</h2>
+        <h2>Typeface and fonts and the differences</h2>
+
+        <figure>
+          <img src="images/l_4df268c0-5b5b-11e1-b528-1b55d0300003.jpg">
+          <figcaption>Recognizable typeface elements</figcaption>
+        </figure>
+
+      </section>
+
+      <section>
+
+        <h2>Font Selection</h2>
+
+        <h3>Font stacks</h3>
+
+        <p>Unless you're using one of the universal fonts, those available everywhere, you will most likely have to plan for what happens if your browser cannot load the font because your internet connection just died or you got caught using a font that you were not licensed to use. That's where you use the font stack.</p>
+
+        <p>At its simplest, the stack is the list of fonts that you want to use in your page going from left to right. For example in the following font stack:</p>
+
+        <pre><code class='css'>html {
+  font-family: 'Museo Sans', Verdana, sans-serif;
+}</code></pre>
+
+        <p>The browser will use Museo Sans, if is available in a format that the browser can read, if it isn't then the browser will use Verdana and... in the unlikely event that verdana is not available the browser will use the system's default sans serif font.</p>
+
+        <p>Why is this important, you may be asking. Because not all fonts are the same. Even fonts that look very similar may be different enough to cause problems with your layout. Let's look at the same Lorem Ipsum text in two different fonts.
+
+          <p>The first example will use Stone Humanist, the font I chose for the body text.</p>
+
+          <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#example1 {
+  border: 1px solid #cc092f;
+  font-family: 'Stone-Humanist', sans-serif;
+  line-height: 1.3;
+  margin-top: 1em;
+  padding: 1em
+}
+          </style>
+
+          <p>Example usinng Stone Humanist</p>
+
+          <div id='example1'>
+            <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+            <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+          </div>
+
+          <p>The second example uses <a href="https://www.wikiwand.com/en/Verdana">Verdana</a>, a font created for and released by Microsoft in 1996.</p>
+
+          <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#example2 {
+  border: 1px solid #cc092f;
+  font-family: 'Verdana', sans-serif;
+  line-height: 1.3;
+  margin-top: 1em;
+  padding: 1em;
+}
+          </style>
+
+        <p>Example usinng Verdana</p>
+
+        <div id='example2'>
+            <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+            <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+          </div>
+
+          <p>Notice, in particular, how Verdana's characters are wider and therefore make the line have less content when compared with Stone Humanist. As a further experiment change the front in Example 2-2 from Verdana to Arial and see the difference.</p>
+
+      <h3>&quot;Web Safe&quot; Fonts</h3>
+
+      <p>Ever since browsers started using fonts they;ve been able to use fonts available on the user's system. These are the &quot;web safe&quot; fonts.</p>
+
+      <p><a href="http://www.cssfontstack.com/">CSS Font Stack</a> presents a list of some of the most common desktop fonts that are installed in Macintosh and Windows operating systems. As you can see there are a few fonts that are really safe to use across platforms.</p>
+
+      <p>This is yet another consideration when building our font stack. If we build backups other than generic fonts we need to be careful to pick fonts that are wide used or pick 2 or more options to cover both Windows and Macintosh cases.</p>
+
+        <h3>Generic font families</h3>
+
+          <p>Most of the time we have a certain font selected for our project and most of the time they will work ok. But what happens when they don't?</p>
+
+          <p>As we saw in the earlier examples the typeface you choose will affect number of words you can fit in a line of text and the way the font writes on screen may look different with the same line height </p>
+
+          <p>CSS defines a number of generic font families for use with your content. These families are (with defnitions taken from the <a href="http://www.w3.org/TR/CSS21/">CSS 2.1</a> specification):</p>
+
+          <dl>
+            <dt><strong>serif</strong></dt>
+            <dd>Glyphs of serif fonts, as the term is used in CSS, tend to have finishing strokes, flared or tapering ends, or have actual serifed (including slab serifs). Serif fonts are typically proportionately-spaced. They often display a greater variation between thick and thin strokes than fonts from the 'sans-serif' generic font family. CSS uses the term 'serif' to apply to a font for any script, although other names may be more familiar for particular scripts, such as Mincho (Japanese), Sung or Song (Chinese), Totum or Kodig (Korean). Any font that is so described may be used to represent the generic 'serif' family.</dd>
+
+            <dt><strong>sans-serif</strong></dt>
+            <dd>Glyphs in sans-serif fonts, as the term is used in CSS, tend to have stroke endings that are plain -- with little or no flaring, cross stroke, or other ornamentation. Sans-serif fonts are typically proportionately-spaced. They often have little variation between thick and thin strokes, compared to fonts from the 'serif' family. CSS uses the term 'sans-serif' to apply to a font for any script, although other names may be more familiar for particular scripts, such as Gothic (Japanese), Kai (Chinese), or Pathang (Korean). Any font that is so described may be used to represent the generic 'sans-serif' family.</dd>
+
+            <dt><strong>cursive</strong></dt>
+            <dd>Glyphs in cursive fonts, as the term is used in CSS, generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letterwork. Fonts for some scripts, such as Arabic, are almost always cursive. CSS uses the term 'cursive' to apply to a font for any script, although other names such as Chancery, Brush, Swing and Script are also used in font names.</dd>
+
+            <dt><strong>fantasy</strong></dt>
+            <dd>Fantasy fonts, as used in CSS, are primarily decorative while still containing representations of characters (as opposed to Pi or Picture fonts, which do not represent characters).</dd>
+
+            <dt><strong>monospace</strong></dt>
+            <dd>The sole criterion of a monospace font is that all glyphs have the same fixed width. (This can make some scripts, such as Arabic, look most peculiar.) The effect is similar to a manual typewriter, and is often used to set samples of computer code.</dd>
+          </dl>
+
+          <p>Using a generic family as the last item in your font stack is always a good idea. The system is guaranteed to be available and you can style your content with this consideration in mind. It also makes your CSS less succeptuble to slow connections or network failures.</p>
+
+      <h3>Additional Considerations</h3>
+
+    <p>There are a couple more elements to consider when selecting a font. They may not seem as important but when put together with evcerything else we'll discuss in this page, it's a lot more important than we give it credit for.</p>
+
+      <h4>Font size</h4>
+
+      <p>Even when working with Desktop Operating Systems alone a font may look very different. It doesn't necessarily have anything to do with the design</p>
+
+      <h4>Line height</h4>
+<!--
+      <h4>Screen Density (?)</h4>
+-->
+      <h3>So what should the stack look like?</h3>
+
+      </section>
+
+      <section>
+        <h2>Loading Fonts</h2>
+
+        <p>Now that we have a better idea of what fonts we want to use and the font stack we'll </p>
+      </section>
+
+      <section>
+
+        <h2>Paragraph styling</h2>
+
+      </section>
+
+      <section>
+        <h2>Headings</h2>
+
+        <h3>Same or different fontface?</h3>
+
+      </section>
+      <h2>Color</h2>
+
+      <p>another aspect to consider is the color for your typefaces. This is a very design-dependent step. Were you given </p>
+
+      <p><a href="https://color.adobe.com/">Adobe Color CSS</a> (Formerly known as Adobe Kuler) let's you create color sets for your projects. If you use SASS/SCSS you can then turn the colors into variables to use in your CSS.</p>
 
 
-     <figure>
-       <img src="image/l_4df268c0-5b5b-11e1-b528-1b55d0300003.jpg" alt="Some font attributes" title="Some font attributes">
-       <figcaption>Some font attributes</figcaption>
-     </figure>
+      <h2>Test the hell out of the project</h2>
 
-     https://www.wikiwand.com/en/Font
+      <p></p>
 
-      <iframe src="https://player.vimeo.com/video/34178417" width="600" height="337" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      <p class="video-caption"><a href="https://vimeo.com/34178417">Jason Santa Maria - On Web Typography</a> from <a href="https://vimeo.com/build">Build</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
-  <h2>Font Stacks</h2>
-
-    <h3>Generic versus Named fontfaces</h3>
-
-  <h2>Paragraph styling</h2>
-
-  <h2>Headings</h2>
-
-    <h3>Same or different fontface?</h3>
-
-  <h2>Color</h2>
-
-  <h2>Test the hell out of the project</h2>
-
-    <p></p>
-
-  <h2>One final thing</h2>
+      <h2>One final thing</h2>
 
       <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/r38al1w-h4k" frameborder="0" allowfullscreen></iframe>
 
 
-   <blockquote cite="http://simplyaccessible.com/article/data-attributes/">
-     <p>In the web front-end stack — HTML, CSS, JS, and ARIA — if you can solve a problem with a simpler solution lower in the stack, you should. It’s less fragile, more foolproof, and just works.</p>
-   </blockquote>
+      <blockquote cite="http://simplyaccessible.com/article/data-attributes/">
+        <p>In the web front-end stack — HTML, CSS, JS, and ARIA — if you can solve a problem with a simpler solution lower in the stack, you should. It’s less fragile, more foolproof, and just works.</p>
+
+        <p><a href="http://simplyaccessible.com/article/author/feather/">Derek Featherstone</a>
+        </p>
+      </blockquote>
     </div>
 
   </div>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script>
     window.jQuery || document.write('<script src="/lib/vendor/jquery-2.1.3.min.js"><\/script>')
   </script>

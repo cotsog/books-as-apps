@@ -1,5 +1,6 @@
 section {
   counter-increment: section_count;
+  counter-reset: figure_count;
 }
 
 figure {

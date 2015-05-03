@@ -725,26 +725,27 @@ li {
 
 /* line 1, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
 section {
-  counter-increment: section_count; }
+  counter-increment: section_count;
+  counter-reset: figure_count; }
 
-/* line 5, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
+/* line 6, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
 figure {
   counter-increment: figure_count;
   margin-top: 2em;
   margin-bottom: 2em; }
-  /* line 10, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
+  /* line 11, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
   figure figcaption {
     font-family: 'Stone-Humanist-SemiItalic', sans-serif;
     margin-top: -.25em; }
-  /* line 15, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
+  /* line 16, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
   figure figcaption::before {
     content: 'Figure ' counter(section_count) '-' counter(figure_count) ': '; }
-  /* line 19, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
+  /* line 20, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
   figure img {
     margin-left: inherit;
     max-width: 100%; }
 
-/* line 26, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
+/* line 27, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
 .iconmelon, .im {
   position: relative;
   width: 32px;
@@ -752,7 +753,7 @@ figure {
   display: block;
   fill: #525151; }
 
-/* line 34, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
+/* line 35, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
 .iconmelon:after, .im:after {
   content: '';
   position: absolute;
