@@ -786,6 +786,7 @@ li {
 
 section {
   counter-increment: section_count;
+  counter-reset: figure_count;
 }
 
 figure {
@@ -841,7 +842,7 @@ pre code {
   font-size: 80%;
 }
 
-body style {
+style {
   counter-increment: css_count;
   background: #333;
   clear: both;

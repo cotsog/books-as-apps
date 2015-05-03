@@ -128,24 +128,24 @@ div#example2 {
 }
           </style>
 
-        <p>Example usinng Verdana</p>
+          <p>Example usinng Verdana</p>
 
-        <div id='example2'>
+          <div id='example2'>
             <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
             <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
           </div>
 
           <p>Notice, in particular, how Verdana's characters are wider and therefore make the line have less content when compared with Stone Humanist. As a further experiment change the front in Example 2-2 from Verdana to Arial and see the difference.</p>
 
-      <h3>&quot;Web Safe&quot; Fonts</h3>
+          <h3>&quot;Web Safe&quot; Fonts</h3>
 
-      <p>Ever since browsers started using fonts they;ve been able to use fonts available on the user's system. These are the &quot;web safe&quot; fonts.</p>
+          <p>Ever since browsers started using fonts they;ve been able to use fonts available on the user's system. These are the &quot;web safe&quot; fonts.</p>
 
-      <p><a href="http://www.cssfontstack.com/">CSS Font Stack</a> presents a list of some of the most common desktop fonts that are installed in Macintosh and Windows operating systems. As you can see there are a few fonts that are really safe to use across platforms.</p>
+          <p><a href="http://www.cssfontstack.com/">CSS Font Stack</a> presents a list of some of the most common desktop fonts that are installed in Macintosh and Windows operating systems. As you can see there are a few fonts that are really safe to use across platforms.</p>
 
-      <p>This is yet another consideration when building our font stack. If we build backups other than generic fonts we need to be careful to pick fonts that are wide used or pick 2 or more options to cover both Windows and Macintosh cases.</p>
+          <p>This is yet another consideration when building our font stack. If we build backups other than generic fonts we need to be careful to pick fonts that are wide used or pick 2 or more options to cover both Windows and Macintosh cases.</p>
 
-        <h3>Generic font families</h3>
+          <h3>Generic font families</h3>
 
           <p>Most of the time we have a certain font selected for our project and most of the time they will work ok. But what happens when they don't?</p>
 
@@ -172,26 +172,143 @@ div#example2 {
 
           <p>Using a generic family as the last item in your font stack is always a good idea. The system is guaranteed to be available and you can style your content with this consideration in mind. It also makes your CSS less succeptuble to slow connections or network failures.</p>
 
-      <h3>Additional Considerations</h3>
+          <h3>Additional Considerations</h3>
 
-    <p>There are a couple more elements to consider when selecting a font. They may not seem as important but when put together with evcerything else we'll discuss in this page, it's a lot more important than we give it credit for.</p>
+          <p>There are a couple more elements to consider when selecting a font. They may not seem as important but when put together with evcerything else we'll discuss in this page, it's a lot more important than we give it credit for.</p>
 
-      <h4>Font size</h4>
+          <h4>Font size</h4>
 
-      <p>Even when working with Desktop Operating Systems alone a font may look very different. It doesn't necessarily have anything to do with the design</p>
+          <p>Even when working with Desktop Operating Systems alone a font may look very different. It doesn't necessarily have anything to do with the design and all with how the operating system renders fonts and it may not even happen but this is something to consider when testing.</p>
 
-      <h4>Line height</h4>
-<!--
-      <h4>Screen Density (?)</h4>
--->
-      <h3>So what should the stack look like?</h3>
+          <p>Fonts become even more complicated when we factor mobile devices into the mix, particularly since Apple released 'Retina' iPhones and iPads and Android phones have been released with even higher pixel density.</p>
 
+          <figure>
+            <img src="images/font-in-chrome-mac.png">
+            <figcaption>This page displayed during development in Chrome for OSX</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/font-in-spartan-win-vm.png">
+            <figcaption>Content displayed in Microsoft Edge running in a Windows 10 virtual machine</figcaption>
+          </figure>
+
+          <h4>Line height</h4>
+
+          <p>In CSS line-height control the vertical space between lines. It can help readability and make it easier for people with dissabilities to engage with your content. </p>
+
+          <pre><code class='css'>p {
+  font: 1em/1.5 arial, helvetica, sans-serif;
+}</code></pre>
+
+          <p>Which is equivalent to this, much more verbose, syntax:</p>
+
+          <pre><code class='css'>p {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+}</code></pre>
+
+          <p>I personally prefer the second syntax. It's explicit in telling you what each attribute controls and it saves you from having to remember what does each part of the expression means. That said you're more than welcome to use either syntax.</p>
+
+          <p>So why do we care about line height. In the example below change the line height attribute, play with values from 1 to 2 or even 3 and see the difference. Which one is more comfortable to read?</p>
+
+          <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#example3 {
+  border: 1px solid #cc092f;
+  font-family: 'Verdana', sans-serif;
+  font-size: 1em;
+  line-height: 1.3;
+  padding: 1em;
+}
+          </style>
+
+          <p>Example demonstrating what happens when you change line-height</p>
+
+          <div id='example3'>
+            <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+            <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+          </div>
+
+          <h3>So what should the stack look like?</h3>
+
+          <p>So, after all these conversations about different types of typefaces, fonts, availability and when to use and not to use them, what should a good font stack look like?</p>
+
+          <p>As with many thing in the web it depends. If you were given fonts as part of your design brief then you should follup up with the designer regarding fall back fonts.</p>
+
+          <p>If this is your design then I'd suggest sites like <a href="http://fontsinuse.com/">Fonts in use</a> or <a href="http://www.typewolf.com/">Typewolf</a> to see how other people are using fonts. Another way is to identify a font you like (like I did with the body font for this page), research whether it's available as a web font and how much would it cost to license.</p>
+
+        <p>Once you know what font you want to use, there are services like <a href="http://typecast.com/">Typecast</a> to see what the font will look like in an actuall web page... you can even add chunks of your own content to get a more acurate picture of what the typeface will look like with <em>your</em> content.</p>
+
+        <p>My default font stack for this project looks like this:</p>
+
+        <pre><code class="css">html {
+  font-family: 'Stone-Humanist', arial, sans-serif;
+}
+        </code></pre>
+
+        <p>I use a different stack for headings and this will be discussed when we talk about <a href="#headings">headings</a> in more detail.</p>
       </section>
 
       <section>
         <h2>Loading Fonts</h2>
 
-        <p>Now that we have a better idea of what fonts we want to use and the font stack we'll </p>
+        <p>Now that we have a better idea of what fonts we want to use and the font stack we'll see how to load them into the page. We'll explore 3 ways: local loading using the <em>@font-face syntax</em>, loading fonts using the <a href="https://developers.google.com/fonts/docs/getting_started">Google font API</a> and using Google's <a href="https://github.com/typekit/webfontloader/blob/master/README.md">Web Font Loader</a></p>
+
+        <h3>@font-face </h3>
+
+        <p>We have been able to use fonts on our web contetn since the days of IE 3 (3,5 for Macintosh if I remember correctly) but we've always had to contend with font creators and foundries fear of piracy. It's only recently that they have relented and allowed their fonts to be used. The basic syntax, covering all modern browsers, looks like this:</p>
+
+
+        <pre><code class="css">@font-face {
+    font-family: 'stone-sans-webfont';
+    src: url('../path-to-font-file.eot');
+    src: url('../path-to-font-file.eot?#iefix') format('embedded-opentype'),
+         url('../path-to-font-file.woff2') format('woff2'),
+         url('../path-to-font-file.woff') format('woff'),
+         url('../path-to-font-file.ttf') format('truetype'),
+         url('../path-to-font-file.svg#stone-sans-webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}</code></pre>
+
+        <p>And then we associate the font with CSS like we normally would matching the font-family attribute in the @font-face declaration with the font-family attribute of the element where we want to use it:</p>
+
+        <pre><code class="css">html {
+        font-family: 'stone-sans-webfont', arial, sans-serif;
+}
+        </code></pre>
+
+        <p>Since we want to avoid faux bold and faux italics in our content, we add the bold and italics versions of our font to the page and then match them to the correct attributes with selectors similar to this:</p>
+
+        <pre><code class="css">strong {
+  font-family: 'Stone-Humanist-Semi';
+}
+
+em {
+  font-family: 'Stone-Humanist-Ita';
+}
+
+/*
+  When using both we don't care what order they are used in
+*/
+strong em,
+em strong {
+  font-family: 'Stone-Humanist-SemiItalic';
+}
+</code></pre>
+
+        <p>Where <em>Stone-Humanist-Semi</em> is our (semi)bold font, <em>Stone-Humanist-Ita</em> is italics and <em>Stone-Humanist-SemiItalic</em> is the semibold italics combination. Since <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> have different semantic meaning in HTML5 I've chosen not to style them.</p>
+
+        <h4>Some things to keep in mind</h4>
+
+        <p>Adding the font to your site/book/app adds to the overall file size. Depending on the font this may increase the size of your project considerably.</p>
+
+        <p>Gentium, a font </p>
+        <h3>Google Fonts API</h3>
+
+        <h3>Google web font loader</h3>
+
       </section>
 
       <section>
@@ -201,7 +318,7 @@ div#example2 {
       </section>
 
       <section>
-        <h2>Headings</h2>
+        <h2><a name="headings"></a>Headings</h2>
 
         <h3>Same or different fontface?</h3>
 
@@ -212,22 +329,66 @@ div#example2 {
 
       <p><a href="https://color.adobe.com/">Adobe Color CSS</a> (Formerly known as Adobe Kuler) let's you create color sets for your projects. If you use SASS/SCSS you can then turn the colors into variables to use in your CSS.</p>
 
+      <section>
+        <h2>Unicode and multilingual support</h2>
+      </section>
 
-      <h2>Test the hell out of the project</h2>
+      <section>
 
-      <p></p>
+        <h2>Legal Issues</h2>
 
-      <h2>One final thing</h2>
+        <h3>Licensing Commercial Fonts</h3>
 
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/r38al1w-h4k" frameborder="0" allowfullscreen></iframe>
+        <h3>Open Source fonts</h3>
+
+      </section>
+
+      <section>
+
+        <h2>Test the hell out of the project</h2>
+
+        <p></p>
+
+      </section>
+
+      <section>
+        <h2>One final thing</h2>
+
+        <p>For those of us who have been playing in/with 'the web' for 10 years or longer remember pages like the ones in figures 9-1, 9-2 and 9-3. There was no Javascript and, I believe, the original CSS specification was released in 1996 so there really was no CSS to play with.</p>
+
+        <figure>
+          <img src="images/Mosaic_Netscape_0.9_on_Windows_XP.png">
+          <figcaption>Anyone remember the Netscape home page?</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/hyperreal-org-1996-archive.png">
+          <figcaption>hyperreal.org circa 1996 via the Internet Archive</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/Navigator_1-22.png">
+          <figcaption>Wikipedia in Netscape Navigator 1.22</figcaption>
+        </figure>
 
 
-      <blockquote cite="http://simplyaccessible.com/article/data-attributes/">
-        <p>In the web front-end stack — HTML, CSS, JS, and ARIA — if you can solve a problem with a simpler solution lower in the stack, you should. It’s less fragile, more foolproof, and just works.</p>
+        <p>Why do I bring this up? Because we've gotten spoiled by reaches. We talk about critical rendering path, page load and web typography and that's good. But we forget that what may be an acceptable page load in Mountain View, California may not be acceptable in Thailand where the dominant form of Internet access is the mobile smart phone (<a href="http://www.techwireasia.com/1152/mobile-internet-users-up-40pc-in-thailand-iphone-dominant/">Tech Wire Asia</a>).</p>
 
-        <p><a href="http://simplyaccessible.com/article/author/feather/">Derek Featherstone</a>
-        </p>
-      </blockquote>
+        <p>As Eric Meyer reminds us the web is more than just Javascript, CSS and the latest and greates APIs or micro services. We need to make sure that the content is accessible whether we have CSS and Javascript enabled or whether they are in a broadband Gigabit connection or in a very slow dial up connection in Africa or India or for people using assistive technology devices.</p>
+
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/r38al1w-h4k" frameborder="0" allowfullscreen></iframe>
+
+        <p>As content developers we need to continually ask ourselves what would happen if we can't download the CSS or if the user has Javascript disabled. We need to make this a part of our testing and development process.</p>
+
+        <blockquote cite="http://simplyaccessible.com/article/data-attributes/">
+          <p>In the web front-end stack — HTML, CSS, JS, and ARIA — if you can solve a problem with a simpler solution lower in the stack, you should. It’s less fragile, more foolproof, and just works.</p>
+
+          <p><a href="http://simplyaccessible.com/article/author/feather/">Derek Featherstone</a>
+          </p>
+        </blockquote>
+
+      </section>
+
     </div>
 
   </div>
