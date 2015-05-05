@@ -682,45 +682,41 @@ p p {
   font-size: 90%; }
 
 /* line 10, /Users/carlos/code/books-as-apps/sass/partials/_social.scss */
-ol {
+.social-buttons ol {
   list-style: none;
   margin: 0 auto;
   padding: 0;
-  width: 100%; }
-
-/* line 17, /Users/carlos/code/books-as-apps/sass/partials/_social.scss */
-li {
-  margin-bottom: 0.5em; }
-
+  width: 100% li;
+  width-margin-bottom: 0.5em; }
 /* line 21, /Users/carlos/code/books-as-apps/sass/partials/_social.scss */
-.profile-link {
+.social-buttons .profile-link {
   background: #f2f2f2;
   color: #4778b8;
   display: block;
   padding: 0.75em 1em;
   text-decoration: none; }
   /* line 29, /Users/carlos/code/books-as-apps/sass/partials/_social.scss */
-  .profile-link:focus, .profile-link:hover {
+  .social-buttons .profile-link:focus, .social-buttons .profile-link:hover {
     color: #fff; }
 
-/* line 35, /Users/carlos/code/books-as-apps/sass/partials/_social.scss */
-.profile-link--delicious:focus, .profile-link--delicious:hover {
+/* line 37, /Users/carlos/code/books-as-apps/sass/partials/_social.scss */
+.social-buttons .profile-link--delicious:focus, .social-buttons .profile-link--delicious:hover {
   background: #248cff; }
 
-/* line 35, /Users/carlos/code/books-as-apps/sass/partials/_social.scss */
-.profile-link--github:focus, .profile-link--github:hover {
+/* line 37, /Users/carlos/code/books-as-apps/sass/partials/_social.scss */
+.social-buttons .profile-link--github:focus, .social-buttons .profile-link--github:hover {
   background: #4183c4; }
 
-/* line 35, /Users/carlos/code/books-as-apps/sass/partials/_social.scss */
-.profile-link--googleplus:focus, .profile-link--googleplus:hover {
+/* line 37, /Users/carlos/code/books-as-apps/sass/partials/_social.scss */
+.social-buttons .profile-link--googleplus:focus, .social-buttons .profile-link--googleplus:hover {
   background: #dd4b39; }
 
-/* line 35, /Users/carlos/code/books-as-apps/sass/partials/_social.scss */
-.profile-link--linkedin:focus, .profile-link--linkedin:hover {
+/* line 37, /Users/carlos/code/books-as-apps/sass/partials/_social.scss */
+.social-buttons .profile-link--linkedin:focus, .social-buttons .profile-link--linkedin:hover {
   background: #007bb6; }
 
-/* line 35, /Users/carlos/code/books-as-apps/sass/partials/_social.scss */
-.profile-link--twitter:focus, .profile-link--twitter:hover {
+/* line 37, /Users/carlos/code/books-as-apps/sass/partials/_social.scss */
+.social-buttons .profile-link--twitter:focus, .social-buttons .profile-link--twitter:hover {
   background: #00aced; }
 
 /* line 1, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */

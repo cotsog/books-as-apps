@@ -302,20 +302,144 @@ em strong {
 
         <h4>Some things to keep in mind</h4>
 
-        <p>Adding the font to your site/book/app adds to the overall file size. Depending on the font this may increase the size of your project considerably.</p>
+        <p>Adding the font to your site/book/app adds to the overall file size. Depending on the font this may increase the size of your project considerably. Takng <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=gentium">Gentium</a> as an example, the font supports Latin, Greek and Cyrillic character sets but it weight a hefty 500k for the regular font (in one format out of the 5 formats needed to support multiple browsers/devices). Add Bold, Italic and you get 1.5 Megabytes just for the font! And it may not be the only font you use in the project. </p>
 
-        <p>Gentium, a font </p>
+        <p>The flipside to this issue of size is that embedding the fonts means they are always available to desktop and mobile browsers readers that support embedding (and it should be all of them.) Choosing what browsers and what versions to support is a different story.</p>
+
         <h3>Google Fonts API</h3>
+
+        <p>Google has two ways of using web fonts, the first one is directly through their API. Using Google's font API is a two step process. First add the font to your html head element with the following syntax (using Tangerine as an example):</p>
+
+        <pre><code class="html">&lt;link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine"></code></pre>
+
+        <p>The link produces a CSS @font-face declaration that we can use in our CSS as normal. The version produced in Chrome and Firefox uses the <a href="http://www.w3.org/TR/WOFF2/">woff2</a> format</p>
+
+        <pre><code class="css">@font-face {
+  font-family: 'Tangerine';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Tangerine'), url(http://fonts.gstatic.com/s/tangerine/v6/HGfsyCL5WASpHOFnouG-RJBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}</code></pre>
+
+        <p>While Safari uses True Type to render the font.</p>
+
+        <pre><code class="css">@font-face {
+  font-family: 'Tangerine';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Tangerine'), url(http://fonts.gstatic.com/s/tangerine/v6/HGfsyCL5WASpHOFnouG-RCZ2oysoEQEeKwjgmXLRnTc.ttf) format('truetype');
+}</code></pre>
+
+        <p>As you can see the advantage of using the APi is that we don't need to use multiple formats in our @font-face declaration. Google takes care of that for us.</p>
+
+        <p>The obvoius disadvantage is that this only works online. That's why a fallback option or options is even more important when working with the API. If we're offline or connectivity is limited we want a good fallback font.</p>
 
         <h3>Google web font loader</h3>
 
+        <p>One of the things neither the font API or directly downloading the content doesn't address is the "flash of unstyled text." According to the <a href="http://help.typekit.com/customer/portal/articles/6852-Controlling-the-Flash-of-Unstyled-Text-or-FOUT-using-Font-Events">Typekit Help Center</a>:</p>
+
+        <blockquote>
+          <p>Fonts are loaded as assets into a web page—just like images or video. Depending on your browser or your connection speed, they can load quickly or lag behind the rest of the page. Different browsers handle font loading differently; for example, Safari and Chrome will refrain from displaying text set in a web font until the font has loaded, while Internet Explorer won’t show anything on the page until the font loads. Meanwhile, Firefox will display the site with the fallback fonts in the font stack, and then switch to the linked fonts after they’ve finished loading. This results in a flash of unstyled text, or FOUT.</p>
+        </blockquote>
+
+        <p>Typekit, in collaboration with Google, has created loader library to make working with type easier. It works by adding scripts to the page that load the library and tell it what fonts to download and use. For example to load the Droid Sans font from Google you'd use code like this:</p>
+
+        <pre><code class="html">&lt;script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js">&lt;/script>
+&lt;script>
+  WebFont.load({
+    typekit: {
+      id: 'xxxxxx'
+    },
+    custom: {
+      families: ['Droid Sans', 'Source Code Pro'],
+    },
+    google: {
+      families: ['Droid Sans', 'Droid Serif'],
+      text: 'abcdedfghijklmopqrstuvwxyz!'
+    },
+    fontdeck: {
+      id: 'xxxxx'
+    },
+    monotype: {
+      projectId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
+      version: 12345 // (optional, flushes the CDN cache)
+    }
+  });
+&lt;/script></code></pre>
+
+      <p>For an explanation of the values for each foundry check the Font Loader's <a href="https://github.com/typekit/webfontloader/blob/master/README.md">readme file</a> in Github.</p>
+
+      <p>The font loader creates a set of events, both CSS and Javascript, for developers to interact with. This is similar to the way Modernizr handles feature detection. The Javascript classes are:</p>
+
+      <ul>
+        <li>loading - This event is triggered when all fonts have been requested.</li>
+        <li>active - This event is triggered when the fonts have rendered.</li>
+        <li>inactive - This event is triggered when the browser does not support linked fonts or if none of the fonts could be loaded.</li>
+        <li>fontloading - This event is triggered once for each font that's loaded.</li>
+        <li>fontactive - This event is triggered once for each font that renders.</li>
+        <li>fontinactive - This event is triggered if the font can't be loaded.</li>
+      </ul>
+
+        <p>CSS events are implemented as classes on the html element. The following classes are set on the html element and correspond to the descriptions above:</p>
+
+        <ul>
+          <li>.wf-loading</li>
+          <li>.wf-active</li>
+          <li>.wf-inactive</li>
+          <li>.wf-&lt;familyname>-&lt;fvd>-loading</li>
+          <li>.wf-&lt;familyname>-&lt;fvd>-active</li>
+          <li>.wf-&lt;familyname>-&lt;fvd>-inactive</li>
+        </ul>
+
+     <p>The &lt;familyname> placeholder will be replaced by a sanitized version of the name of each font family in lowercase with only alphanumeric characters. For example, Droid Sans becomes droidsans. The &lt;fvd> placeholder is a <a href="http://typekit.github.io/fvd/">Font Variation Description,</a> a shorthand for describing the style and weight of a particular font.</p>
+
+
+     <h4>So why would we use the Font Loader?</h4>
+
+     <p>In short: to make the user's experience less jarring. Since fonts are downloaded as any other resource in your web page. If we use the following font stack: <code>'stone-sans-webfont', arial, sans-serif</code>, we can then use the Font Loader Defined classes to make the transition to our fonts smoother and better looking. Let's look at one possibility:</p>
+
+     <pre><code class="css">.wf-inactive html{
+  font-family: arial, sans-serif;
+  line-height: 1.4em;
+}
+
+.wf-active html {
+  font-family: 'stone-sans-webfont', arial, sans-serif;
+  line-height: 1.3
+}
+     </code></pre>
+
+     <p><code>.wf-inactive</code> indicates that loading the font or fonts (in this case we are using one) has not started. To make sure that the user doesn't see a system fault we provide a fallback option while the web font(s) are loading. This may be an instant or maybe several seconds in a slow or congested network connection (try Starbucks on a Sunday afternoon.)</p>
+
+     <p>Once the font(s) load, the class will switch to <code>.wf-active</code> where we put out web font stack and attributes related to font. In this case I only added a different line-height attribute to the selector but you can be as detailed as you want.</p>
       </section>
 
       <section>
-
         <h2>Paragraph styling</h2>
 
-      </section>
+        <p>Most the time we spend engaged with text is with paragraphs and that's where I put a lot of my research time when working on a new project.</p>
+
+                 <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#example4 {
+  border: 1px solid #cc092f;
+  padding: 1em;
+}
+
+div#example4 p {
+  font-family: 'Verdana', sans-serif;
+  font-size: 1em;
+  line-height: 1.3;
+}
+          </style>
+
+          <div id='example4'>
+            <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+            <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+            <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+            <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+          </div>      </section>
 
       <section>
         <h2><a name="headings"></a>Headings</h2>

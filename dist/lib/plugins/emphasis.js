@@ -10,7 +10,7 @@
       this.config(), this.pl = !1, this.p = !1, this.h = !1, this.s = !1, this.vu = !1, this.kh = "|", this.addCSS(), this.readHash(), document.addEventListener("keydown", this.keydown)
     },
     config: function () {
-      this.paraSelctors = document.querySelectorAll("#article-content p"), this.classReady = "emReady", this.classActive = "emActive", this.classHighlight = "emHighlight", this.classInfo = "emInfo", this.classAnchor = "emAnchor", this.classActiveAnchor = "emActiveAnchor"
+      this.paraSelctors = document.querySelectorAll(".wrap p"), this.classReady = "emReady", this.classActive = "emActive", this.classHighlight = "emHighlight", this.classInfo = "emInfo", this.classAnchor = "emAnchor", this.classActiveAnchor = "emActiveAnchor"
     },
     addCSS: function () {
       var t = document.createElement("style");

@@ -737,50 +737,46 @@ p p {
   font-size: 90%;
 }
 
-ol {
+.social-buttons ol {
   list-style: none;
   margin: 0 auto;
   padding: 0;
-  width: 100%;
+  width: 100% li;
+  width-margin-bottom: 0.5em;
 }
-
-li {
-  margin-bottom: 0.5em;
-}
-
-.profile-link {
+.social-buttons .profile-link {
   background: #f2f2f2;
   color: #4778b8;
   display: block;
   padding: 0.75em 1em;
   text-decoration: none;
 }
-.profile-link:focus, .profile-link:hover {
+.social-buttons .profile-link:focus, .social-buttons .profile-link:hover {
   color: #fff;
 }
 
-.profile-link--delicious:focus,
-.profile-link--delicious:hover {
+.social-buttons .profile-link--delicious:focus,
+.social-buttons .profile-link--delicious:hover {
   background: #248cff;
 }
 
-.profile-link--github:focus,
-.profile-link--github:hover {
+.social-buttons .profile-link--github:focus,
+.social-buttons .profile-link--github:hover {
   background: #4183c4;
 }
 
-.profile-link--googleplus:focus,
-.profile-link--googleplus:hover {
+.social-buttons .profile-link--googleplus:focus,
+.social-buttons .profile-link--googleplus:hover {
   background: #dd4b39;
 }
 
-.profile-link--linkedin:focus,
-.profile-link--linkedin:hover {
+.social-buttons .profile-link--linkedin:focus,
+.social-buttons .profile-link--linkedin:hover {
   background: #007bb6;
 }
 
-.profile-link--twitter:focus,
-.profile-link--twitter:hover {
+.social-buttons .profile-link--twitter:focus,
+.social-buttons .profile-link--twitter:hover {
   background: #00aced;
 }
 
