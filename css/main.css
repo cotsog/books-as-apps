@@ -824,7 +824,7 @@ figure img {
 div .code-example {
   font-family: 'sourcecodepro-medium-webfont', monospace;
   display: block;
-  background: #333;
+  background: #666;
   color: white;
   padding: 20px;
   white-space: pre;
@@ -852,6 +852,11 @@ style {
 
 body style + p:before {
   content: "CSS Example " counter(section_count) "-" counter(css_count) ": ";
+}
+
+code {
+  color: #333;
+  background: #f8f8f8;
 }
 
 .browserupgrade {
