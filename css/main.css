@@ -839,7 +839,6 @@ pre code {
 }
 
 style {
-  counter-increment: css_count;
   background: #333;
   clear: both;
   color: white;
@@ -850,13 +849,16 @@ style {
   white-space: pre;
 }
 
-body style + p:before {
+div .css-example {
+  counter-increment: css_count;
+}
+div .css-example + p:before {
   content: "CSS Example " counter(section_count) "-" counter(css_count) ": ";
 }
 
 code {
   color: #333;
-  background: #f8f8f8;
+  background: #d3d3d3;
 }
 
 .browserupgrade {
