@@ -496,9 +496,9 @@ aside h3 {
   font-style: normal;
 }
 @font-face {
-  font-family: "MuseoSlab-500";
-  src: url("../fonts/2E03FA_0_0.eot");
-  src: url("../fonts/2E03FA_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E03FA_0_0.woff2") format("woff2"), url("../fonts/2E03FA_0_0.woff") format("woff"), url("../fonts/2E03FA_0_0.ttf") format("truetype"), url("../fonts/2E03FA_0_0.svg#wf") format("svg");
+  font-family: "Roboto Slab";
+  src: url("../fonts/robotoslab-regular-webfont.eot");
+  src: url("../fonts/robotoslab-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/robotoslab-regular-webfont.woff2") format("woff2"), url("../fonts/robotoslab-regular-webfont.woff") format("woff"), url("../fonts/robotoslab-regular-webfont.ttf") format("truetype"), url("../fonts/robotoslab-regular-webfont.svg#wf") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -526,7 +526,7 @@ h4,
 h5,
 h6 {
   color: 555;
-  font-family: 'MuseoSlab-500';
+  font-family: 'Roboto Slab', sans-serif;
   hyphens: none;
 }
 
@@ -537,80 +537,6 @@ h1 {
   margin-top: 0.9375em;
   margin-bottom: 0.3125em;
 }
-@media (min-width: 220em) {
-  h1 {
-    font-size: 2.5em;
-    letter-spacing: normal;
-    line-height: 1.125;
-    margin-top: 0.73333334em;
-    margin-bottom: 0.24444445em;
-    max-width: 14.4em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  h1 .wrapper {
-    width: 217.5em;
-  }
-}
-@media (min-width: 282.5em) {
-  h1 {
-    font-size: 3em;
-    letter-spacing: normal;
-    line-height: 1.05;
-    margin-top: 0.6875em;
-    margin-bottom: 0.22916667em;
-    max-width: 12.66667em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  h1 .wrapper {
-    width: 280em;
-  }
-}
-#page > header h1 {
-  max-width: 100%;
-}
-.font-scale-inactive h1 {
-  font-size: 3em;
-}
-
-h2 {
-  font-size: 1.625em;
-  line-height: 1.15384615;
-  margin-top: 1.15384616em;
-  margin-bottom: 0.38461539em;
-}
-@media (min-width: 220em) {
-  h2 {
-    font-size: 2em;
-    line-height: 1.25;
-    margin-top: 1.03125em;
-    margin-bottom: 0.34375em;
-    max-width: 18em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  h2 .wrapper {
-    width: 217.5em;
-  }
-}
-@media (min-width: 282.5em) {
-  h2 {
-    font-size: 2.25em;
-    line-height: 1.25;
-    margin-top: 1.03125em;
-    margin-bottom: 0.34375em;
-    max-width: 16.88889em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  h2 .wrapper {
-    width: 280em;
-  }
-}
-.font-scale-inactive h2 {
-  font-size: 2.25em;
-}
 
 h3 {
   font-size: 1.375em;
@@ -618,67 +544,12 @@ h3 {
   margin-top: 1.36363637em;
   margin-bottom: 0.45454546em;
 }
-@media (min-width: 220em) {
-  h3 {
-    font-size: 1.5em;
-    line-height: 1.25;
-    margin-top: 1.37500001em;
-    margin-bottom: 0.45833334em;
-    max-width: 26.18182em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  h3 .wrapper {
-    width: 217.5em;
-  }
-}
-@media (min-width: 282.5em) {
-  h3 {
-    font-size: 1.75em;
-    line-height: 1.25;
-    margin-top: 1.37500001em;
-    margin-bottom: 0.45833334em;
-    max-width: 21.71429em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  h3 .wrapper {
-    width: 280em;
-  }
-}
-.font-scale-inactive h3 {
-  font-size: 1.75em;
-}
 
 h4 {
   font-size: 1.125em;
   line-height: 1.11111111;
   margin-top: 1.66666667em;
   margin-bottom: 0.55555556em;
-}
-@media (min-width: 220em) {
-  h4 {
-    line-height: 1.22222222;
-    margin-top: 1.83333333em;
-    margin-bottom: 0.61111111em;
-    max-width: 32em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  h4 .wrapper {
-    width: 217.5em;
-  }
-}
-@media (min-width: 282.5em) {
-  h4 {
-    max-width: 33.77778em;
-  }
-  h4 .wrapper {
-    width: 280em;
-  }
-}
-.font-scale-inactive h4 {
-  font-size: 1.125em;
 }
 
 strong {
@@ -858,9 +729,124 @@ div .css-example + p:before {
 
 code {
   color: #333;
-  background: #d3d3d3;
+  background: #aaa;
 }
 
+/* 400px */
+/* 700px */
+/* 900px */
+/* 1300px */
+@media (min-width: 220em) {
+  h1 {
+    font-size: 2.5em;
+    letter-spacing: normal;
+    line-height: 1.125;
+    margin-top: 0.73333334em;
+    margin-bottom: 0.24444445em;
+    max-width: 14.4em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 .wrapper {
+    width: 217.5em;
+  }
+}
+@media (min-width: 282.5em) {
+  h1 {
+    font-size: 3em;
+    letter-spacing: normal;
+    line-height: 1.05;
+    margin-top: 0.6875em;
+    margin-bottom: 0.22916667em;
+    max-width: 12.66667em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 .wrapper {
+    width: 280em;
+  }
+}
+
+@media (min-width: 220em) {
+  h2 {
+    font-size: 2em;
+    line-height: 1.25;
+    margin-top: 1.03125em;
+    margin-bottom: 0.34375em;
+    max-width: 18em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h2 .wrapper {
+    width: 217.5em;
+  }
+}
+@media (min-width: 282.5em) {
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.25;
+    margin-top: 1.03125em;
+    margin-bottom: 0.34375em;
+    max-width: 16.88889em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h2 .wrapper {
+    width: 280em;
+  }
+}
+.font-scale-inactive h2 {
+  font-size: 2.25em;
+}
+
+@media (min-width: 220em) {
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.25;
+    margin-top: 1.37500001em;
+    margin-bottom: 0.45833334em;
+    max-width: 26.18182em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h3 .wrapper {
+    width: 217.5em;
+  }
+}
+@media (min-width: 282.5em) {
+  h3 {
+    font-size: 1.75em;
+    line-height: 1.25;
+    margin-top: 1.37500001em;
+    margin-bottom: 0.45833334em;
+    max-width: 21.71429em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h3 .wrapper {
+    width: 280em;
+  }
+}
+
+@media (min-width: 220em) {
+  .wrapper {
+    width: 217.5em;
+  }
+
+  line-height: 1.22222222;
+  margin-top: 1.83333333em;
+  margin-bottom: 0.61111111em;
+  max-width: 32em;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 282.5em) {
+  .wrapper {
+    width: 280em;
+  }
+
+  max-width: 33.77778em;
+}
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
