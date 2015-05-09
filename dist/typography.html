@@ -350,7 +350,7 @@ em strong {
 
         <p>Typekit, in collaboration with Google, has created loader library to make working with type easier. It works by adding scripts to the page that load the library and tell it what fonts to download and use. For example to load the Droid Sans font from Google you'd use code like this:</p>
 
-        <pre><code class="html">&lt;script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js">&lt;/script>
+        <pre><code class="html">&lt;script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js">&lt;/script>
 &lt;script>
   WebFont.load({
     typekit: {
@@ -418,12 +418,20 @@ em strong {
      <p><code>.wf-inactive</code> indicates that loading the font or fonts (in this case we are using one) has not started. To make sure that the user doesn't see a system fault we provide a fallback option while the web font(s) are loading. This may be an instant or maybe several seconds in a slow or congested network connection (try Starbucks on a Sunday afternoon.)</p>
 
      <p>Once the font(s) load, the class will switch to <code>.wf-active</code> where we put out web font stack and attributes related to font. In this case I only added a different line-height attribute to the selector but you can be as detailed as you want.</p>
+
+     <p>One last detail: <strong>What happens if Javascript is disabled?</strong></p>
+
+     <p>If you're fonts are loaded from google you can revert back to useing the Google API to load your fonts. You can do something like:</p>
+
+     <pre><code class="html">&lt;noscript>
+  &lt;link href='http://fonts.googleapis.com/css?family=Roboto:700italic,300,700,300italic' rel='stylesheet' type='text/css'>
+&lt;/noscript></code></pre>
       </section>
 
       <section>
         <h2>Paragraph styling</h2>
 
-        <p>Most the time we spend engaged with text is with paragraphs and that's where I put a lot of my research time when working on a new project.</p>
+        <p>Most the time we spend engaged with text is with paragraphs and that's where I put a lot of my research time when working on a new project. You may be asking why put so much work on how the paragraphs look... As you will see in the example below there are many elements that are involved in controlling paragraph appearance.</p>
 
 <div class="css-example">
     <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
@@ -434,15 +442,19 @@ div#example4 {
   width: 100%;
 }
 
+div#example4 p:first-child {
+  text-indent: 0;
+  font-size: 1em;
+}
 div#example4 p {
   font-family: 'Stone-Humanist', arial, sans-serif;
   font-size: 1em; /* 1em = 16px */
   line-height: 1.3;
   text-align: left;
-  text-align-last: left;
   text-indent: 2em;
-  vertical-align: baseline;
-  word-spacing: normal;
+  letter-spacing: 0;
+  word-spacing: 0;
+
 }
           </style>
 
@@ -455,9 +467,13 @@ div#example4 p {
 </div>
                    <p>Playing with paragraph type</p>
 
-          <p>With the content above we can now start playing with type. Do the following activities to get a feel for how much type can change:</p>
+                    <p>With the content above we can now start playing with type. Do the following activities to get a feel for how much type can change:</p>
 
           <ol>
+            <li>Change the font-size on <code>div#example4 p:first-child</code> to 1.5em</li>
+            <ul>
+              <li>Does the size of the first paragraph change your reaction to it? Does size matter?</li>
+            </ul>
             <li>Remove the reference to "Stone Humanist" to see what would the text look like in Arial</li>
             <li>Remove the reference to Arial to see what the text would look like in the system's Sans Serif font</li>
             <ul>
@@ -473,28 +489,243 @@ div#example4 p {
             <ul>
               <li>Does the text become harder to read as it gets narrower?</li>
             </ul>
+            <li>Change the word spacing from normal to .25em</li>
+            <li>Change the word spacing from .25em to -.25em</li>
+            <ul>
+              <li>Does the text become harder to read as it gets sspread further apart? As it gets condensed together?</li>
+            </ul>
+            <li>Change the letter spacing from 0 to .25em.</li>
+            <li>Change the letter spacing from .25em to -.25em</li>
+            <ul>
+              <li>Does the text become harder to read as it gets sspread further apart? As it gets condensed together?</li>
+            </ul>
           </ol>
 
-          <p>The typeface you select does make a difference. While we may not conciously notice how the text changes the changes affect the way text looks and the way we interact with it.</p>
-     </section>
+          <p>The typeface you select does make a difference. While we may not conciously notice how the text changes the changes affect the way text looks and the way we interact with it. I know I hit you with a lot of activities and questions for this little paragraph exercise so feel free to play with some, all or none of the activities above. </p>
 
+          <p>But whether you use them or not, you get the idea of how much work goes into making paragraphs read well.</p>
+
+          <h3>Drop caps</h3>
+
+          <p>Most (if not all) of us have seen the big initial capital letter on the first paragraph of a chapter. We can do th is with CSS. One version of the effect looks like the code below using first--of-type and first-letter to identify the first letter of the first paragraph and the styles to apply to t his pseudo element</p>
+
+          <pre><code class="css">p:first-of-type:first-letter {
+  font-size: 3em;
+  line-height: 0.9em;
+  float: left;
+  padding-right: 0.15em;
+}
+          </code></pre>
+
+    <div class="css-example">
+      <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+#dropcap-example {
+  border: 1px solid #cc092f;
+  padding: 1em;
+  width: 100%;
+}
+
+#dropcap-example p:first-of-type:first-letter {
+  font-size: 6em;
+  line-height: 1.25em;
+  float: left;
+  padding-right: 0.15em;
+}
+      </style>
+      <div id='dropcap-example'>
+        <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+        <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+        <p>Ad short Wibs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+      </div>
+    </div>
+    <p>Example of drop cap using pseudo classes</p>
+
+    <p>Unfortunately older browsers don't support the :first-of-type selector (looking at IE7 and possibly IE8) so we have to work around and tie the drop cap to the first element. Most of the time this will be an h1 or other heading element but it can be any element you want. If you don't care about supporting older browsers then this is a non-issue but coding defensively is always a good practice :)</p>
+
+          <pre><code class="css">h1 + p:first-letter {
+  font-size: 3em;
+  line-height: 0.9em;
+  float: left;
+  padding-right: 0.15em;
+}
+          </code></pre>
+
+    <div class="css-example">
+      <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+#dropcap-example2 {
+  border: 1px solid #cc092f;
+  padding: 1em;
+  width: 100%;
+}
+
+#dropcap-example2 h1 + p:first-letter {
+  font-size: 6em;
+  line-height: .9em;
+  float: left;
+  padding-right: 0.15em;
+}
+      </style>
+      <div id='dropcap-example2'>
+        <h1>This is the bacon</h1>
+        <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+        <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+        <p>Ad short Wibs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+      </div>
+    </div>
+    <p>Example of drop cap using sibbling selectors</p>
+</section>
       <section>
         <h2><a name="headings"></a>Headings</h2>
 
+        <p>Headings serve as the visual representation of our content and, as such, they deserve special consideration. We'll discuss whether to use the same font as our body or whether it's better to use a different one, and some things we can do with heading text. I wish I could tell you exactly what fonts to use but, as with many things type related, it'll depend on many factors.</p>
+
+        <p>Let's look at what the possibilities are. </p>
+
         <h3>Same or different fontface?</h3>
 
-      </section>
-      <h2>Color</h2>
+        <p>One of the questions that always baffles me is whether to use the same font for headings as I use for the body text. </p>
 
-      <p>another aspect to consider is the color for your typefaces. This is a very design-dependent step. Were you given </p>
+
+<div class="css-example">
+    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#headingFontExample1 {
+  border: 1px solid #cc092f;
+  padding: 1em;
+  width: 100%;
+}
+
+div#headingFontExample1 h1 {
+  font-family: 'Stone-Humanist', sans-serif;
+}
+  </style>
+
+      <div id='headingFontExample1'>
+        <h1>This is the bacon</h1>
+        <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+      </div>
+</div>
+
+
+        <h3>Playing with heading type</h3>
+
+<div class="css-example">
+    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#headingExample {
+  border: 1px solid #cc092f;
+  padding: 1em;
+  width: 100%;
+}
+
+#headingExample h2 {
+  text-transform: capitalize;
+}
+
+#headingExample strong {
+  text-transform: uppercase;
+}
+
+#headingExample .uc {
+  text-transform: uppercase;
+}
+
+#headingExample .lc {
+  text-transform: lowercase;
+}
+          </style>
+
+          <div id='headingExample'>
+           <h2>Bacon bacon bacon bacon</h2>
+           <h2><strong>nostrud brisket strip steak shankle turducken</strong></h2>
+           <h2 class="lc">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
+           <h2 class="uc">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor.</h2>
+          </div>
+</div>
+      <p>Different text effects applied to headings</p>
+
+      </section>
+
+     <section>
+             <h2>Color</h2>
+
+      <p>another aspect to consider is the color for your typefaces. This is a very design-dependent step. Were you given a color palette as part of your design brief? Then use those. But if you're planning your own project then you can use the tools below.</p>
 
       <p><a href="https://color.adobe.com/">Adobe Color CSS</a> (Formerly known as Adobe Kuler) let's you create color sets for your projects. If you use SASS/SCSS you can then turn the colors into variables to use in your CSS.</p>
 
-      <section>
-        <h2>Unicode and multilingual support</h2>
+      <p>Dudley Storye creataed a <a href="http://demosthenes.info/blog/927/The-New-Defaults-A-Sass-Color-Thesaurus">color Thesaurus</a> that makes it easier to see what the colors will look like in the page. We can combine the colors from the chart with text to test </p>
+
+     </section>
+
+     <section>
+        <h2>Mediaqueries: Not all displays are equal</h2>
+
+
       </section>
 
-      <section>
+     <section>
+        <h2>Unicode and multilingual support</h2>
+
+        <h3>Open Type features</h3>
+
+        <p>Open Type fonts have a set of features that make typographical work easier. These features can be enabled. These are a subset of all the Open Type features available. </p>
+
+        <ul>
+          <li>"c2sc" : small caps from caps</li>
+          <li>"calt" : contextual alternates</li>
+          <li>"clig" : contextual ligatures</li>
+          <li>"dlig" : discretionary ligatures</li>
+          <li>"hist" : historical character alternatives</li>
+          <li>"hlig" : historical ligatures</li>
+          <li>"kern" : enable use of embedded kerning table</li>
+          <li>"liga" : common ligatures</li>
+          <li>"nalt" : alternate annotation</li>
+          <li>"salt" : stylistic alternatives</li>
+          <li>"smcp" : small caps</li>
+          <li>"ss01" : alternate stylistic set 1</li>
+          <li>"ss02" : alternate stylistic set 2</li>
+          <li>"ss03" : alternate stylistic set 3</li>
+          <li>"ss04" : alternate stylistic set 4</li>
+          <li>"ss05" : alternate stylistic set 5</li>
+          <li>"swsh" : swashes</li>
+          <li>"zero" : slashed-zero</li>
+        </ul>
+
+        <p>Adobe has <a href="http://partners.adobe.com/public/developer/opentype/index_tag3.html">more information about Open Type features</a>, both the ones listed above and additional features used in desktop publishing. When in doubt use the name above to check Adobe's list.</p>
+
+        <p>To enable these features in CSS use something like the code below:</p>
+
+        <pre><code class=css>body {
+  font-feature-settings:
+    "c2sc" 0,
+    "calt" 1,
+    "clig" 1,
+    "dlig" 1,
+    "frac" 0,
+    "hist" 0,
+    "hlig" 0,
+    "kern" 0,
+    "liga" 1,
+    "nalt" 0,
+    "salt" 1,
+    "ss01" 0,
+    "ss02" 0,
+    "ss03" 0,
+    "ss04" 0,
+    "ss05" 0,
+    "swsh" 0,
+    "zero" 0;
+}
+        </code></pre>
+
+        <p>This feature is a prime candidate for autoprefixer or some other automation tool. Repeating the same sequence of value-pair for 3 or 4 different alternatives is a nightmare; according to <a href="http://caniuse.com/#search=font-feature-settings">caniuse.com</a>, Only IE, Chrome/Opera and Firefox support the feature and Chrome/Opera support it behind the -webkit flag.</p>
+
+      </section>
+
+
+     <section>
 
         <h2>Legal Issues</h2>
 
