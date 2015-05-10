@@ -262,7 +262,7 @@ div#example3 {
 
         <h3>@font-face </h3>
 
-        <p>We have been able to use fonts on our web contetn since the days of IE 3 (3.5 for Macintosh if I remember correctly) but we've always had to contend with font creators and foundries fear of piracy. It's only recently that they have relented and allowed their fonts to be used. The basic syntax, covering all modern browsers, looks like this:</p>
+        <p>We have been able to use fonts on our web content since the days of IE 3 (3.5 for Macintosh if I remember correctly) but we've always had to contend with font creators and foundries fear of piracy. It's only recently that they have relented and allowed their fonts to be used. The basic syntax, covering all modern browsers, looks like this:</p>
 
 
         <pre><code class="css">@font-face {
@@ -607,9 +607,59 @@ div#headingFontExample1 h1 {
         <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
       </div>
 </div>
+<p>Heading using body type</p>
 
+<p>The second example uses a Serif font, Roboto Slab, in the headings with Stone Humanist as the body font. I like the contrast better but am not 100% sold on the idea, so let's try one more variant.</p>
 
-        <h3>Playing with heading type</h3>
+<div class="css-example">
+    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#headingFontExample2 {
+  border: 1px solid #cc092f;
+  padding: 1em;
+  width: 100%;
+}
+
+div#headingFontExample2 h1 {
+  font-family: 'Roboto Slab', serif;
+}
+  </style>
+
+      <div id='headingFontExample2'>
+        <h1>This is the bacon</h1>
+        <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+      </div>
+</div>
+<p>Heading using a serif web font</p>
+
+<p>The last option is to use a typeface from the web safe palette. One of my favorite typefaces is Verdana so we'll try that for headings and see how that looks on our headins with the font selected for the body. And here it is:</p>
+
+<div class="css-example">
+    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#headingFontExample3 {
+  border: 1px solid #cc092f;
+  padding: 1em;
+  width: 100%;
+}
+
+div#headingFontExample3 h1 {
+  font-family: Verdana, sans-serif;
+}
+  </style>
+
+      <div id='headingFontExample3'>
+        <h1>This is the bacon</h1>
+        <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+      </div>
+</div>
+  <p>Heading using a system's serif font</p>
+
+  <p>So with these three options which one should I pick? Three typefaces may not be enough but out of the three I'd pick Roboto Slab. We should certainly test additional fonts either with a system like the one I just did or with <a href="http://typecast.com/">Typecast</a> but I was narrowing the choice to these three so doing it by hand was less of a hassle than setting up Typecast. In a larger project I would set up Typecast earlier and do all the testing there. </p>
+
+<h3>Playing with heading type</h3>
+
+  <p>Now that we've selected the font we can look at some effects that will make the headings stand out further. We can play with changing the capitalization of the heading, make them all upper or lower case and maybe even change letter and word spacing. The example below</p>
 
 <div class="css-example">
     <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
@@ -635,13 +685,22 @@ div#headingExample {
 #headingExample .lc {
   text-transform: lowercase;
 }
+
+#headingExample .narrow {
+  letter-spacing: -.125em;
+}
+
+#headingExample .wide {
+  letter-spacing: .125em;
           </style>
 
           <div id='headingExample'>
            <h2>Bacon bacon bacon bacon</h2>
            <h2><strong>nostrud brisket strip steak shankle turducken</strong></h2>
            <h2 class="lc">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
-           <h2 class="uc">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor.</h2>
+           <h2 class="uc">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
+           <h2 class="narrow">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
+           <h2 class="wide">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
           </div>
 </div>
       <p>Different text effects applied to headings</p>
@@ -651,11 +710,153 @@ div#headingExample {
      <section>
              <h2>Color</h2>
 
-      <p>another aspect to consider is the color for your typefaces. This is a very design-dependent step. Were you given a color palette as part of your design brief? Then use those. But if you're planning your own project then you can use the tools below.</p>
+      <p>Another aspect to consider is the color for your typefaces. This is a very design-dependent step. Were you given a color palette as part of your design brief? Then use those. But if you're planning your own project then you can use the tools below.</p>
 
       <p><a href="https://color.adobe.com/">Adobe Color CSS</a> (Formerly known as Adobe Kuler) let's you create color sets for your projects. If you use SASS/SCSS you can then turn the colors into variables to use in your CSS.</p>
 
       <p>Dudley Storye creataed a <a href="http://demosthenes.info/blog/927/The-New-Defaults-A-Sass-Color-Thesaurus">color Thesaurus</a> that makes it easier to see what the colors will look like in the page. We can combine the colors from the chart with text to test </p>
+
+       <p>For this section I've created an <a href="https://color.adobe.com/Labs-Color-Scheme-1-color-theme-3359413/">Adobe Color CC Palette</a>.</p>
+
+       <p>It may not have al the colors I need and I'm in no way required to use all the colors in the palette but I will set them up anyways so we can see what it looks like in all the colors available to the palette.</p>
+
+       <div class="css-example">
+    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#headingColorExample {
+  border: 1px solid #cc092f;
+  padding: 1em;
+  width: 100%;
+}
+
+.color1 {
+  color: #5A69BF;
+}
+
+.color2 {
+  color: #3C467F;
+}
+
+.color3 {
+  color: #788DFF;
+}
+
+.color4 {
+  color: #1E2340;
+}
+
+.color5 {
+  color: #6C7EE5;
+}
+          </style>
+
+          <div id='headingColorExample'>
+           <h2>Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
+           <h2 class="color1">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
+           <h2 class="color2">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
+           <h2 class="color3">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
+           <h2 class="color4">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
+           <h2 class="color5">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
+          </div>
+</div>
+      <p>Colored headings</p>
+
+      <p>I've chosen a <a href="https://color.adobe.com/Copy-of-Coral-Sea-color-theme-6005348/">second palete</a> from Color CC.</p>
+
+       <div class="css-example">
+    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#headingColorExample2 {
+  border: 1px solid #cc092f;
+  padding: 1em;
+  width: 100%;
+}
+
+#headingColorExample2 .color1 {
+  color: rgb(83, 178, 156);
+  color: #53B29C;
+}
+
+#headingColorExample2 .color2 {
+  color: rgb(135, 175, 165);
+  color: #87AFA5;
+}
+
+#headingColorExample2 .color3 {
+  color: rgb(138, 255, 227);
+  color: #8AFFE3;
+}
+
+#headingColorExample2 .color4 {
+  color: rgb(237, 114, 74);
+  color: #ED724A;
+}
+
+#headingColorExample2 .color5 {
+  color: rgb(255, 173, 146);
+  color: #FFAD92;
+}
+          </style>
+
+          <div id='headingColorExample2'>
+           <h2>Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
+           <h2 class="color1">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
+           <h2 class="color2">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
+           <h2 class="color3">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
+           <h2 class="color4">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
+           <h2 class="color5">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
+          </div>
+</div>
+      <p>Colored headings, take 2</p>
+
+
+    <p>We can also test color with our paragraph formatting. I will pick the second color palette for this experiment. Notice how the lighter colors make things harder to read and the darker colors help... When we discuss accessibility concerns we'll touch on color blindness and contrast as necessary elements of your typographical design.</p>
+
+           <div class="css-example">
+    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#headingColorExample3 {
+  border: 1px solid #cc092f;
+  padding: 1em;
+  width: 100%;
+}
+
+#headingColorExample3 .color1 {
+  color: rgb(83, 178, 156);
+  color: #53B29C;
+}
+
+#headingColorExample3 .color2 {
+  color: rgb(135, 175, 165);
+  color: #87AFA5;
+}
+
+#headingColorExample3 .color3 {
+  color: rgb(138, 255, 227);
+  color: #8AFFE3;
+}
+
+#headingColorExample3 .color4 {
+  color: rgb(237, 114, 74);
+  color: #ED724A;
+}
+
+#headingColorExample3 .color5 {
+  color: rgb(255, 173, 146);
+  color: #FFAD92;
+}
+          </style>
+
+          <div id='headingColorExample3'>
+           <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p class="color1">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p class="color2">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p class="color3">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p class="color4">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p class="color5">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+          </div>
+</div>
+      <p>Colored paragraphs</p>
 
      </section>
 
