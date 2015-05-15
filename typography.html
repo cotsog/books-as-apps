@@ -78,9 +78,7 @@
 
       </section>
 -->
-
-      <section>
-
+<section>
         <h2>Font Selection</h2>
 
         <h3>Font stacks</h3>
@@ -97,7 +95,7 @@
 
         <p>Why is this important, you may be asking. Because not all fonts are the same. Even fonts that look very similar may be different enough to cause problems with your layout. Let's look at the same Lorem Ipsum text in two different fonts.
 
-          <p>The first example will use Stone Humanist, the font I chose for the body text.</p>
+          <p>The first example will use Stone Humanist, the font I chose for the body text in this document.</p>
 
 <div class="css-example">
             <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
@@ -184,7 +182,9 @@ div#example2 {
 
           <p>Even when working with Desktop Operating Systems alone a font may look very different. It doesn't necessarily have anything to do with the design and all with how the operating system renders fonts and it may not even happen but this is something to consider when testing.</p>
 
-          <p>Fonts become even more complicated when we factor mobile devices into the mix, particularly since Apple released 'Retina' iPhones and iPads and Android phones have been released with even higher pixel density.</p>
+          <p>Smaller sizes may cause font details to dissapear as the font grows smaller. This may affect the typeface you use for your body text, particularly in smaller devices.</p>
+
+          <p>Fonts have become more interesting when  particularly since Apple released 'Retina' iPhones and iPads and Android phones have been released with even higher pixel density. While the higher density allows you to use more typefaces, your design must still consider browsers with lower pixel density in your design.</p>
 
           <figure>
             <img src="images/font-in-chrome-mac.png">
@@ -644,7 +644,7 @@ div#headingFontExample3 {
 }
 
 div#headingFontExample3 h1 {
-  font-family: Verdana, sans-serif;
+  font-family: sans-serif;
 }
   </style>
 
@@ -863,6 +863,9 @@ div#headingColorExample3 {
      <section>
         <h2>Mediaqueries: Not all displays are equal</h2>
 
+        <p>Media queries are a part of the progressive enhancement process. Using <a href="">Media Queries</a> you can use a single CSS style sheet to work with multiple devices</p>
+
+
 
       </section>
 
@@ -930,7 +933,17 @@ div#headingColorExample3 {
 
         <h2>Legal Issues</h2>
 
+        <p>Unless you own the typeface or it is licensed through Google Fonts or another free service, you will have to pay for the font. I will briefly discuss what I had to do to license Stone Humanist for use on the web, what this allows me to do and the things I'm not allowed to.</p>
+
         <h3>Licensing Commercial Fonts</h3>
+
+        <p>Licensing Stone Humanist means that I have permission to use the font on a web site (or web sites) with no more than 250,000 hits a month. I've added it using the @font-face syntax and am considering using the Web Font Loader to make the process seamless to the user.</p>
+
+        <p>If I go over 250k hits on my pages in month or if want to use the font for a different use (application, e-book or more hits per month than what I already paid for) I am supposed to pay an additional ammount to the Foundry.</p>
+
+        <p>This is what, for the longest time, bothered me about licensing fonts for use in online content. The prices for e-pub fonts are prohibitive for most independent e-book producers and content creators. I can understand the need for font creators and foundries to make a living </p>
+
+
 
         <h3>Open Source fonts</h3>
 
