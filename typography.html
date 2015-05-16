@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Learning to play with typography</title>
   <meta name="description" content="">
 
   <meta name="viewport" content="user-scalable=no, initial-scale=1.0" />
@@ -597,13 +597,18 @@ div#headingFontExample1 {
   width: 100%;
 }
 
+
 div#headingFontExample1 h1 {
   font-family: 'Stone-Humanist', sans-serif;
+}
+
+div#headingFontExample1 h1 + p:first-letter {
+  font-size: 1em;
 }
   </style>
 
       <div id='headingFontExample1'>
-        <h1>This is the bacon</h1>
+        <h1>This is the bacon 22</h1>
         <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
       </div>
 </div>
@@ -622,6 +627,10 @@ div#headingFontExample2 {
 
 div#headingFontExample2 h1 {
   font-family: 'Roboto Slab', serif;
+}
+
+div#headingFontExample2 h1 + p:first-letter {
+  font-size: 1em;
 }
   </style>
 
@@ -646,6 +655,10 @@ div#headingFontExample3 {
 div#headingFontExample3 h1 {
   font-family: sans-serif;
 }
+
+div#headingFontExample3 h1 + p:first-letter {
+  font-size: 1em;
+}
   </style>
 
       <div id='headingFontExample3'>
@@ -659,7 +672,9 @@ div#headingFontExample3 h1 {
 
 <h3>Playing with heading type</h3>
 
-  <p>Now that we've selected the font we can look at some effects that will make the headings stand out further. We can play with changing the capitalization of the heading, make them all upper or lower case and maybe even change letter and word spacing. The example below</p>
+  <p>Now that we've selected the font we can look at some effects that will make the headings stand out further. We can play with changing the capitalization of the heading, make them all upper or lower case and maybe even change letter and word spacing.</p>
+
+  <p>The example below uses different values for the text-transform property to change the way the headings look.</p>
 
 <div class="css-example">
     <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
@@ -858,16 +873,144 @@ div#headingColorExample3 {
 </div>
       <p>Colored paragraphs</p>
 
-     </section>
+    <p>Even different shades of gray/grey may have an impact. In the last color example I've picked different shades of grey for each paragraph color. As with many things related to type, the best color for your text will depend on the typeface you choose.</p>
+
+            <div class="css-example">
+    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#headingColorExample4 {
+  border: 1px solid #cc092f;
+  padding: 1em;
+  width: 100%;
+}
+
+#headingColorExample4 .color1 {
+  color: #aaaaaa;
+}
+
+#headingColorExample4 .color2 {
+  color: #333333;
+}
+
+#headingColorExample4 .color3 {
+  color: #554c4d;
+}
+
+#headingColorExample4 .color4 {
+  color: #7c6e7f;
+}
+
+#headingColorExample4 .color5 {
+  color: #7d7c9c;
+}
+          </style>
+
+          <div id='headingColorExample4'>
+           <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p class="color1">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p class="color2">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p class="color3">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p class="color4">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p class="color5">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+          </div>
+</div>
+      <p>How different shades of gray/grey look as text color</p>     </section>
 
      <section>
         <h2>Mediaqueries: Not all displays are equal</h2>
 
-        <p>Media queries are a part of the progressive enhancement process. Using <a href="">Media Queries</a> you can use a single CSS style sheet to work with multiple devices</p>
+        <p>Media queries are a part of the progressive enhancement process. Using Media Queries (<a href="http://www.w3.org/TR/css3-mediaqueries/">Specification</a> and <a href="http://www.w3.org/TR/mediaqueries-4/">first public draft of Level 4 extensions</a>) you can use a single CSS style sheet to work with multiple devices.</p>
 
+        <p></p>
 
+     </section>
 
-      </section>
+     <section>
+       <h2>Text Alignment and Hyphenation</h2>
+
+       <p>Given the same font, alignment and hypenatiton have a definitive impact on the way we read content and how it appears on screen</p>
+
+             <div class="css-example">
+    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#alignmentExample {
+  border: 1px solid #cc092f;
+  padding: 1em;
+  width: 100%;
+}
+
+div#alignmentExample .left {
+  text-align: left;
+}
+
+div#alignmentExample .center {
+  text-align: center;
+}
+
+div#alignmentExample .right {
+  text-align: right;
+}
+
+div#alignmentExample .justified {
+  text-align: justify;
+}
+
+        </style>
+
+          <div id='alignmentExample'>
+
+           <p class="left">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p class="center">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p class="right">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p class="justified">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+          </div>
+</div>
+      <p>Text Alignment Possibilities</p>
+
+      <p>None of the paragraphs above is hyphenated. Note in particular how the Justified paragraph leaves larger gaps between words to acomodate the justification. It is the same, although not so noticeable, in the other paragraphs.</p>
+
+      <p>Although CSS support hyphenation using the hyphens rule the support is inconsistent (it only works in Firefox and </p>
+
+                 <div class="css-example">
+    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#alignmentExample2 {
+  border: 1px solid #cc092f;
+  padding: 1em;
+  width: 100%;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;}
+
+div#alignmentExample2 .left {
+  text-align: left;
+}
+
+div#alignmentExample2 .center {
+  text-align: center;
+}
+
+div#alignmentExample2 .right {
+  text-align: right;
+}
+
+div#alignmentExample2 .justified {
+  text-align: justify;
+}
+
+        </style>
+
+          <div id='alignmentExample2' lang='en'>
+
+           <p class="left">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p class="center">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p class="right">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p class="justified">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+          </div>
+</div>
+      <p>Text Alignment Possibilities With Hyphenated Text.</p>
+     </section>
 
      <section>
         <h2>Unicode and multilingual support</h2>
@@ -956,18 +1099,19 @@ div#headingColorExample3 {
         <p></p>
 
       </section>
-      
+
       <section>
-        <h2>Getting fancy using shapes</h2>
-        
-        <p><a href="http://dev.w3.org/csswg/css-shapes/">CSS Shapes</a> allow designers and content creators to match some magazines layouts </p>
-        
-        <h3>Examples and References</h3>
-        <ul>
-          <li><a href="http://alistapart.com/article/css-shapes-101">http://alistapart.com/article/css-shapes-101</a></li>
-          <li><a href="http://www.html5rocks.com/en/tutorials/shapes/getting-started/">http://www.html5rocks.com/en/tutorials/shapes/getting-started/</a></li>
-        </ul>
-                 <div class="css-example">
+        <h2>Getting fancy using shapes, masks and clip paths</h2>
+
+        <p><a href="http://dev.w3.org/csswg/css-shapes/">CSS Shapes</a> allow designers and content creators to match some magazines layouts where the text wraps around images and other polygonal and irregular shapes.</p>
+
+        <p>Why do I include shapes in an essay about typography? As you can see in the examples below, shapes change the way the text relates to the surrounding images. Imagine what we can do with irregular shapes or letters (thinking of Dropcap applications).It can also be used to create shapes with text <em>inside</em> the shape (although this is not as widely supported)</p>
+
+        <figure>
+          <img src="images/shape-outside-example.jpg" alt="example of text wrapping around shapes in a page">
+          <figcaption>Example of text wrapping around shapes in a page</figcaption>
+        </figure>
+      <div class="css-example">
     <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
 
 div#shapeExample {
@@ -976,26 +1120,57 @@ div#shapeExample {
   width: 100%;
 }
 #shapeExample .element{
-  shape-outside: url(http://alistapart.com/d/394/shape-outside-example.jpg);
+  shape-outside: url(images/espresso.jpg);
   shape-image-threshold: 0.5;
   float: left;
 }
           </style>
 
           <div id='shapeExample'>
-             <img class=”element” src=”http://alistapart.com/d/394/shape-outside-example.jpg” />
+             <img class="element" src="images/espresso.jpg" />
 <p>Lorem ipsum…</p>
           </div>
 </div>
       <p>Shape outside an image</p>
-       
 
+      <p>In the future we'll be able to use shape outside and <a href="http://dev.w3.org/csswg/css-exclusions/">exclusions</a> to create magazine equivalent layouts and where creativity will be the driving force, not browser constaints.</p>
+
+      <p>Unfortunately there doesn't seem to be much traction with exclusions or full shapes support within the CSS working group (which means that browsers are far from giving us working implementations) so we have to resort to <a href="https://github.com/adobe-webplatform/css-shapes-polyfill/blob/master/README.md">polyfills</a> for shapes to account for incomplete spec support and older browsers that don't support the feature altogether. I am not a fan of polyfills but, even with all the limitations inherent to polyfills, seems like a good compromise for this particular situation.</p>
+
+      <figure>
+        <img src="images/exclusion-example.jpg" alt="Example Layout using Exclusions">
+        <figcaption>Example Layout using Exclusions (taken from A List Apart's article <a href="http://alistapart.com/article/css-shapes-101">CSS Shapes 101</a> by <a href="http://sarasoueidan.com/">Sara Soueidan</a>.)</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/rhombic.jpg" alt="Another example of what may be possible with shapes">
+        <figcaption>Another example of what may be possible with shapes (taken from A List Apart's article <a href="http://alistapart.com/article/css-shapes-101">CSS Shapes 101</a> by <a href="http://sarasoueidan.com/">Sara Soueidan</a>.)</figcaption>
+      </figure>
+
+        <p>According to the <a href="http://dev.w3.org/fxtf/masking/">CSS Masking</a> specification abstract:</p>
+
+        <blockquote>
+          <p>CSS Masking provides two means for partially or fully hiding portions of visual elements: masking and clipping.</p>
+
+      <p><em>Masking</em> describes how to use another graphical element or image as a luminance or alpha mask. Typically, rendering an element via CSS or SVG can conceptually described as if the element, including its children, are drawn into a buffer and then that buffer is composited into the element’s parent. Luminance and alpha masks influence the transparency of this buffer before the compositing stage.</p>
+
+      <p><em>Clipping</em> describes the visible region of visual elements. The region can be described by using certain SVG graphics elements or basic shapes. Anything outside of this region is not rendered.</p>
+        </blockquote>
+
+        <p>It has long been a trivial exercise to create masks and clip path images in Photoshop or Illustrator (and Photoshop CC makes it a really simple &#39;pick the image and click here and here&#39; exercise.) But until clip paths and masks became available in CSS you had to use an external tool to create these effects.</p>
+
+        <h3>Examples and References</h3>
+        <ul>
+          <li><a href="http://alistapart.com/article/css-shapes-101">http://alistapart.com/article/css-shapes-101</a></li>
+          <li><a href="http://www.html5rocks.com/en/tutorials/shapes/getting-started/">http://www.html5rocks.com/en/tutorials/shapes/getting-started/</a></li>
+          <li><a href="https://css-tricks.com/clipping-masking-css/">Clipping and Masking in CSS</a></li>
+        </ul>
       </section>
 
       <section>
         <h2>One final thing</h2>
 
-        <p>For those of us who have been playing in/with 'the web' for 10 years or longer remember pages like the ones in figures 9-1, 9-2 and 9-3. There was no Javascript and, I believe, the original CSS specification was released in 1996 so there really was no CSS to play with.</p>
+        <p>For those of us who have been playing in/with 'the web' for 10 years or longer remember pages like the ones in the figures below. There was no Javascript and, I believe, the original CSS specification was released in 1996 so there was no CSS to play with.</p>
 
         <figure>
           <img src="images/Mosaic_Netscape_0.9_on_Windows_XP.png">
