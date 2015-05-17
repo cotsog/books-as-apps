@@ -5,8 +5,9 @@ section {
 
 figure {
   counter-increment: figure_count;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin: 2em auto;
+  max-width: 500px;
+  max-width: min-content;
 
   figcaption {
     font-family: 'Stone-Humanist-SemiItalic', sans-serif;
@@ -18,8 +19,7 @@ figure {
   }
 
   img {
-    margin-left: inherit;
-    max-width: 100%;
+    max-width: inherit;
   }
 }
 

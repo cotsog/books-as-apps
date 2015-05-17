@@ -1,7 +1,7 @@
 // Font Related Stuff
 
 // Font ligatures
-@mixin font-ligature() {
+@mixin font-ligature {
   /* optional: for older browsers */
   text-rendering: optimizeLegibility;
   /* for iOS and Safari 6 */
