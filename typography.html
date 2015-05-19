@@ -66,18 +66,23 @@
       <blockquote>
         <p>The first thing to learn is that all typefaces are different. What works for the typefaces I chose may or may not work for the typefaces you choose for your projects. Where possible I'll show the typefaces used in this page against other typefaces (most likely from the 'web safe' font set.)</p>
       </blockquote>
-<!--
-      <section>
 
-        <h2>Typeface and fonts and the differences</h2>
+      <h2>Why worry about typography on the web?</h2>
+
+      <div class='video'>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0OF-jU97HzQ" frameborder="0" allowfullscreen></iframe>
+
+        <p>Universal Typography -- Tim Brown</p>
+      </div>
+
+      <!--
+      <h2>Typeface and fonts and the differences</h2>
 
         <figure>
           <img src="images/l_4df268c0-5b5b-11e1-b528-1b55d0300003.jpg">
           <figcaption>Recognizable typeface elements</figcaption>
         </figure>
-
-      </section>
--->
+      -->
 <section>
         <h2>Font Selection</h2>
 
@@ -172,7 +177,7 @@ div#example2 {
             <dd>The sole criterion of a monospace font is that all glyphs have the same fixed width. (This can make some scripts, such as Arabic, look most peculiar.) The effect is similar to a manual typewriter, and is often used to set samples of computer code.</dd>
           </dl>
 
-          <p>Using a generic family as the last item in your font stack is always a good idea. The system is guaranteed to be available and you can style your content with this consideration in mind. It also makes your CSS less succeptuble to slow connections or network failures.</p>
+          <p>Using a generic family as the last item in your font stack is essential. The system is guaranteed to be available and you can style your content with this in mind. It also makes your CSS less succeptuble to slow connections or network failures.</p>
 
           <h3>Additional Considerations</h3>
 
@@ -234,6 +239,14 @@ div#example3 {
           </div>
 </div>
           <p>Example demonstrating what happens when you change line-height</p>
+
+          <h3>Line width</h3>
+
+          <blockquote>
+            <p>Anything from 45 to 75 characters is widely regarded as a satisfactory length of line for a single-column page set in a serifed text face in a text size. The 66-character line (counting both letters and spaces) is widely regarded as ideal. For multiple-column work, a better average is 40 to 50 characters.</p>
+            <p>Robert Bringhurst’s The Elements of Typographic Style, (p.26)</p>
+          </blockquote>
+          <p>Until I started working with web type I had never considered line length</p>
 
           <h3>So what should the stack look like?</h3>
 
@@ -576,6 +589,7 @@ div#example4 p {
     </div>
     <p>Example of drop cap using sibbling selectors</p>
 </section>
+
       <section>
         <h2><a name="headings"></a>Headings</h2>
 
@@ -917,11 +931,113 @@ div#headingColorExample4 {
       <p>How different shades of gray/grey look as text color</p>     </section>
 
      <section>
-        <h2>Mediaqueries: Not all displays are equal</h2>
+        <h2>Media Queries: Not all displays are equal</h2>
 
         <p>Media queries are a part of the progressive enhancement process. Using Media Queries (<a href="http://www.w3.org/TR/css3-mediaqueries/">Specification</a> and <a href="http://www.w3.org/TR/mediaqueries-4/">first public draft of Level 4 extensions</a>) you can use a single CSS style sheet to work with multiple devices.</p>
 
-        <p></p>
+        <p>At its most basic, a media query tells the browser to change selectors and attributes based on a certain value or to load (or not load) a specified resource. For example, you can use media queries when loading a stylesheet with a link element:</p>
+
+        <pre><code class='css'><!-- CSS media query on a link element -->
+&lt;link rel="stylesheet" media="(max-width: 800px)" href="example.css" /></code></pre>
+
+        <p>In this query, The user agen test is the the user agent is 800 pixels wider or narrower and, if it is, it will load the specified style sheet; otherwise it'll skip it.</p>
+
+        <p>You can also use media queries inside a stylesheet (internal or external) using the media at-rule. </p>
+
+        <pre><code class='css'><!-- CSS media query within a stylesheet -->
+@media (max-width: 600px) {
+  .facet_sidebar {
+    display: none;
+  }
+}
+</code></pre>
+
+       <p>In the stylesheet example, the test if for width of 600 pixels or less. If the rule is matches then we will change the display propery of the facet_siderbar class to hide it. You can have multiple rules inside each media query.</p>
+
+       <p>You can also do multiple queries, limit them to specific device types (like screen or print) and even chain queries together. </p>
+
+        <pre><code class='css'><!-- CSS media query within a stylesheet -->
+@media screen and (max-width: 640px) {
+  html{
+    /* for small form factor make the line height shorter */
+    line-height: 1.125em;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  .facet_sidebar {
+    /* Do something for browsers that go between the two values */
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  html {
+    /* maybe make the font size a little larger? */
+  }
+}
+</code></pre>
+
+        <h3>Making changes for print</h3>
+
+        <p>One of the best uses I've seen for media queries is to handle priting web content. As I wrote in <a href='http://publishing-project.rivendellweb.net/creating-print-css-stylesheets/'>Creating print CSS stylesheets</a> this is not an alternative to CSS Paged Media but a stop gap to get the content online</p>
+
+        <p>What this media query will do is set up the margins (top, left and right to 1 inch and bottom to 1.5), set the line height to 1.5 (18pt in this case), remove any background image and make the text color black.</p>
+
+        <p>It will then adjust the size of the h1, h2 and h3 elements and hide video, audio, and object elements. These are normally multimedia elements that may or may not be needed in a printed document. If you don't hide them then the printer will spend large amounts of toner or ink to get your content printed (waste of time in my opinion.)</p>
+
+        <pre><code class='css'>/* example changes for printing a web page */
+@media print {
+  body {
+    margin: 1in 1in 1.5in;
+    font-size: 12pt;
+    line-height: 1.5;
+    background-image: none;
+    color: #000;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.75em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  video, audio, object {
+    display: none
+  }
+}        </code></pre>
+
+        <h3>Moving forward</h3>
+
+        <p>While the current Media Query specification defines a large set of <a href='http://www.w3.org/TR/css3-mediaqueries/#media1'>media features</a> to use in our queries, what really excite me are some of the queries (additional <a href='http://www.w3.org/TR/mediaqueries-4/#mf-dimensions'>dimensions</a>, <a href='http://www.w3.org/TR/mediaqueries-4/#mf-display-quality'>display quality</a> and <a href='http://www.w3.org/TR/mediaqueries-4/#mf-interaction'>interaction</a> in particular) available in the editor draft for level 4</p>
+
+        <p>When these queries are supported in browsers we will be able to query for both screen size and DPI density and serve the appropriate content using CSS. It may look something like this:</p>
+
+        <pre><code class='css'>/* possible test for screen size and 2x HDPI */
+@media screen and ((min-width: 800px) and (max-width: 1024px)) and (resolution &gt;= 2dppx) {
+  .facet_sidebar {
+    /* Do something for browsers that go between the two values */
+  }
+}
+</code></pre>
+
+        <p>Just in case you're curious (as I was): dppx represents the number of dots per px unit. Due to the 1:96 fixed ratio of CSS in to CSS px, 1dppx is equivalent to 96dpi, that corresponds to the default resolution of images displayed in CSS as defined by image-resolution (from <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/resolution'>MDN</a>.)</p>
+
+        <p>Even when widely supported you <strong>must</strong> test this in your target devices!</p>
+
+        <h3>Links and resources</h3>
+
+        <ul>
+          <li><a href='http://www.w3.org/TR/css3-mediaqueries/'>Media Query Level 3 Specification</a></li>
+          <li><a href='http://www.w3.org/TR/mediaqueries-4/'>Media Query Level 4 Editor Draft</a></li>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries#Media_features'>MDN Media Query entry</a></li>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Web/CSS/@media'>Media Types</a></li>
+          <li><a href='http://viewportsizes.com/'>List of device viewport sizes</a></li>
+        </ul>
 
      </section>
 
@@ -1187,7 +1303,7 @@ $(document).ready(function() {
 
 <p>Web performance patterns advise that you put Javascripts at the bottom of your page before your <code>&lt;/body&gt;</code> tag.  There is an unfortunate side effect where you may experiences a <a href="http://paulirish.com/2009/fighting-the-font-face-fout/">FOUT (Flash of Unstyled Text)</a> when you're manipulating your text after the DOM has loaded.  Unfortunately, we found the best solution to avoid/minimize the FOUT caused by this plugin is to put your scripts (jQuery, Lettering.js) in the document <code>&lt;head&gt;</code>. On the one hand, your page will load slower. On the other hand, a flash/restyling makes your site feel slow. Users might ultimately feel the site is faster if they don't see the FOUT.</p>
 
-     <p>Dave Rupert. Letterin.js <a href="https://github.com/davatron5000/Lettering.js/blob/master/README.md">Readme</a></p>
+     <p>Dave Rupert. Lettering.js <a href="https://github.com/davatron5000/Lettering.js/blob/master/README.md">Readme</a></p>
       </blockquote>
        <p>The result will appear like this:</p>
 
@@ -1320,9 +1436,9 @@ $(document).ready(function() {
      <section>
         <h2>Unicode and multilingual support</h2>
 
-        <p><a href="http://unicode.org/standard/WhatIsUnicode.html">Unicode</a> is an ISO international standard (ISO/IEC 10646) for for the consistent encoding, representation, and handling of text in most of the world's writing systems. </p>
+        <p><a href="http://unicode.org/standard/WhatIsUnicode.html">Unicode</a> is an ISO international standard (ISO/IEC 10646) for the consistent encoding, representation, and handling of text in most of the world's writing systems. It answers the question: <strong>How do I combine multiple languages in a single document?</strong></p>
 
-        <p>Unicode answers the question: <strong>How do I combine multiple languages in a single file?</strong> In the past we had different encodings for different language. English, for example, uses ISO/IEC 8859-1 which is mostly ASCII. This is not sufficient to work with easter European languages that use additional symbols accents and punctuation to fully express the language. See the <a href="https://www.wikiwand.com/en/ISO/IEC_8859">Wikipedia entry for ISO 8859</a> for more details regarding what languages are supported on each section of the standard.</p>
+        <p>In the past we had different encodings for different language codified in the ISO/IEC 8859 series of standards. English, for example, uses ISO/IEC 8859-1 which is mostly ASCII. This is not sufficient to work with eastern European languages that use additional symbols accents and punctuation to fully express the language. See the <a href="https://www.wikiwand.com/en/ISO/IEC_8859">Wikipedia entry for ISO 8859</a> for more details regarding what languages are supported on each section of the standard.</p>
       </section>
 
 
@@ -1330,15 +1446,9 @@ $(document).ready(function() {
 
         <h2>Legal Issues</h2>
 
-        <p>Unless you own the typeface or it is licensed through Google Fonts or another free service, you will have to pay for the font. I will briefly discuss what I had to do to license Stone Humanist for use on the web, what this allows me to do and the things I'm not allowed to.</p>
+        <p>Unless you own the typeface or it is licensed through Google Fonts or another free service, you will have to pay for the font and be subject to whatever restrictions the EULA (End User License Agreement) specifies. This may be a problem when the foundry decides that you don't need a TTF format for the font you just purchased or when you're not allowed to generate an SVG version of your font to use with older iOS devices.</p>
 
-        <h3>Licensing Commercial Fonts</h3>
-
-        <p>Licensing Stone Humanist means that I have permission to use the font on a web site (or web sites) with no more than 250,000 hits a month. I've added it using the @font-face syntax and am considering using the Web Font Loader to make the process seamless to the user.</p>
-
-        <p>If I go over 250k hits on my pages in month or if want to use the font for a different use (application, e-book or more hits per month than what I already paid for) I am supposed to pay an additional ammount to the Foundry.</p>
-
-        <p>This is what, for the longest time, bothered me about licensing fonts for use in online content. The prices for e-pub fonts are prohibitive for most independent e-book producers and content creators. I can understand the need for font creators and foundries to make a living </p>
+        <p>I do not mean to say or imply that you should break your license agreement. Quite the opposite; we should be thankful that foundries and font creators have decided that the bennefits outweigh the risks when it comes to online fonts. It is not a perfect solution and we need </p>
 
 
 
@@ -1421,6 +1531,31 @@ div#shapeExample {
         </ul>
       </section>
 
+      <section>
+        <h2>Links and videos about progressive enhancement</h2>
+
+        <ul>
+          <li><a href='http://jakearchibald.com/2013/progressive-enhancement-still-important/'>Progressive enhancement still important</a> -- Jake Archibald</li>
+          <li><a href='http://thatemil.com/blog/2013/07/02/progressive-enhancement-still-not-dead/'>Progressive enhancement still not dead</a> -- Emil Björklund</li>
+          <li><a href='http://blog.pamelafox.org/2013/05/frontend-architectures-server-side-html.html'>Server-side HTML vs. JS Widgets vs. Single-Page Web Apps</a> -- Pamela Fox</li>
+          <li><a href='http://christianheilmann.com/2012/02/16/stumbling-on-the-escalator/'>Stumbling on the escalator</a> -- Christian Heilmann</li>
+          <li><a href='http://responsivenews.co.uk/post/18948466399/cutting-the-mustard'>Cutting the mustard</a> -- BBC News</li>
+        </ul>
+
+        <div class='video'>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/li4Y0E_x8zE" frameborder="0" allowfullscreen></iframe>
+
+          <p>Enough with the Javascript already -- Nicholas Zakas</p>
+        </div>
+
+        <div class='video'>
+          <iframe src="https://player.vimeo.com/video/118146193" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+          <p>The long web -- Jeremy Keith</p>
+        </div>
+
+
+      </section>
       <section>
         <h2>One final thing</h2>
 

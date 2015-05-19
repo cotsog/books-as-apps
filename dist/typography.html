@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Learning to play with typography</title>
+  <title>Typography Playground</title>
   <meta name="description" content="">
 
   <meta name="viewport" content="user-scalable=no, initial-scale=1.0" />
@@ -66,18 +66,23 @@
       <blockquote>
         <p>The first thing to learn is that all typefaces are different. What works for the typefaces I chose may or may not work for the typefaces you choose for your projects. Where possible I'll show the typefaces used in this page against other typefaces (most likely from the 'web safe' font set.)</p>
       </blockquote>
-<!--
-      <section>
 
-        <h2>Typeface and fonts and the differences</h2>
+      <h2>Why worry about typography on the web?</h2>
+
+      <div class='video'>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0OF-jU97HzQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <p>Universal Typography -- Tim Brown</p>
+
+      <!--
+      <h2>Typeface and fonts and the differences</h2>
 
         <figure>
           <img src="images/l_4df268c0-5b5b-11e1-b528-1b55d0300003.jpg">
           <figcaption>Recognizable typeface elements</figcaption>
         </figure>
-
-      </section>
--->
+      -->
 <section>
         <h2>Font Selection</h2>
 
@@ -172,7 +177,7 @@ div#example2 {
             <dd>The sole criterion of a monospace font is that all glyphs have the same fixed width. (This can make some scripts, such as Arabic, look most peculiar.) The effect is similar to a manual typewriter, and is often used to set samples of computer code.</dd>
           </dl>
 
-          <p>Using a generic family as the last item in your font stack is always a good idea. The system is guaranteed to be available and you can style your content with this consideration in mind. It also makes your CSS less succeptuble to slow connections or network failures.</p>
+          <p>Using a generic family as the last item in your font stack is essential. The system is guaranteed to be available and you can style your content with this in mind. It also makes your CSS less succeptuble to slow connections or network failures.</p>
 
           <h3>Additional Considerations</h3>
 
@@ -576,6 +581,7 @@ div#example4 p {
     </div>
     <p>Example of drop cap using sibbling selectors</p>
 </section>
+
       <section>
         <h2><a name="headings"></a>Headings</h2>
 
@@ -917,11 +923,113 @@ div#headingColorExample4 {
       <p>How different shades of gray/grey look as text color</p>     </section>
 
      <section>
-        <h2>Mediaqueries: Not all displays are equal</h2>
+        <h2>Media Queries: Not all displays are equal</h2>
 
         <p>Media queries are a part of the progressive enhancement process. Using Media Queries (<a href="http://www.w3.org/TR/css3-mediaqueries/">Specification</a> and <a href="http://www.w3.org/TR/mediaqueries-4/">first public draft of Level 4 extensions</a>) you can use a single CSS style sheet to work with multiple devices.</p>
 
-        <p></p>
+        <p>At its most basic, a media query tells the browser to change selectors and attributes based on a certain value or to load (or not load) a specified resource. For example, you can use media queries when loading a stylesheet with a link element:</p>
+
+        <pre><code class='css'><!-- CSS media query on a link element -->
+&lt;link rel="stylesheet" media="(max-width: 800px)" href="example.css" /></code></pre>
+
+        <p>In this query, The user agen test is the the user agent is 800 pixels wider or narrower and, if it is, it will load the specified style sheet; otherwise it'll skip it.</p>
+
+        <p>You can also use media queries inside a stylesheet (internal or external) using the media at-rule. </p>
+
+        <pre><code class='css'><!-- CSS media query within a stylesheet -->
+@media (max-width: 600px) {
+  .facet_sidebar {
+    display: none;
+  }
+}
+</code></pre>
+
+       <p>In the stylesheet example, the test if for width of 600 pixels or less. If the rule is matches then we will change the display propery of the facet_siderbar class to hide it. You can have multiple rules inside each media query.</p>
+
+       <p>You can also do multiple queries, limit them to specific device types (like screen or print) and even chain queries together. </p>
+
+        <pre><code class='css'><!-- CSS media query within a stylesheet -->
+@media screen and (max-width: 640px) {
+  html{
+    /* for small form factor make the line height shorter */
+    line-height: 1.125em;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  .facet_sidebar {
+    /* Do something for browsers that go between the two values */
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  html {
+    /* maybe make the font size a little larger? */
+  }
+}
+</code></pre>
+
+        <h3>Making changes for print</h3>
+
+        <p>One of the best uses I've seen for media queries is to handle priting web content. As I wrote in <a href='http://publishing-project.rivendellweb.net/creating-print-css-stylesheets/'>Creating print CSS stylesheets</a> this is not an alternative to CSS Paged Media but a stop gap to get the content online</p>
+
+        <p>What this media query will do is set up the margins (top, left and right to 1 inch and bottom to 1.5), set the line height to 1.5 (18pt in this case), remove any background image and make the text color black.</p>
+
+        <p>It will then adjust the size of the h1, h2 and h3 elements and hide video, audio, and object elements. These are normally multimedia elements that may or may not be needed in a printed document. If you don't hide them then the printer will spend large amounts of toner or ink to get your content printed (waste of time in my opinion.)</p>
+
+        <pre><code class='css'>/* example changes for printing a web page */
+@media print {
+  body {
+    margin: 1in 1in 1.5in;
+    font-size: 12pt;
+    line-height: 1.5;
+    background-image: none;
+    color: #000;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.75em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  video, audio, object {
+    display: none
+  }
+}        </code></pre>
+
+        <h3>Moving forward</h3>
+
+        <p>While the current Media Query specification defines a large set of <a href='http://www.w3.org/TR/css3-mediaqueries/#media1'>media features</a> to use in our queries, what really excite me are some of the queries (additional <a href='http://www.w3.org/TR/mediaqueries-4/#mf-dimensions'>dimensions</a>, <a href='http://www.w3.org/TR/mediaqueries-4/#mf-display-quality'>display quality</a> and <a href='http://www.w3.org/TR/mediaqueries-4/#mf-interaction'>interaction</a> in particular) available in the editor draft for level 4</p>
+
+        <p>When these queries are supported in browsers we will be able to query for both screen size and DPI density and serve the appropriate content using CSS. It may look something like this:</p>
+
+        <pre><code class='css'>/* possible test for screen size and 2x HDPI */
+@media screen and ((min-width: 800px) and (max-width: 1024px)) and (resolution &gt;= 2dppx) {
+  .facet_sidebar {
+    /* Do something for browsers that go between the two values */
+  }
+}
+</code></pre>
+
+        <p>Just in case you're curious (as I was): dppx represents the number of dots per px unit. Due to the 1:96 fixed ratio of CSS in to CSS px, 1dppx is equivalent to 96dpi, that corresponds to the default resolution of images displayed in CSS as defined by image-resolution (from <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/resolution'>MDN</a>.)</p>
+
+        <p>Even when widely supported you <strong>must</strong> test this in your target devices!</p>
+
+        <h3>Links and resources</h3>
+
+        <ul>
+          <li><a href='http://www.w3.org/TR/css3-mediaqueries/'>Media Query Level 3 Specification</a></li>
+          <li><a href='http://www.w3.org/TR/mediaqueries-4/'>Media Query Level 4 Editor Draft</a></li>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries#Media_features'>MDN Media Query entry</a></li>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Web/CSS/@media'>Media Types</a></li>
+          <li><a href='http://viewportsizes.com/'>List of device viewport sizes</a></li>
+        </ul>
 
      </section>
 
@@ -969,9 +1077,18 @@ div#alignmentExample .justified {
 
       <p>None of the paragraphs above is hyphenated. Note in particular how the Justified paragraph leaves larger gaps between words to acomodate the justification. It is the same, although not so noticeable, in the other paragraphs.</p>
 
-      <p>Although CSS support hyphenation using the hyphens rule the support is inconsistent (it only works in Firefox and </p>
+      <p>Although CSS support hyphenation using the hyphens rule the support is inconsistent (it only works in Firefox. A good alternative is to use libraries such as <a href="http://mnater.github.io/Hyphenator/">hyphenator</a> to provide a consistent hyphenation experience.</p>
 
-                 <div class="css-example">
+      <p>Some of the Hyphenator's drawbacks (also from <a href="http://mnater.github.io/Hyphenator/">http://mnater.github.io/Hyphenator/</a>):</p>
+
+      <ul>
+        <li>Hyphenator.js and the hyphenation patterns are quite large. A good compression and caching is vital.</li>
+        <li>Automatic hyphenation can not be perfect: it may lead to misleading hyphenation like leg-ends (depends on the pattern quality)</li>
+        <li>There's no support for special (aka non-standard) hyphenation (e.g. omaatje->oma-tje)</li>
+        <li>There's no way for Javascript to influence the algorithm for laying out text in the browser. Thus we can't control how many hyphens occur on subsequent lines nor can we know which words have actually to be hyphenated. Hyphenator.js just hyphenates all of them.</li>
+      </ul>
+
+  <div class="css-example">
     <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
 
 div#alignmentExample2 {
@@ -1009,15 +1126,253 @@ div#alignmentExample2 .justified {
            <p class="justified">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
           </div>
 </div>
-      <p>Text Alignment Possibilities With Hyphenated Text.</p>
+      <p>Text Alignment Possibilities With Hyphenated Text. Currently only works in Firefox</p>
+     </section>
+
+
+    <!-- Video to download: https://www.youtube.com/watch?v=wEEsrmEWSxU -->
+     <section>
+       <h2>Kerning</h2>
+
+       <figure>
+         <img src="http://imgs.xkcd.com/comics/kerning.png" alt="If you really hate someone, teach them to recognize bad kerning">
+         <figcaption>If you really hate someone, teach them to recognize bad kerning. From <a href="http://xkcd.com/1015/">xkcd</a></figcaption>
+       </figure>
+
+       <blockquote>
+         <p>Kerning can refer to one of two things: spacing instructions that type designers put into font files to mitigate awkward character combinations, or spacing adjustments that graphic designers make as they typeset</p>
+       </blockquote>
+
+       <p>We will discuss both the built-in CSS kerning features and <a href="http://letteringjs.com/">Lettering.js</a>, a Javascript library that provides enhanced support for kerning and other formatting using CSS. The idea is to adjust the kerning without having to do any refactoring of the content.</p>
+
+       <p>Automatic kerning in CSS depends on <a href="#features">Open Type Features</a>, particularly in the kerning attribute being enabled. This will change from font to font and is embedded in the font when created.</p>
+
+  <div class="css-example">
+    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#kerningExample {
+  border: 1px solid #cc092f;
+  padding: 1em;
+  width: 100%;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern=1";
+  -ms-font-feature-settings: "kern";
+  -o-font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  font-feature-settings: "kern";
+}
+        </style>
+
+          <div id='kerningExample' lang='en'>
+
+           <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+           <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+          </div>
+</div>
+      <p>Automatic kerning Example</p>
+
+       <p>There may situations where you want a less uniform kerning based on specific attributes. We can control the kerning between letters, as in example 8-2, below. The first paragraph has normal kerning; the second paragraph has letters spaced 0.25em; and the third one has a negative kerning of 0.25em.</p>
+
+         <div class="css-example">
+    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#kerningExample2 {
+  border: 1px solid #cc092f;
+  padding: 1em;
+  width: 100%;
+}
+
+div#kerningExample2 .normal {
+  /* This is a  normal paragraph */
+}
+
+div#kerningExample2 .wide {
+  letter-spacing: 0.25em;
+}
+
+div#kerningExample2 .narrow {
+  letter-spacing: -0.25em;
+}
+        </style>
+
+          <div id='kerningExample2' lang='en'>
+
+           <p class="normal">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+
+           <p class="wide">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+
+           <p class="narrow">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+
+          </div>
+</div>
+      <p>kerning Example using letter-spacing</p>
+
+       <p>Another way to work with kerning is to change letter spacing within words as in example 8-3. Notice the difference between examples 8-2 and 8-3: When we kern letters the text looks significantly different than when we work with words.</p>
+
+  <div class="css-example">
+    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#kerningExample3 {
+  border: 1px solid #cc092f;
+  padding: 1em;
+  width: 100%;
+}
+
+div#kerningExample3 .normal {
+  /* This is a  normal paragraph */
+}
+
+div#kerningExample3 .wide {
+  word-spacing: 0.25em;
+}
+
+div#kerningExample3 .narrow {
+  word-spacing: -0.25em;
+}
+
+        </style>
+
+          <div id='kerningExample3' lang='en'>
+
+           <p class="normal">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+
+           <p class="wide">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+
+           <p class="narrow">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+
+          </div>
+</div>
+      <p>kerning Example using word-spacing</p>
+
+      <p>As with many other things in the web, different browsers have different levels of support for kerning. This makes the feature another prime candidate for Autoprefixer. If you're not inclined to automate, you can do something like this:</p>
+
+      <pre><code class="css">div#kerningExample {
+  border: 1px solid #cc092f;
+  padding: 1em;
+  width: 100%;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern=1";
+  -ms-font-feature-settings: "kern";
+  -o-font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  font-feature-settings: "kern";
+}</code></pre>
+
+      <p>There are multiple entries for Firefox (indicated as -moz-font-feature-settings) indicating that the format for the feature changed in an incompatible way.</p>
+
+      <p>The version for Opera (-o-font-feature-settings) is for older versions before adoptin Blink.</p>
+       <h3>Using Lettering.js</h3>
+
+       <p>One of the biggest drawbacks of using CSS Kerning is that it only work with all letters and all words in a document. If you want to work at a finer level you have to work with libraries like <a href="http://letteringjs.com/">Lettering.js</a>.</p>
+
+       <p>Lettering.js is a jQuery plugin that will automatically add tags (span) and class names to letters, words or lines depending on how we call the plugin. We can then style each individual class as we see fit.</p>
+
+       <p>You can wrap spans around characters, words, lines and combination of the three to get as tight a control over the text style as you need or want. Because it insert classes, designers must be careful to use it in headings or small chunks of text or it will affect performance.</p>
+
+       <p>Working with Lettering.js is a three step process.</p>
+
+       <p>Following the <a href='https://github.com/davatron5000/Lettering.js/wiki/Wrapping-letters-with-lettering()'>Lettering.js Wiki Example</a> we will use this as our example text:</p>
+
+       <pre><code class="html">&lt;h1 class="fancy_title">Some Title&lt;/h1></code></pre>
+
+       <p>First, we need to load and initialize the plugin as you would any other plugin:</p>
+
+       <pre><code class='html'>&lt;script src="path/to/jquery.min.js">&lt;/script>
+&lt;script src="path/to/jquery.lettering.min.js">&lt;/script>
+&lt;script>
+$(document).ready(function() {
+  $(".fancy_title").lettering();
+});
+&lt;/script></code></pre>
+
+       <p>Contrary to what most people tell you, I put all my script initializers and loaders at the bottom of my file to make sure that there is content loaded before I initialize code that will change it. It's always been a catch 22.  AS:</p>
+
+      <blockquote cite="https://github.com/davatron5000/Lettering.js/blob/master/README.md">
+
+<p>Web performance patterns advise that you put Javascripts at the bottom of your page before your <code>&lt;/body&gt;</code> tag.  There is an unfortunate side effect where you may experiences a <a href="http://paulirish.com/2009/fighting-the-font-face-fout/">FOUT (Flash of Unstyled Text)</a> when you're manipulating your text after the DOM has loaded.  Unfortunately, we found the best solution to avoid/minimize the FOUT caused by this plugin is to put your scripts (jQuery, Lettering.js) in the document <code>&lt;head&gt;</code>. On the one hand, your page will load slower. On the other hand, a flash/restyling makes your site feel slow. Users might ultimately feel the site is faster if they don't see the FOUT.</p>
+
+     <p>Dave Rupert. Letterin.js <a href="https://github.com/davatron5000/Lettering.js/blob/master/README.md">Readme</a></p>
+      </blockquote>
+       <p>The result will appear like this:</p>
+
+       <pre><code class="html">&lt;h1 class="fancy_title">
+  &lt;span class="char1">S&lt;/span>
+  &lt;span class="char2">o&lt;/span>
+  &lt;span class="char3">m&lt;/span>
+  &lt;span class="char4">e&lt;/span>
+  &lt;span class="char5">&lt;/span>
+  &lt;span class="char6">T&lt;/span>
+  &lt;span class="char7">i&lt;/span>
+  &lt;span class="char8">t&lt;/span>
+  &lt;span class="char9">l&lt;/span>
+  &lt;span class="char10">e&lt;/span>
+&lt;/h1></code></pre>
+
+       <p>Which then we can style with CSS looking something like this:</p>
+
+       <pre><code class='css'>.fancy_title .ch2 {
+         margin-left: -.0125em;
+         color: purple;
+}</code></pre>
+
+       <p>We can be even more detailed in how we break our content out and how much we style it. In the example below:</p>
+
+       <pre><code class='html'>&lt;h1>My Three Sons&lt;/h1></code></pre>
+
+<pre><code class='html'>&lt;script>
+  $("h1").lettering('words').children('span').lettering();
+&lt;/script>
+</code></pre>
+
+       <p>The lettering invocation will create spans for words and then it will split each word into its component characters, procudinc HTML like the one below:</p>
+
+<pre><code class='html'>&lt;h1>
+  &lt;span class="word1">
+    &lt;span class="char1">M&lt;/span>
+    &lt;span class="char2">y&lt;/span>
+  &lt;/span>
+  &lt;span class="word2">
+    &lt;span class="char1">T&lt;/span>
+    &lt;span class="char2">h&lt;/span>
+    &lt;span class="char3">r&lt;/span>
+    &lt;span class="char4">e&lt;/span>
+    &lt;span class="char5">e&lt;/span>
+  &lt;/span>
+  &lt;span class="word3">
+    &lt;span class="char1">S&lt;/span>
+    &lt;span class="char2">o&lt;/span>
+    &lt;span class="char3">n&lt;/span>
+    &lt;span class="char4">s&lt;/span>
+  &lt;/span>
+&lt;/h1></code></pre>
+
+       <p>Although, as mentioned earlier, this is not good for larger chunks of text the posibilities for headings and smaller pieces of text are only limited by your imagination.</p>
+
+       <h3>Links and resources</h3>
+
+       <p>From MDN</p>
+
+       <ul>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing">https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing</a></li>
+         <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing">https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing</a></li>
+       </ul>
+
+       <p>Other resources</p>
+
+       <ul>
+         <li><a href="http://www.elliotjaystocks.com/blog/kerning/">http://www.elliotjaystocks.com/blog/kerning/</a></li>
+         <li><a href="http://blog.typekit.com/2014/02/05/kerning-on-the-web/">Kerning on the web</a> (Typekit blog)</li>
+       </ul>
      </section>
 
      <section>
-        <h2>Unicode and multilingual support</h2>
+       <h2><a name="features"></a>Open Type features</h2>
 
-        <h3>Open Type features</h3>
-
-        <p>Open Type fonts have a set of features that make typographical work easier. These features can be enabled. These are a subset of all the Open Type features available. </p>
+        <p>Open Type fonts have a set of features that make typographical work easier both in print and, where supported, on the web. These features can be enabled. These are a subset of all the Open Type features available. </p>
 
         <ul>
           <li>"c2sc" : small caps from caps</li>
@@ -1068,7 +1423,14 @@ div#alignmentExample2 .justified {
         </code></pre>
 
         <p>This feature is a prime candidate for autoprefixer or some other automation tool. Repeating the same sequence of value-pair for 3 or 4 different alternatives is a nightmare; according to <a href="http://caniuse.com/#search=font-feature-settings">caniuse.com</a>, Only IE, Chrome/Opera and Firefox support the feature and Chrome/Opera support it behind the -webkit flag.</p>
+     </section>
 
+     <section>
+        <h2>Unicode and multilingual support</h2>
+
+        <p><a href="http://unicode.org/standard/WhatIsUnicode.html">Unicode</a> is an ISO international standard (ISO/IEC 10646) for the consistent encoding, representation, and handling of text in most of the world's writing systems. It answers the question: <strong>How do I combine multiple languages in a single document?</strong></p>
+
+        <p>In the past we had different encodings for different language codified in the ISO/IEC 8859 series of standards. English, for example, uses ISO/IEC 8859-1 which is mostly ASCII. This is not sufficient to work with eastern European languages that use additional symbols accents and punctuation to fully express the language. See the <a href="https://www.wikiwand.com/en/ISO/IEC_8859">Wikipedia entry for ISO 8859</a> for more details regarding what languages are supported on each section of the standard.</p>
       </section>
 
 
@@ -1167,6 +1529,24 @@ div#shapeExample {
         </ul>
       </section>
 
+      <section>
+        <h2>Links and videos about progressive enhancement</h2>
+
+        <ul>
+          <li><a href='http://jakearchibald.com/2013/progressive-enhancement-still-important/'>Progressive enhancement still important</a> -- Jake Archibald</li>
+          <li><a href='http://thatemil.com/blog/2013/07/02/progressive-enhancement-still-not-dead/'>Progressive enhancement still not dead</a> -- Emil Björklund</li>
+          <li><a href='http://blog.pamelafox.org/2013/05/frontend-architectures-server-side-html.html'>Server-side HTML vs. JS Widgets vs. Single-Page Web Apps</a> -- Pamela Fox</li>
+          <li><a href='http://christianheilmann.com/2012/02/16/stumbling-on-the-escalator/'>Stumbling on the escalator</a> -- Christian Heilmann</li>
+          <li><a href='http://responsivenews.co.uk/post/18948466399/cutting-the-mustard'>Cutting the mustard</a> -- BBC News</li>
+        </ul>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/li4Y0E_x8zE" frameborder="0" allowfullscreen></iframe>
+        <p>Enough with the Javascript already</p>
+
+        <iframe src="https://player.vimeo.com/video/118146193" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <p>The long web</p>
+
+      </section>
       <section>
         <h2>One final thing</h2>
 

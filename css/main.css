@@ -582,26 +582,25 @@ video,
 object {
   border-width: thin;
   border-style: solid;
-  border-color: #f44336;
   clear: both;
   display: block;
   margin: 1em auto;
   max-width: 100%;
 }
 
-iframe {
-  border-width: thin;
-  border-style: solid;
-  border-color: #f44336;
-  clear: both;
-  display: block;
-  margin-bottom: 1em;
-  margin-top: 1em;
-  max-width: 100%;
+div.video {
+  margin: 1em auto;
+  max-width: 500px;
+  max-width: min-content;
 }
-
-p.video-caption {
-  margin-top: 0.5em;
+div.video iframe {
+  clear: both;
+  max-width: inherit;
+}
+div.video p {
+  font-style: italic;
+  font-weight: bold;
+  margin-top: -.125em;
 }
 
 h1 + p:first-letter {

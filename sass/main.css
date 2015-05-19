@@ -543,26 +543,25 @@ strong em, em strong {
 video, object {
   border-width: thin;
   border-style: solid;
-  border-color: #f44336;
   clear: both;
   display: block;
   margin: 1em auto;
   max-width: 100%; }
 
-/* line 16, /Users/carlos/code/books-as-apps/sass/partials/_multimedia.scss */
-iframe {
-  border-width: thin;
-  border-style: solid;
-  border-color: #f44336;
-  clear: both;
-  display: block;
-  margin-bottom: 1em;
-  margin-top: 1em;
-  max-width: 100%; }
-
-/* line 26, /Users/carlos/code/books-as-apps/sass/partials/_multimedia.scss */
-p.video-caption {
-  margin-top: 0.5em; }
+/* line 15, /Users/carlos/code/books-as-apps/sass/partials/_multimedia.scss */
+div.video {
+  margin: 1em auto;
+  max-width: 500px;
+  max-width: min-content; }
+  /* line 21, /Users/carlos/code/books-as-apps/sass/partials/_multimedia.scss */
+  div.video iframe {
+    clear: both;
+    max-width: inherit; }
+  /* line 27, /Users/carlos/code/books-as-apps/sass/partials/_multimedia.scss */
+  div.video p {
+    font-style: italic;
+    font-weight: bold;
+    margin-top: -.125em; }
 
 /* line 3, /Users/carlos/code/books-as-apps/sass/partials/_paragraphs.scss */
 h1 + p:first-letter {
