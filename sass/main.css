@@ -1,5 +1,3 @@
-@import url("https://hello.myfonts.net/count/2e02d0");
-@import url("https://hello.myfonts.net/count/2e03fa");
 /* line 55, /Users/carlos/code/books-as-apps/sass/partials/_normalize.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
@@ -205,64 +203,64 @@ input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
   padding: 0; }
 
-/* line 21, /Users/carlos/code/books-as-apps/bower_components/susy/sass/susy/language/susy/_box-sizing.scss */
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-/* line 14, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
+/* line 22, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
 .wrap {
   max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
-  height: 100%; }
+  height: 100vh; }
   /* line 12, /Users/carlos/code/books-as-apps/bower_components/susy/sass/susy/output/support/_clearfix.scss */
   .wrap:after {
     content: " ";
     display: block;
     clear: both; }
 
-/* line 19, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
-.social-buttons {
+/* line 27, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
+.aside-left {
   width: 17.5%;
   float: left;
   margin-left: 0.625%;
   margin-right: 0.625%;
-  height: 100%;
+  height: 100vh;
   margin-top: 15em; }
 
-/* line 27, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
+/* line 35, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
 .main-content {
   width: 61.25%;
   float: left;
   margin-left: 19.375%;
-  margin-right: -100%;
-  height: 100%; }
+  margin-right: -100%; }
+  /* line 14, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
+  .main-content:after {
+    content: " ";
+    display: block;
+    clear: both; }
 
-/* line 34, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
+/* line 40, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
+aside-right {
+  width: 17.5%;
+  float: left;
+  margin-left: 63.125%;
+  margin-right: -100%;
+  border-top: 3px double #ddd;
+  border-bottom: 3px double #ddd;
+  color: #666;
+  line-height: 1.4em; }
+  /* line 14, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
+  aside-right:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/* line 50, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
 .main-content-simple {
-  background-color: rgba(255, 0, 255, 0.1);
   width: 61.25%;
   float: left;
   margin-left: 0.625%;
   margin-right: 0.625%;
   height: 100%; }
-
-/* line 39, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
-aside {
-  width: 17.5%;
-  float: left;
-  margin-left: 63.125%;
-  margin-right: -100%;
-  width: 100%;
-  border-top: 3px double #ddd;
-  border-bottom: 3px double #ddd;
-  color: #666;
-  line-height: 1.4em;
-  background-color: rgba(0, 255, 255, 0.1); }
-  /* line 24, /Users/carlos/code/books-as-apps/sass/partials/_mixins.scss */
-  aside:after {
+  /* line 14, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
+  .main-content-simple:after {
     content: " ";
     display: block;
     clear: both; }
@@ -476,9 +474,9 @@ aside h3 {
   font-weight: normal;
   font-style: normal; }
 
-/* line 81, /Users/carlos/code/books-as-apps/sass/main.scss */
+/* line 80, /Users/carlos/code/books-as-apps/sass/main.scss */
 html {
-  color: #333;
+  color: #554c4d;
   font-family: 'Stone-Humanist';
   line-height: 1.3;
   /* optional: for older browsers */
@@ -532,7 +530,7 @@ strong {
   font-family: 'Stone-Humanist-Semi'; }
 
 /* line 6, /Users/carlos/code/books-as-apps/sass/partials/_styles.scss */
-em {
+Skolar em {
   font-family: 'Stone-Humanist-Ita'; }
 
 /* line 12, /Users/carlos/code/books-as-apps/sass/partials/_styles.scss */
@@ -639,23 +637,6 @@ figure {
   /* line 21, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
   figure img {
     max-width: inherit; }
-
-/* line 27, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
-.iconmelon, .im {
-  position: relative;
-  width: 32px;
-  height: 32px;
-  display: block;
-  fill: #525151; }
-
-/* line 35, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
-.iconmelon:after, .im:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
 
 /* line 1, /Users/carlos/code/books-as-apps/sass/partials/_code.scss */
 div .code-example {
@@ -793,14 +774,14 @@ div .css-example {
     width: 280em; }
   max-width: 33.77778em; }
 
-/* line 120, /Users/carlos/code/books-as-apps/sass/main.scss */
+/* line 119, /Users/carlos/code/books-as-apps/sass/main.scss */
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0; }
 
-/* line 134, /Users/carlos/code/books-as-apps/sass/main.scss */
+/* line 133, /Users/carlos/code/books-as-apps/sass/main.scss */
 .col2 {
   width: 100%;
   /* How many columns? */
@@ -820,7 +801,7 @@ div .css-example {
   -webkit-column-span: none;
   column-span: none; }
 
-/* line 145, /Users/carlos/code/books-as-apps/sass/main.scss */
+/* line 144, /Users/carlos/code/books-as-apps/sass/main.scss */
 .col3 {
   width: 100%;
   /* How many columns? */

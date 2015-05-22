@@ -1,25 +1,33 @@
+@import '../../bower_components/susy/sass/susy';
 // Susy map to tell it how to layout the content
 $susy: (
   output: isolate,
   columns: 16,
   container: 1140px,
   global-box-sizing: border-box,
-  //debug: (image: show),
-  gutter-position: split
+  gutter-position: split,
   );
 
-@include border-box-sizing;
+//@include border-box-sizing;
+
+@mixin cf {
+  &:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
 
 // The wrapper for our content
 .wrap {
   @include container();
-  height: 100%;
+  height: 100vh;
 }
 
-.social-buttons {
+.aside-left {
   @include span(3 of 16);
   //background-color: rgba(0, 0, 255, .1);
-  height:100%;
+  height:100vh;
   margin-top: 15em;
 }
 
@@ -27,22 +35,20 @@ $susy: (
 .main-content {
   //background-color: rgba(255, 0, 255, .1);
   @include span(10 of 16 at 4);
-  height:100%;
-}
-
-// The main content area
-.main-content-simple{
-  background-color: rgba(255, 0, 255, .1);
-  @include span(10 of 16);
-  height:100%;
-}
-aside {
-  @include span(3 of 16 at 11);
   @include cf;
-  width: 100%;
+}
+aside-right {
+  @include span(3 of 16 at 11 last);
+  @include cf;
   border-top: 3px double #ddd;
   border-bottom: 3px double #ddd;
   color: #666;
   line-height: 1.4em;
-  background-color: rgba(0, 255, 255, .1);
+}
+
+// The main content area when used as the second item in the grid
+.main-content-simple{
+  @include span(10 of 16);
+  height:100%;
+  @include cf;
 }

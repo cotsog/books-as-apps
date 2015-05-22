@@ -71,9 +71,9 @@
 
       <div class='video'>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/0OF-jU97HzQ" frameborder="0" allowfullscreen></iframe>
-      </div>
 
-      <p>Universal Typography -- Tim Brown</p>
+        <p>Universal Typography -- Tim Brown</p>
+      </div>
 
       <!--
       <h2>Typeface and fonts and the differences</h2>
@@ -239,6 +239,14 @@ div#example3 {
           </div>
 </div>
           <p>Example demonstrating what happens when you change line-height</p>
+
+          <h3>Line width</h3>
+
+          <blockquote>
+            <p>Anything from 45 to 75 characters is widely regarded as a satisfactory length of line for a single-column page set in a serifed text face in a text size. The 66-character line (counting both letters and spaces) is widely regarded as ideal. For multiple-column work, a better average is 40 to 50 characters.</p>
+            <p>Robert Bringhurst’s The Elements of Typographic Style, (p.26)</p>
+          </blockquote>
+          <p>Until I started working with web type I had never considered line length</p>
 
           <h3>So what should the stack look like?</h3>
 
@@ -1295,7 +1303,7 @@ $(document).ready(function() {
 
 <p>Web performance patterns advise that you put Javascripts at the bottom of your page before your <code>&lt;/body&gt;</code> tag.  There is an unfortunate side effect where you may experiences a <a href="http://paulirish.com/2009/fighting-the-font-face-fout/">FOUT (Flash of Unstyled Text)</a> when you're manipulating your text after the DOM has loaded.  Unfortunately, we found the best solution to avoid/minimize the FOUT caused by this plugin is to put your scripts (jQuery, Lettering.js) in the document <code>&lt;head&gt;</code>. On the one hand, your page will load slower. On the other hand, a flash/restyling makes your site feel slow. Users might ultimately feel the site is faster if they don't see the FOUT.</p>
 
-     <p>Dave Rupert. Letterin.js <a href="https://github.com/davatron5000/Lettering.js/blob/master/README.md">Readme</a></p>
+     <p>Dave Rupert. Lettering.js <a href="https://github.com/davatron5000/Lettering.js/blob/master/README.md">Readme</a></p>
       </blockquote>
        <p>The result will appear like this:</p>
 
@@ -1438,15 +1446,9 @@ $(document).ready(function() {
 
         <h2>Legal Issues</h2>
 
-        <p>Unless you own the typeface or it is licensed through Google Fonts or another free service, you will have to pay for the font. I will briefly discuss what I had to do to license Stone Humanist for use on the web, what this allows me to do and the things I'm not allowed to.</p>
+        <p>Unless you own the typeface or it is licensed through Google Fonts or another free service, you will have to pay for the font and be subject to whatever restrictions the EULA (End User License Agreement) specifies. This may be a problem when the foundry decides that you don't need a TTF format for the font you just purchased or when you're not allowed to generate an SVG version of your font to use with older iOS devices.</p>
 
-        <h3>Licensing Commercial Fonts</h3>
-
-        <p>Licensing Stone Humanist means that I have permission to use the font on a web site (or web sites) with no more than 250,000 hits a month. I've added it using the @font-face syntax and am considering using the Web Font Loader to make the process seamless to the user.</p>
-
-        <p>If I go over 250k hits on my pages in month or if want to use the font for a different use (application, e-book or more hits per month than what I already paid for) I am supposed to pay an additional ammount to the Foundry.</p>
-
-        <p>This is what, for the longest time, bothered me about licensing fonts for use in online content. The prices for e-pub fonts are prohibitive for most independent e-book producers and content creators. I can understand the need for font creators and foundries to make a living </p>
+        <p>I do not mean to say or imply that you should break your license agreement. Quite the opposite; we should be thankful that foundries and font creators have decided that the bennefits outweigh the risks when it comes to online fonts. It is not a perfect solution and we need </p>
 
 
 
@@ -1540,11 +1542,18 @@ div#shapeExample {
           <li><a href='http://responsivenews.co.uk/post/18948466399/cutting-the-mustard'>Cutting the mustard</a> -- BBC News</li>
         </ul>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/li4Y0E_x8zE" frameborder="0" allowfullscreen></iframe>
-        <p>Enough with the Javascript already</p>
+        <div class='video'>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/li4Y0E_x8zE" frameborder="0" allowfullscreen></iframe>
 
-        <iframe src="https://player.vimeo.com/video/118146193" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        <p>The long web</p>
+          <p>Enough with the Javascript already -- Nicholas Zakas</p>
+        </div>
+
+        <div class='video'>
+          <iframe src="https://player.vimeo.com/video/118146193" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+          <p>The long web -- Jeremy Keith</p>
+        </div>
+
 
       </section>
       <section>

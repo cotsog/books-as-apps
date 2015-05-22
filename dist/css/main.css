@@ -582,7 +582,6 @@ video,
 object {
   border-width: thin;
   border-style: solid;
-  border-color: #f44336;
   clear: both;
   display: block;
   margin: 1em auto;
@@ -590,19 +589,17 @@ object {
 }
 
 div.video {
-  border-width: thin;
-  border-style: solid;
   margin: 1em auto;
   max-width: 500px;
   max-width: min-content;
 }
 div.video iframe {
   clear: both;
-  display: block;
   max-width: inherit;
 }
-
-div.video + p {
+div.video p {
+  font-style: italic;
+  font-weight: bold;
   margin-top: -.125em;
 }
 

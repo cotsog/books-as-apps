@@ -1,6 +1,6 @@
 // @import must be at top of file, otherwise CSS will not work
-@import url("https://hello.myfonts.net/count/2e02d0");
-@import url("https://hello.myfonts.net/count/2e03fa");
+//@import url("https://hello.myfonts.net/count/2e02d0");
+//@import url("https://hello.myfonts.net/count/2e03fa");
 
 // Webfonts and licenses
 //
@@ -28,9 +28,6 @@
 @import 'partials/mixins';
 // Import normalize first
 @import 'partials/normalize';
-// Import Susy grid to make sure that if we add additional
-// grid classes things won't break
-@import '../bower_components/susy/sass/susy';
 // Import the susy partials specific to this project
 @import 'partials/susy';
 // Breakpoint support for sussy and for standalone queries
@@ -58,7 +55,7 @@
 // ALTERNATE FONTS
 //If you make any changes here, remember to change the values in partials/_styles.scss
 //to match.
-//Also, if you use Skolar you may have to switch your heading font
+//Also, if you use Skolar you may have to switch your heading font.
 //
 // Alternate body font 1: Skolar
 //@include font-declaration('Skolar', '../fonts/skolarlatinweb-light-webfont');
@@ -66,6 +63,8 @@
 //@include font-declaration('Skolar-Semi', '../fonts/skolarlatinweb-semibold-webfont');
 //@include font-declaration('Skolar-SemiItalic', '../fonts/skolarlatinweb-semibolditalic-webfont');
 // Alternate body font 2: Fira Sans
+//If you make any changes here, remember to change the values in partials/_styles.scss
+//to match.
 //@include font-declaration('fira-sans-light', '../fonts/firasans-light-webfont');
 //@include font-declaration('fira-sans-bold', '../fonts/firasans-bold-webfont', 'weight: bold');
 //@include font-declaration('fira-sans-italic', '../fonts/firasans-lightitalic-webfont', 'style: italics');
@@ -79,7 +78,7 @@
 // @description Default settings for page/site/app
 //
 html {
-  color: #333;
+  color: #554c4d;
   font-family: 'Stone-Humanist';
 //  font-family: 'Skolar';
   line-height: 1.3;
