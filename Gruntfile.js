@@ -222,7 +222,11 @@
       },
 
       // Copy the files from our repository into the dist
-      // directory
+      // directory. Do not doo deep copy of HTML files.
+      // It'll copy stuff that we keep around for testing,
+      // like the webfont loader docs. Either delete the
+      // webfont loader stuff or just copy html from the
+      // top level directory (which I changed it to do)
       copy: {
         dist: {
           files: [ {
@@ -232,7 +236,7 @@
               'css/**/*',
               'lib/**/*',
               'js/**/*',
-              '**/*.html'],
+              '*.html'],
             dest: 'dist/'
           }]
         }
