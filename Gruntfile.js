@@ -222,7 +222,7 @@
       },
 
       // Copy the files from our repository into the dist
-      // directory. Do not doo deep copy of HTML files.
+      // directory. Do not do deep copy of HTML files.
       // It'll copy stuff that we keep around for testing,
       // like the webfont loader docs. Either delete the
       // webfont loader stuff or just copy html from the
