@@ -268,26 +268,10 @@ input[type="checkbox"], input[type="radio"] {
 .right-column {
   width: 17.5%;
   float: left;
-  margin-left: 63.125%;
-  margin-right: -100%;
+  margin-left: 0.625%;
+  margin-right: 0.625%;
 }
 .right-column:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-.aside-right {
-  width: 17.5%;
-  float: left;
-  margin-left: 63.125%;
-  margin-right: -100%;
-  border-top: 3px double #ddd;
-  border-bottom: 3px double #ddd;
-  color: #666;
-  line-height: 1.4em;
-}
-.aside-right:after {
   content: " ";
   display: block;
   clear: both;
@@ -657,55 +641,13 @@ p p {
   font-size: 90%;
 }
 
-.social-buttons ol {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  width: 100% li;
-  width-margin-bottom: 0.5em;
-}
-.social-buttons .profile-link {
-  background: #f2f2f2;
-  color: #4778b8;
-  display: block;
-  padding: 0.75em 1em;
-  text-decoration: none;
-}
-.social-buttons .profile-link:focus, .social-buttons .profile-link:hover {
-  color: #fff;
-}
-
-.social-buttons .profile-link--delicious:focus,
-.social-buttons .profile-link--delicious:hover {
-  background: #248cff;
-}
-
-.social-buttons .profile-link--github:focus,
-.social-buttons .profile-link--github:hover {
-  background: #4183c4;
-}
-
-.social-buttons .profile-link--googleplus:focus,
-.social-buttons .profile-link--googleplus:hover {
-  background: #dd4b39;
-}
-
-.social-buttons .profile-link--linkedin:focus,
-.social-buttons .profile-link--linkedin:hover {
-  background: #007bb6;
-}
-
-.social-buttons .profile-link--twitter:focus,
-.social-buttons .profile-link--twitter:hover {
-  background: #00aced;
-}
-
 section {
   counter-increment: section_count;
   counter-reset: figure_count;
 }
 
 figure {
+  border: 1px solid #f44336;
   counter-increment: figure_count;
   margin: 2em auto;
   max-width: 600px;

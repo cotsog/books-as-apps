@@ -31,26 +31,27 @@ $susy: (
   margin-top: 15em;
 }
 
-// The main content area
+// The main content area when there's no other content in the left or right columns
 .main-content {
   //background-color: rgba(255, 0, 255, .1);
   @include span(10 of 16 at 4);
   @include cf;
 }
 
+// Right side column
 .right-column {
-  @include span(3 of 16 at 11 last);
+  @include span(3 of 16);
   @include cf;
 }
 
-.aside-right {
-  @include span(3 of 16 at 11 last);
-  @include cf;
-  border-top: 3px double #ddd;
-  border-bottom: 3px double #ddd;
-  color: #666;
-  line-height: 1.4em;
-}
+//.aside-right {
+//  @include span(3 of 16);
+//  @include cf;
+//  border-top: 3px double #ddd;
+//  border-bottom: 3px double #ddd;
+//  color: #666;
+//  line-height: 1.4em;
+//}
 
 // The main content area when used as the second item in the grid
 .main-content-simple{
