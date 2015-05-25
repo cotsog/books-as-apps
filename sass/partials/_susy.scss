@@ -24,7 +24,7 @@ $susy: (
   height: 100vh;
 }
 
-.aside-left {
+.left-column {
   @include span(3 of 16);
   //background-color: rgba(0, 0, 255, .1);
   height:100vh;
@@ -37,7 +37,13 @@ $susy: (
   @include span(10 of 16 at 4);
   @include cf;
 }
-aside-right {
+
+.right-column {
+  @include span(3 of 16 at 11 last);
+  @include cf;
+}
+
+.aside-right {
   @include span(3 of 16 at 11 last);
   @include cf;
   border-top: 3px double #ddd;
@@ -51,4 +57,26 @@ aside-right {
   @include span(10 of 16);
   height:100%;
   @include cf;
+}
+
+
+// Full Bleed is designed to take the full 16 columns of the screen.
+// Ideally I'd like to do it full screen but it is not possible to do so.
+.full-bleed {
+  @include bleed-x(span(3 wide of 10));
+  @include cf;
+  //background: rgba(255, 0, 0 , 0.25);
+
+  img .full-bleed-image {
+    clear: both;
+    margin: 0;
+    position: absolute;
+    width: -moz-min-content;
+    width: -webkit-min-content;
+    width: min-content;
+  }
+
+  p {
+    margin-top: -.5em;
+  }
 }

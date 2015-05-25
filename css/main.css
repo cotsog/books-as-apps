@@ -244,7 +244,7 @@ input[type="checkbox"], input[type="radio"] {
   clear: both;
 }
 
-.aside-left {
+.left-column {
   width: 17.5%;
   float: left;
   margin-left: 0.625%;
@@ -265,7 +265,19 @@ input[type="checkbox"], input[type="radio"] {
   clear: both;
 }
 
-aside-right {
+.right-column {
+  width: 17.5%;
+  float: left;
+  margin-left: 63.125%;
+  margin-right: -100%;
+}
+.right-column:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.aside-right {
   width: 17.5%;
   float: left;
   margin-left: 63.125%;
@@ -275,7 +287,7 @@ aside-right {
   color: #666;
   line-height: 1.4em;
 }
-aside-right:after {
+.aside-right:after {
   content: " ";
   display: block;
   clear: both;
@@ -292,6 +304,32 @@ aside-right:after {
   content: " ";
   display: block;
   clear: both;
+}
+
+.full-bleed {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  margin-right: -30%;
+  margin-left: -30%;
+  padding-right: 30%;
+  padding-left: 30%;
+}
+.full-bleed:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.full-bleed img .full-bleed-image {
+  clear: both;
+  margin: 0;
+  position: absolute;
+  width: -moz-min-content;
+  width: -webkit-min-content;
+  width: min-content;
+}
+.full-bleed p {
+  margin-top: -.5em;
 }
 
 @media (min-width: 0) {
@@ -670,7 +708,9 @@ section {
 figure {
   counter-increment: figure_count;
   margin: 2em auto;
-  max-width: 500px;
+  max-width: 600px;
+  max-width: -moz-min-content;
+  max-width: -webkit-min-content;
   max-width: min-content;
 }
 figure figcaption {
@@ -682,11 +722,6 @@ figure figcaption::before {
 }
 figure img {
   max-width: inherit;
-}
-
-.full-bleed {
-  width: 100vw;
-  height: 50vh;
 }
 
 div .code-example {

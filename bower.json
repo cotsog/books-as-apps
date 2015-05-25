@@ -16,6 +16,6 @@
   "dependencies": {
     "susy": "~2.2.2",
     "breakpoint": "~4.6.4",
-    "typeplate-starter-kit": "~2.1.0",
+    "typeplate-starter-kit": "~2.1.0"
   }
 }

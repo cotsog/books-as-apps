@@ -216,7 +216,7 @@ input[type="checkbox"], input[type="radio"] {
     clear: both; }
 
 /* line 27, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
-.aside-left {
+.left-column {
   width: 17.5%;
   float: left;
   margin-left: 0.625%;
@@ -236,8 +236,20 @@ input[type="checkbox"], input[type="radio"] {
     display: block;
     clear: both; }
 
-/* line 40, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
-aside-right {
+/* line 41, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
+.right-column {
+  width: 17.5%;
+  float: left;
+  margin-left: 63.125%;
+  margin-right: -100%; }
+  /* line 14, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
+  .right-column:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/* line 46, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
+.aside-right {
   width: 17.5%;
   float: left;
   margin-left: 63.125%;
@@ -247,12 +259,12 @@ aside-right {
   color: #666;
   line-height: 1.4em; }
   /* line 14, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
-  aside-right:after {
+  .aside-right:after {
     content: " ";
     display: block;
     clear: both; }
 
-/* line 50, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
+/* line 56, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
 .main-content-simple {
   width: 61.25%;
   float: left;
@@ -264,6 +276,32 @@ aside-right {
     content: " ";
     display: block;
     clear: both; }
+
+/* line 65, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
+.full-bleed {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  margin-right: -30%;
+  margin-left: -30%;
+  padding-right: 30%;
+  padding-left: 30%; }
+  /* line 14, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
+  .full-bleed:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  /* line 70, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
+  .full-bleed img .full-bleed-image {
+    clear: both;
+    margin: 0;
+    position: absolute;
+    width: -moz-min-content;
+    width: -webkit-min-content;
+    width: min-content; }
+  /* line 79, /Users/carlos/code/books-as-apps/sass/partials/_susy.scss */
+  .full-bleed p {
+    margin-top: -.5em; }
 
 @media (min-width: 0) {
   /* line 9, /Users/carlos/code/books-as-apps/bower_components/breakpoint/breakpoint/_core.scss */
@@ -625,16 +663,18 @@ section {
 figure {
   counter-increment: figure_count;
   margin: 2em auto;
-  max-width: 500px;
+  max-width: 600px;
+  max-width: -moz-min-content;
+  max-width: -webkit-min-content;
   max-width: min-content; }
-  /* line 12, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
+  /* line 14, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
   figure figcaption {
     font-family: 'Stone-Humanist-SemiItalic', sans-serif;
     margin-top: -.25em; }
-  /* line 17, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
+  /* line 19, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
   figure figcaption::before {
     content: 'Figure ' counter(section_count) '-' counter(figure_count) ': '; }
-  /* line 21, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
+  /* line 23, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
   figure img {
     max-width: inherit; }
 
