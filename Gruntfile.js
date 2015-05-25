@@ -3,7 +3,11 @@
 (function () {
   'use strict';
   module.exports = function (grunt) {
-    // require it at the top and pass in the grunt instance
+    // Apparently I have to require mozjpeg anyways
+    // need to research why. Is it because it's not
+    // seen as a grunt package?
+    var mozjpeg = require('imagemin-mozjpeg');
+    // require time-grunt at the top and pass in the grunt instance
     // it will measure how long things take for performance
     //testing
     require('time-grunt')(grunt);
@@ -89,6 +93,44 @@
         }
       },
 
+      imagemin: {
+        png: {
+          options: {
+            optimizationLevel: 3
+          },
+          files: [
+            {
+              // Set to true to enable the following options…
+              expand: true,
+              // cwd is 'current working directory'
+              cwd: 'images/',
+              src: ['**/*.png'],
+              // Could also match cwd line above. i.e. project-directory/img/
+              dest: 'dist/images/',
+              ext: '.png'
+            }
+          ]
+        },
+        jpg: {
+          options: {
+            progressive: true,
+            use: [mozjpeg()]
+          },
+          files: [
+            {
+              // Set to true to enable the following options…
+              expand: true,
+              // cwd is 'current working directory'
+              cwd: 'images/',
+              src: ['**/*.jpg'],
+              // Could also match cwd. i.e. project-directory/img/
+              dest: 'dist/images/',
+              ext: '.jpg'
+            }
+          ]
+        }
+      },
+
       // Autoprefixer will check caniuse.com's database and
       // add the necessary prefixes to CSS elements as needed.
       // This saves us from doing the work manually
@@ -144,12 +186,12 @@
       // See http://babeljs.io/ for more information.
       babel: {
         options: {
-            sourceMap: true
+          sourceMap: true
         },
         dist: {
-            files: {
-                'es6/*.js': 'src/*.js'
-            }
+          files: {
+            'es6/*.js': 'src/*.js'
+          }
         }
       },
 
@@ -190,7 +232,6 @@
               'css/**/*',
               'lib/**/*',
               'js/**/*',
-              'images/**/*',
               '**/*.html'],
             dest: 'dist/'
           }]
@@ -214,15 +255,15 @@
           files: [ 'Gruntfile.js', 'js/{,*/}*.js'],
           tasks: [ 'jshint'],
           options: {
-            livereload: true,
-          },
+            livereload: true
+          }
         },
         sass: {
           files: [ 'sass/*.scss'],
           tasks: [ 'sass:dev'],
           options: {
-            livereload: true,
-          },
+            livereload: true
+          }
         }
       },
 
@@ -232,7 +273,7 @@
             base: '.',
             port: 2509,
             keepalive: true,
-            livereload: true,
+            livereload: true
 
           }
         },
@@ -241,7 +282,7 @@
             base: 'dist',
             keepalive: true,
             livereload: true,
-            port: 2510,
+            port: 2510
           }
         }
       },
@@ -252,7 +293,7 @@
           // Gets the port from the connect configuration
           path: 'http://0.0.0.0:2509'
         }
-      },
+      }
 
     });
     // closes initConfig
@@ -272,7 +313,7 @@
 
     grunt.task.registerTask(
       'publish',
-      [ 'clean:all', 'copy:dist', 'gh-pages' ]
+      [ 'clean:all', 'copy:dist', 'imagemin', 'gh-pages' ]
     );
     grunt.task.registerTask(
       'lint-all',
