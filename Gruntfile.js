@@ -264,7 +264,7 @@
         },
         sass: {
           files: [ 'sass/*.scss'],
-          tasks: [ 'sass:dev'],
+          tasks: [ 'sass:dev', 'autoprefixer'],
           options: {
             livereload: true
           }
