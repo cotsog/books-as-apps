@@ -93,6 +93,19 @@
         }
       },
 
+      perfbudget: {
+        all: {
+          options: {
+            url: 'https://caraya.github.io/books-as-apps/typography.html',
+            key: 'A.be974c9b235f69677db80813612925c6',
+            budget: {
+              visualComplete: '4000',
+              SpeedIndex: '1500'
+            }
+          }
+        }
+      },
+
       imagemin: {
         png: {
           options: {

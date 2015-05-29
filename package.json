@@ -30,6 +30,7 @@
     "grunt-gh-pages": "^0.9.1",
     "grunt-mkdir": "^0.1.2",
     "grunt-open": "^0.2.3",
+    "grunt-perfbudget": "^0.1.6",
     "grunt-scss-lint": "^0.3.4",
     "grunt-uncss": "^0.4.0",
     "imagemin-mozjpeg": "^5.1.0",
