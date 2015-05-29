@@ -1,3 +1,45 @@
+@font-face {
+  font-family: "Stone-Humanist";
+  src: url("../fonts/2E02D0_0_0.eot");
+  src: url("../fonts/2E02D0_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_0_0.woff2") format("woff2"), url("../fonts/2E02D0_0_0.woff") format("woff"), url("../fonts/2E02D0_0_0.ttf") format("truetype"), url("../fonts/2E02D0_0_0.svg#wf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Stone-Humanist-Ita";
+  src: url("../fonts/2E02D0_1_0.eot");
+  src: url("../fonts/2E02D0_1_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_1_0.woff2") format("woff2"), url("../fonts/2E02D0_1_0.woff") format("woff"), url("../fonts/2E02D0_1_0.ttf") format("truetype"), url("../fonts/2E02D0_1_0.svg#wf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Stone-Humanist-Semi";
+  src: url("../fonts/2E02D0_2_0.eot");
+  src: url("../fonts/2E02D0_2_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_2_0.woff2") format("woff2"), url("../fonts/2E02D0_2_0.woff") format("woff"), url("../fonts/2E02D0_2_0.ttf") format("truetype"), url("../fonts/2E02D0_2_0.svg#wf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Stone-Humanist-SemiItalic";
+  src: url("../fonts/2E02D0_3_0.eot");
+  src: url("../fonts/2E02D0_3_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_3_0.woff2") format("woff2"), url("../fonts/2E02D0_3_0.woff") format("woff"), url("../fonts/2E02D0_3_0.ttf") format("truetype"), url("../fonts/2E02D0_3_0.svg#wf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../fonts/robotoslab-regular-webfont.eot");
+  src: url("../fonts/robotoslab-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/robotoslab-regular-webfont.woff2") format("woff2"), url("../fonts/robotoslab-regular-webfont.woff") format("woff"), url("../fonts/robotoslab-regular-webfont.ttf") format("truetype"), url("../fonts/robotoslab-regular-webfont.svg#wf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sourcecodepro-medium-webfont";
+  src: url("../fonts/sourcecodepro-medium-webfont.eot");
+  src: url("../fonts/sourcecodepro-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcecodepro-medium-webfont.woff2") format("woff2"), url("../fonts/sourcecodepro-medium-webfont.woff") format("woff"), url("../fonts/sourcecodepro-medium-webfont.ttf") format("truetype"), url("../fonts/sourcecodepro-medium-webfont.svg#wf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 article,
 aside,
 details,
@@ -268,26 +310,10 @@ input[type="checkbox"], input[type="radio"] {
 .right-column {
   width: 17.5%;
   float: left;
-  margin-left: 63.125%;
-  margin-right: -100%;
+  margin-left: 0.625%;
+  margin-right: 0.625%;
 }
 .right-column:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-.aside-right {
-  width: 17.5%;
-  float: left;
-  margin-left: 63.125%;
-  margin-right: -100%;
-  border-top: 3px double #ddd;
-  border-bottom: 3px double #ddd;
-  color: #666;
-  line-height: 1.4em;
-}
-.aside-right:after {
   content: " ";
   display: block;
   clear: both;
@@ -503,48 +529,6 @@ aside h3 {
   padding-left: 20px;
 }
 
-@font-face {
-  font-family: "Stone-Humanist";
-  src: url("../fonts/2E02D0_0_0.eot");
-  src: url("../fonts/2E02D0_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_0_0.woff2") format("woff2"), url("../fonts/2E02D0_0_0.woff") format("woff"), url("../fonts/2E02D0_0_0.ttf") format("truetype"), url("../fonts/2E02D0_0_0.svg#wf") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Stone-Humanist-Ita";
-  src: url("../fonts/2E02D0_1_0.eot");
-  src: url("../fonts/2E02D0_1_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_1_0.woff2") format("woff2"), url("../fonts/2E02D0_1_0.woff") format("woff"), url("../fonts/2E02D0_1_0.ttf") format("truetype"), url("../fonts/2E02D0_1_0.svg#wf") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Stone-Humanist-Semi";
-  src: url("../fonts/2E02D0_2_0.eot");
-  src: url("../fonts/2E02D0_2_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_2_0.woff2") format("woff2"), url("../fonts/2E02D0_2_0.woff") format("woff"), url("../fonts/2E02D0_2_0.ttf") format("truetype"), url("../fonts/2E02D0_2_0.svg#wf") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Stone-Humanist-SemiItalic";
-  src: url("../fonts/2E02D0_3_0.eot");
-  src: url("../fonts/2E02D0_3_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_3_0.woff2") format("woff2"), url("../fonts/2E02D0_3_0.woff") format("woff"), url("../fonts/2E02D0_3_0.ttf") format("truetype"), url("../fonts/2E02D0_3_0.svg#wf") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Roboto Slab";
-  src: url("../fonts/robotoslab-regular-webfont.eot");
-  src: url("../fonts/robotoslab-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/robotoslab-regular-webfont.woff2") format("woff2"), url("../fonts/robotoslab-regular-webfont.woff") format("woff"), url("../fonts/robotoslab-regular-webfont.ttf") format("truetype"), url("../fonts/robotoslab-regular-webfont.svg#wf") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sourcecodepro-medium-webfont";
-  src: url("../fonts/sourcecodepro-medium-webfont.eot");
-  src: url("../fonts/sourcecodepro-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcecodepro-medium-webfont.woff2") format("woff2"), url("../fonts/sourcecodepro-medium-webfont.woff") format("woff"), url("../fonts/sourcecodepro-medium-webfont.ttf") format("truetype"), url("../fonts/sourcecodepro-medium-webfont.svg#wf") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
 html {
   color: #554c4d;
   font-family: 'Stone-Humanist';
@@ -655,49 +639,6 @@ p p {
 
 .small {
   font-size: 90%;
-}
-
-.social-buttons ol {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  width: 100% li;
-  width-margin-bottom: 0.5em;
-}
-.social-buttons .profile-link {
-  background: #f2f2f2;
-  color: #4778b8;
-  display: block;
-  padding: 0.75em 1em;
-  text-decoration: none;
-}
-.social-buttons .profile-link:focus, .social-buttons .profile-link:hover {
-  color: #fff;
-}
-
-.social-buttons .profile-link--delicious:focus,
-.social-buttons .profile-link--delicious:hover {
-  background: #248cff;
-}
-
-.social-buttons .profile-link--github:focus,
-.social-buttons .profile-link--github:hover {
-  background: #4183c4;
-}
-
-.social-buttons .profile-link--googleplus:focus,
-.social-buttons .profile-link--googleplus:hover {
-  background: #dd4b39;
-}
-
-.social-buttons .profile-link--linkedin:focus,
-.social-buttons .profile-link--linkedin:hover {
-  background: #007bb6;
-}
-
-.social-buttons .profile-link--twitter:focus,
-.social-buttons .profile-link--twitter:hover {
-  background: #00aced;
 }
 
 section {

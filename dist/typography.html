@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Typography Playground</title>
-  <meta name="description" content="">
+  <meta name="description" content="Explorations and exercises in web typography and related css specifications">
 
   <meta name="viewport" content="user-scalable=no, initial-scale=1.0" />
   <!-- iOS Web App indicators -->
@@ -39,6 +39,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- Place favicon.ico in the root directory -->
 
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/styles/github.css">
   <script src="lib/vendor/highlight.pack.js"></script>
@@ -46,6 +47,7 @@
     hljs.initHighlightingOnLoad();
   </script>
   <script src="lib/vendor/modernizr-2.8.3.js"></script>
+
 </head>
 
 <body>
@@ -86,7 +88,7 @@
         <p>Universal Typography -- Tim Brown</p>
       </div>
 
-      <p>I love the web and I've been working on digital content for almost 20 years. While I agree with the universality and accessibility requirements for the web (it should be acessible by anyone anywhere, regardless of disability.) But it doesn't mean that usable has to equal boring or plain</p>
+      <p>I love the web and I've been working on digital content for almost 20 years. While I agree with the universality and accessibility requirements for the web (it should be acessible by anyone anywhere, regardless of disability or network connection) the content doesn't have to be boring or plain</p>
 
       <p>Whether we are reading a paper book or a web page or a iBook or Kindle ebook, typography still matters and it's still an important part of the design process.</p>
 
@@ -1592,7 +1594,9 @@ $(document).ready(function() {
 });
 &lt;/script></code></pre>
 
-       <p>Contrary to what most people tell you, I put all my script initializers and loaders at the bottom of my file to make sure that there is content loaded before I initialize code that will change it. It's always been a catch 22.  AS:</p>
+       <p>Contrary to what most people tell you, I put all my script initializers and loaders at the bottom of my file to make sure that there is content loaded before I initialize code that will change it. It's always been a catch 22.</p>
+
+       <p>If you let your content load before scripts and stylesheets are loaded then the content will flash and change as the stles modify the way the content looks and behaves. But if you put the scripts and style sheets first then they will all have to load before the content is displayed and that may take significantly long (at least in web terms) up to several seconds.</p>
 
       <blockquote cite="https://github.com/davatron5000/Lettering.js/blob/master/README.md">
 
@@ -1780,35 +1784,320 @@ $(document).ready(function() {
 
         <p>CSS 3 allows you to create multi column layouts without cheating. According to caniuse.com the feature is <a href='http://caniuse.com/#feat=multicolumn'>supported to some degree</a> by all browser vendors. We'll explore some of the things you can do with columns and where the limitations are.</p>
 
+        <p>Please note that these examples use -moz and -webkit prefixes (for Chrome). To make sure the column examples work when you make changes you have to change all three values (prefixed and unprefixed.) This PITA makes columns another great candidate for autoprefixer or a SASS mixin.</p>
+
+        <p>Finally, because this is still a work in progress, some aspects of the spec may not be implemented in all browsers. If this is an issue for you please consider using polyfills.</p>
+
         <h3><a name='counting-columns'></a>Creating multi column text: counting columns</h3>
+
+        <p>The easiest way to work with columns is to tell CSS how many columns you want using the (prefixed) column-count property. This will tell the bowser how many columns to use. It will stick to that number of columns no matter what. They will be as wide or narrow as they need to be but the browser will always honor the number of clumns you tell it to use.</p>
+
+        <div class="css-example">
+            <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#columns1 {
+  border: 1px solid #cc092f;
+  font-family: 'Stone-Humanist', sans-serif;
+  line-height: 1.3;
+  margin-top: 1em;
+  padding: 1em;
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+}
+          </style>
+
+<div id='columns1'>
+  <h2>Bacon Title</h2>
+  <div class='content'>
+    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+    </div>
+  </div>
+</div>
+         <p>Example counting columns</p>
 
         <h3><a name='measuring-width'></a>Creating multi column text: counting width</h3>
 
+        <p>The opposite effect is to use the (also prefixed) column-width property. Where column count takes a single integer without unit as its value, column-width takes a value with unit (like the 150px used in CSS Example 12-2) and will create as many columns of that width as there is space available. Contrast CSS Example 12-1 and 12-2. Where 12-1 sticks to the two columns, 12-2 creates as many 150px columns as it can with the space available. Try narrowing the window and see what happens in example 12-2... the number of columns will shrink a the space available decreases.</p>
+
+        <div class="css-example">
+            <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#columns2 {
+  border: 1px solid #cc092f;
+  font-family: 'Stone-Humanist', sans-serif;
+  line-height: 1.3;
+  margin-top: 1em;
+  padding: 1em;
+  -moz-column-width: 150px;
+  -webkit-column-width: 150px;
+  column-width: 150px;
+}
+          </style>
+
+<div id='columns2'>
+  <h2>Bacon Title</h2>
+  <div class='content'>
+    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+    </div>
+  </div>
+</div>
+         <p>Example fixed column width</p>
+
         <h3><a name='shorthand1'></a>Creating multi column text: the shorthand method</h3>
+
+        <p>Some times I'm lazy and I want to just make columns work. Fortunately there is a shorthand syntax for column-width and column-count. It's just columns. Examples of legal values (Taken from the CSS3 colmn module specification:</p>
+
+        <pre><code class='css'>body {
+  columns: 12em;      /* column-width: 12em; column-count: auto */
+  columns: auto 12em; /* column-width: 12em; column-count: auto */
+  columns: 2;         /* column-width: auto; column-count: 2 */
+  columns: 2 auto;    /* column-width: auto; column-count: 2 */
+}</code></pre>
+
+        <p>As we can see it's either a column-count or column-width, not both.</p>
 
         <h3><a name='column-gap'></a>Column Gap</h3>
 
+        <p>In both previous examples, the browser took it upon itself to create a gap between columns. In this case it was OK but it is not always the case. Fortunately the multi column spec gives you the option of specifying a gap between the columns of your text.</p>
+
+                <div class="css-example">
+            <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#columns3 {
+  border: 1px solid #cc092f;
+  font-family: 'Stone-Humanist', sans-serif;
+  line-height: 1.3;
+  margin-top: 1em;
+  padding: 1em;
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  column-gap: 1em; /* 16px with a base font of 16px */
+  -moz-column-gap: 1em;
+  -webkit-column-gap: 1em;
+}
+          </style>
+
+<div id='columns3'>
+  <h2>Bacon Title</h2>
+  <div class='content'>
+    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+    </div>
+  </div>
+</div>
+         <p>Example with a 1em gap between columns</p>
+
+         <p>As you can see in the examples, the further apart we put the columns the easier each column it is to read but we get a smaller space to work with the overall text content.</p>
+
+                <div class="css-example">
+            <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#columns4 {
+  border: 1px solid #cc092f;
+  font-family: 'Stone-Humanist', sans-serif;
+  line-height: 1.3;
+  margin-top: 1em;
+  padding: 1em;
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  column-gap: 4em; /* 64px with a base font of 16px */
+  -moz-column-gap: 4em;
+  -webkit-column-gap: 4em;
+}
+          </style>
+
+<div id='columns4'>
+  <h2>Bacon Title</h2>
+  <div class='content'>
+    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+    </div>
+  </div>
+</div>
+         <p>Example with a 4em gap between columns</p>
+
         <h3><a name='column-rules'></a>Column Rules</h3>
 
+        <p>In this context, rules are vertical lines between the columns to help differentiate the columns and prevent runon text. We can combine this with gutter/gap as in example 12-4 to create a more pleasing reading experience.</p>
+
+                <div class="css-example">
+            <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#columns5 {
+  border: 1px solid #cc092f;
+  font-family: 'Stone-Humanist', sans-serif;
+  line-height: 1.3;
+  margin-top: 1em;
+  padding: 1em;
+  -moz-column-width: 150px;
+  -webkit-column-width: 150px;
+  column-width: 150px;
+  column-gap: 2em; /* 32px with a base font of 16px */
+  -moz-column-gap: 2em;
+  -webkit-column-gap: 2em;
+  -moz-column-rule: 2px solid #cc092f;
+  -webkit-column-rule: 2px solid #cc092f;
+  column-rule: 2px solid #cc092f;
+}
+          </style>
+
+<div id='columns5'>
+  <h2>Bacon Title</h2>
+  <div class='content'>
+    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+    </div>
+  </div>
+</div>
+         <p>Example column layout using rules</p>
+
         <h3><a name='column-rules'></a>Spanning Columns</h3>
+
+        <p>There are times when it's nice to have an element (a div that holds byline information, for example) span the full width of our content area without regard to the number of columns. CSS Columns module provides the column-span rule to do just that.</p>
+
+         <p>This is where we see the first deviation from the specification. According to <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/column-span'>MDN</a>, Firefox does not support column-span at all, it displays the content in its own column regardless of the settings authors choose.At least the result is not too bad...</p>
+
+                <div class="css-example">
+            <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+
+div#columns6 {
+  border: 1px solid #cc092f;
+  font-family: 'Stone-Humanist', sans-serif;
+  line-height: 1.3;
+  margin-top: 1em;
+  padding: 1em;
+  -moz-column-width: 150px;
+  -webkit-column-width: 150px;
+  column-width: 150px;
+  column-gap: 2em; /* 32px with a base font of 16px */
+  -moz-column-gap: 2em;
+  -webkit-column-gap: 2em;
+}
+
+#columns6 .byline {
+  -moz-column-span: all;
+  -webkit-column-span: all;
+  column-span: all;
+  background-color: purple;
+  color: white;
+}
+          </style>
+
+<div id='columns6'>
+
+  <div class='content'>
+    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+    <div class='byline'>
+       <h2>Bacon Title</h2>
+       <p>By Carlos</p>
+    </div>
+    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
+    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
+    </div>
+  </div>
+</div>
+        <p>Example of text spanning columns using column-span</p>
 
         <h3><a name='filling-columns'></a>Filling Columns</h3>
 
         <h3><a name='column-breaks'></a>Column Breaks</h3>
 
+        <h3><a name='mixins-and-autoprefixer'></a>Mixins and Autoprefixer</h3>
+
+        <p>If you're a SASS monkey then you can use a mixin like the one below to work with columns. The mixing makes it easier for you to work with prefixes by abstracting the prefixes and, where it makes sense, providing sensible defaults. </p>
+
+        <pre><code class='scss'>@mixin column-attribs ($cols, $gap, $fill: balance, $span: none){
+  /* How many columns? */
+  -moz-column-count: $cols;
+  -webkit-column-count: $cols;
+  column-count: $cols;
+  /* Space between columns */
+  -moz-column-gap: $gap;
+  -webkit-column-gap: $gap;
+  column-gap: $gap;
+  /* How do we fill the content of our columns, default is to balance */
+  -moz-column-fill: $fill;
+  -webkit-column-fill: $fill;
+  column-fill: $fill;
+  /* Column span, defaul is not to span columns */
+  -moz-column-span: $span;
+  -webkit-column-span: $span;
+  column-span: $span;
+}
+</code></pre>
+
+      <pre><code class='scss'>.col2 {
+  width: 100%;
+  @include column-attribs (2, 20px);
+}</code></pre>
+
+      <p>And the result looks like this:</p>
+
+      <pre><code class='css'>.col2 {
+  width: 100%;
+  /* How many columns? */
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  /* Space between columns */
+  -moz-column-gap: 20px;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+  /* How do we fill the content of our columns, default is to balance */
+  -moz-column-fill: balance;
+  -webkit-column-fill: balance;
+  column-fill: balance;
+  /* Column span, defaul is not to span columns */
+  -moz-column-span: none;
+  -webkit-column-span: none;
+  column-span: none;
+}</code></pre>
+
+      <p>I understand that there are designers who are not comfortable with SASS/SCSS. For those people I think the best solution is to use automatic prefixer tools, either directly or as part of an automated workflow. I've chosen to use <a href='https://github.com/postcss/autoprefixer'>autoprefixer</a> in a <a href='http://gruntjs.com/'>Grunt</a> workflow.</p>
+
+      <p>I won't go into details about the Grunt workflow but if you're familiar with Grunt it shouldn't be too hard to add Autoprefixer to the process. If you want to look at a (somewhat disorganized) reference you can look at the <a href='https://github.com/caraya/books-as-apps/blob/master/Gruntfile.js'>Gruntfile</a> I created for this project.</p>
 
       </section>
 
       <section>
         <h2><a name='css-transformations'></a>Getting fancy: CSS Transformations</h2>
 
-        <p>One of the most intriguing things we can do with text is change it's position and the way it looks on the screen with nothing but CSS in browsers that support it. The good news is that <a href="http://caniuse.com/#feat=transforms2d">all browsers except IE8 and Opera Mini support transformations</a> so we won't have to do workarounds</p>
-
+        <p>One of the most intriguing things we can do with text is change it's position and the way it looks on the screen with nothing but CSS in browsers that support it. The good news is that <a href="http://caniuse.com/#feat=transforms2d">all browsers except IE8 and Opera Mini support transformations</a> so we won't have to do workarounds.</p>
 
       <figure>
         <img src="images/rhombic.jpg" alt="Another example of what may be possible with shapes">
         <figcaption>An example of what may be possible with CSS shapes and transformations (taken from A List Apart's article <a href="http://alistapart.com/article/css-shapes-101">CSS Shapes 101</a> by <a href="http://sarasoueidan.com/">Sara Soueidan</a>.)</figcaption>
       </figure>
+
+      <p>We'll start with moving a heading to the left of the main body and rotating it 90 degrees.</p>
 
 
 
@@ -1823,12 +2112,13 @@ $(document).ready(function() {
 
         <p><a href="http://dev.w3.org/csswg/css-shapes/">CSS Shapes</a> allow designers and content creators to match some magazines layouts where the text wraps around images and other polygonal and irregular shapes.</p>
 
-        <p>Why do I include shapes in an essay about typography? As you can see in the examples below, shapes change the way the text relates to the surrounding images. Imagine what we can do with irregular shapes or letters (thinking of Dropcap applications).It can also be used to create shapes with text <em>inside</em> the shape (although this is not as widely supported)</p>
+        <p>Why do I include shapes in an essay about typography? As you can see in the examples below, shapes change the way the text relates to the surrounding images. Imagine what we can do with irregular shapes or letters (thinking of Dropcap applications).It can also be used to create shapes with text <em>inside</em> the shape (this is not part of the level 1 specification and was deferred to level 2 which is currently a working draft.)</p>
 
         <figure>
           <img src="images/shape-outside-example.jpg" alt="example of text wrapping around shapes in a page">
           <figcaption>Example of text wrapping around shapes in a page</figcaption>
         </figure>
+
       <div class="css-example">
     <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
 
@@ -1877,11 +2167,12 @@ div#shapeExample {
           <li><a href="http://alistapart.com/article/css-shapes-101">http://alistapart.com/article/css-shapes-101</a></li>
           <li><a href="http://www.html5rocks.com/en/tutorials/shapes/getting-started/">http://www.html5rocks.com/en/tutorials/shapes/getting-started/</a></li>
           <li><a href="https://css-tricks.com/clipping-masking-css/">Clipping and Masking in CSS</a></li>
+          <li><a href="http://www.html5rocks.com/en/tutorials/masking/adobe/">Masking Tutorial</a></li>
         </ul>
       </section>
 
       <section>
-        <h2><a name='#explorations'></a>Explorations and Experiments</h2>
+        <h2><a name='explorations'></a>Explorations and Experiments</h2>
 
         <div class='video'>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/ZNpn7FBp_9U" frameborder="0" allowfullscreen></iframe>
@@ -1913,14 +2204,14 @@ div#shapeExample {
 
       <section>
 
-        <h2><a name='#test'></a>Test the hell out of the project</h2>
+        <h2><a name='test'></a>Test the hell out of the project</h2>
 
         <p></p>
 
       </section>
 
       <section>
-        <h2><a name='#one-final-thing'></a>One final thing</h2>
+        <h2><a name='one-final-thing'></a>One final thing</h2>
 
         <p>For those of us who have been playing in/with 'the web' for 10 years or longer remember pages like the ones in the figures below. There was no Javascript and, I believe, the original CSS specification was released in 1996 so there was no CSS to play with.</p>
 
@@ -1959,74 +2250,7 @@ div#shapeExample {
 
     </div>
 
-     <div class='right-column'>
-            <h3>Table of Contents</h3>
-
-       <div class='toc'>
-         <ul>
-           <li><a href='#playground'>Typography Playground</a></li>
-           <li><a href='#font-selection'>Font Selection</a></li>
-             <ul>
-               <li><a href='#font-stacks'>Font Stacks</a></li>
-               <li><a href='#considerations'>Additional Considerations</a></li>
-               <ul>
-                 <li><a href='#size'>Font Size</a></li>
-                 <li><a href='#line-height'>Line Height</a></li>
-                 <li><a href='#line-width'>Line Width</a></li>
-               </ul>
-               <li><a href='#so-what'>So what should the stack look like?</a></li>
-             </ul>
-           <li><a href='#loading'>Loading Fonts</a></li>
-           <ul>
-             <li><a href='#at-font-face'>@font-face</a></li>
-             <li><a href='#google-font-api'>Google Font Api</a></li>
-             <li><a href='#googe-web-font-loader'>Google Web Font Loader</a></li>
-             <li><a href='#font-face-observer'>Font Face Observer</a></li>
-           </ul>
-           <li><a href='#paragraph-styling'>Paragraph Styling</a></li>
-           <li><a href='#dropcaps'>Drop Caps</a></li>
-           <li><a href='#headings'>Headings</a></li>
-           <ul>
-             <li><a href='#same-or-different'>Same or different fontface?</a></li>
-             <li><a href='#playing-with-heading-type'>Playing With Heading Type</a></li>
-           </ul>
-           <li><a href='#color'>Color</a></li>
-           <li><a href='#media-queries'>Media Queries: Not all displays are equal</a></li>
-           <li><a href='#changes-for-print'>Making Changes For Print</a></li>
-           <li><a href='#text-alignment-and-hyphenations'>Text Alignment and Hyphenation</a></li>
-           <li><a href='#kerning'>Kerning</a></li>
-           <ul>
-             <li><a href='#using-lettering.js'>Using Lettering.js</a></li>
-           </ul>
-           <li><a href='#open-type-features'>Open Type Features</a></li>
-           <li><a href='#unicode-and-multilingual-support'>Unicode and multilingual support</a></li>
-           <li><a href='#legal-issues'>Legal Issues</a></li>
-           <ul>
-             <li><a href='#open-source-fonts'>Open Source fonts</a></li>
-           </ul>
-           <li><a href='#multi-column'>Multi Column Layouts</a></li>
-           <ul>
-             <li><a href='#counting-columns'>Counting Columns</a></li>
-             <li><a href='#measuring-width'>Measuring Width</a></li>
-             <li><a href='#shorthand1'>The Shorthand method</a></li>
-             <li><a href='#column-gap'>Column Gap</a></li>
-             <li><a href='#column-rules'>Column Rules</a></li>
-             <li><a href='#spanning-columns'>Spanning Columns</a></li>
-             <li><a href='#filling-columns'>Filling Columns</a></li>
-             <li><a href='#column-breaks'>Column Break</a></li>
-           </ul>
-           <li><a href='#css-transformations'>Getting fancy: CSS Transformations</a></li>
-           <li><a href='#css-animations'>Getting Fancy: Animating text</a></li>
-           <li><a href='#css-shapes-masks-and-clip-paths'>Getting fancy: Shapes, masks and clip paths</a></li>
-           <li><a href='#explorations'>Explorations and Experiments</a></li>
-           <ul>
-             <li><a href='#relationship-to-print'>Why can't it look like print? Why should it look like print?</a></li>
-           </ul>
-           <li><a href='#test'>Test the hell out of the project</a></li>
-           <li><a href='#one-final-thing'>One final thing</a></li>
-         </ul>
-       </div>
-     </div>
+     <div class='right-column'></div>
 
   </div>
 
