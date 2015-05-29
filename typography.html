@@ -777,7 +777,9 @@ div#example4 p {
     </div>
     <p>Example of drop cap using pseudo classes</p>
 
-    <p>Unfortunately older browsers don't support the :first-of-type selector (looking at IE7 and possibly IE8) so we have to work around and tie the drop cap to the first element. Most of the time this will be an h1 or other heading element but it can be any element you want. If you don't care about supporting older browsers then this is a non-issue but coding defensively is always a good practice :)</p>
+    <p>Unfortunately older browsers don't support the :first-of-type selector (looking at IE7 and possibly IE8) so we have to work around and tie the drop cap to the first letter of the first element. Most of the time this will be an h1 or other heading element but it can be any element you want. Note that you will have to hardcode what the first element is and change your SASS/CSS every time you change the first element</p>
+
+    <p>If you don't care about supporting older browsers then this is a non-issue but coding defensively is always a good practice :)</p>
 
           <pre><code class="css">h1 + p:first-letter {
   font-size: 3em;
@@ -2071,7 +2073,7 @@ div#columns7 {
 
         <p>One of the most complex aspects of working with multi column content is how to prevent breaks inside, before or after a given piece of text. It gets even more complex when we factor columns into the mix. We'll explore how to make sure that breaks work and that they actually do what we want them to:</p>
 
-        <p>In this case we'll make the title h2 element stand alone in its own column and move the body text to the right and keep in the two column format. In the older days you'd accompllish this with column layouts but now it can be done using only CSS in bowsers that support it.</p>
+        <p>In this case we'll make the title h2 element stand alone in its own column and move the body text to the right and keep in the two column format. In the older days you'd accompllish this with table-based layouts but now it can be done using only CSS in bowsers that support it.</p>
 
                 <div class="css-example">
             <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
@@ -2261,8 +2263,6 @@ div#shapeExample {
           <iframe width="560" height="315" src="https://www.youtube.com/embed/ZNpn7FBp_9U" frameborder="0" allowfullscreen></iframe>
           <p>Jen Simmons presentation at SFHTML5 - May 20, 2015</p>
         </div>
-
-        <script async class="speakerdeck-embed" data-id="2e4ad92e6ebc4ded883f82b40b700889" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
 
         <p><a href='https://twitter.com/leaverou'>Lea Verou</a>'s <a href='http://shop.oreilly.com/product/0636920031123.do'>CSS Secrets</a> is another good source of inspiration for CSS and how far to push the technologies.</p>
         <h3>Why can't it look like print? Why should it look like print?</h3>
