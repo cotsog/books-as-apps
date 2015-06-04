@@ -2342,9 +2342,9 @@ div#rotation1 .content {
 }
 
 div#rotation1 h2 {
-  -webkit-transform: rotate(-90deg) translateY(-5em);
-  -moz-transform: rotate(-90deg) translateY(-5em);
-  transform: rotate(-90deg) translateY(-5em);
+  -webkit-transform: rotate(-90deg) translateX(-1em);
+  -moz-transform: rotate(-90deg) translateX(-1em);
+  transform: rotate(-90deg) translateX(-1em);
 
   -webkit-column-break-after: always;
   break-after: column;
@@ -2416,7 +2416,14 @@ div#rotation2 h2 {
 
         <p>This is just the beginning of what you can do. Mozila Developers Network (MDN) provides a very good <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/transform'>overview of CSS transformations</a> to show what you can do. You can also combine these transformations like what we did in example 14-2. It is not perfect. Even though you cannot see it, the width of the heading is too large and it creates unnecessary space between the editable code and the resulting example.... We should be able to get rid of it but I'm happy with the result as it is so far.</p>
 
-        <p>Because this is dependent on screen resolution (when is a pixel is not a pixel) you must test in your target devices. </p>
+        <p>Because this is dependent on screen resolution (when is a pixel is not a pixel) you must test in your target devices. Also : <em>Just because you can it doesn't mean you should.</em> As great as  transformations are they take time and may detract from your audience's attention.</p>
+
+        <h3>Links and Resources</h3>
+
+        <ul>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Web/CSS/transform'>CSS Transform</a> (MDN)</li>
+          <li><a href='https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_transforms'>Using CSS Transforms</a> (MDN)</li>
+        </ul>
       </section>
 
       <section>
@@ -2445,53 +2452,41 @@ div#rotation2 h2 {
 }
     </code></pre>
 
-        <p>Once we set up the animation parameters we need to define the animation. We also have to do this three times, One for Firefox, one for Webkit-based browsers and one without a prefix to future proof our code.</p>
-
-        <p>Each keyframes attributes define a beginning and ending state for the chosen object. We move object from left to right and decrease the width of the element at the same time?</p>
+        <p>Once we set up the animation parameters we need to define the animation. We also have to do this three times, One for Firefox, one for Webkit-based browsers and one without a prefix to future proof our code. Each keyframes selector defines a beginning and ending state for the chosen object. In this case we move h1 heading from left to right and decrease its width at the same time. All these tasks will be done in 3 seconds (as specified by the *-animation-duration attribute of the h1 tag.)</p>
 
     <pre><code class='css'>@-moz-keyframes slidein {
-  from {
-    margin-left:100%;
-    width:300%
-  }
-
-  to {
-    margin-left:0%;
-    width:100%;
-  }
+  0% { margin-left:100%; width:300%; }
+  100% { margin-left:0%; width:100%; }
 }
 
 @-webkit-keyframes slidein {
-  from {
-    margin-left:100%;
-    width:300%
-  }
-
-  to {
-    margin-left:0%;
-    width:100%;
-  }
+  0% { margin-left:100%; width:300%; }
+  100% { margin-left:0%; width:100%; }
 }
 
 @keyframes slidein {
-  from {
-    margin-left:100%;
-    width:300%
-  }
-
-  to {
-    margin-left:0%;
-    width:100%;
-  }
+  0% { margin-left:100%; width:300%; }
+  100% { margin-left:0%; width:100%; }
 }</code></pre>
 
-        <p>The animation itself is a two-step process. First we define the animation attributes and, in a separate process, we define the frames of the key frame animation.</p>
+        <blockquote>
+          <p>There is another syntax available online that uses percetages. They are equivalent but I recommend using percentages since they make more sense when inserting additional steps for an animation.</p>
+        </blockquote>
 
-        <p>Because of vendor prefixes we need to duplicate the animation attributes and the keyframes elements.</p>
-
-        <p></p>
+        <p>This is just the beginning. We can add aditional frames to the keyframes selector to make the animation smoother or to add aditional steps and animation types to the process. We're also able to animate color transitions, like transforming the background color of an element through a series of steps.</p>
 
         <p>There is also a <a href='https://w3c.github.io/web-animations/'>Web Animations API</a> editor's draft that allows developers to use JavaScript to create and control animations. I mention it here but wil not cover it as it's a Javascript API I'm still in the process of learning.</p>
+
+        <p>Just like with transformation: <em>Just because you can it doesn't mean you should.</em> As great as animations are they take time and may detract from your audience's attention. Animations can also cause <a href='http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/'>performance issues</a> that you need to consider. </p>
+
+        <h3>Links and resources</h3>
+
+        <ul>
+          <li><a href='https://css-tricks.com/snippets/css/keyframe-animation-syntax/'>Keyframe Animation Syntax</a></li>
+          <li><a href='https://css-tricks.com/almanac/properties/a/animation/'>Animation</a></li>
+          <li><a href=''>Web Animation API</a></li>
+          <li><a href='http://www.the-art-of-web.com/css/css-animation/'>Animation Using CSS Transforms</a> (The Art of Web)</li>
+        </ul>
       </section>
 
       <section>
@@ -2547,12 +2542,12 @@ div#shapeExample {
       <p><em>Clipping</em> describes the visible region of visual elements. The region can be described by using certain SVG graphics elements or basic shapes. Anything outside of this region is not rendered.</p>
         </blockquote>
 
-        <p>It has long been a trivial exercise to create masks and clip path images in Photoshop or Illustrator (and Photoshop CC makes it a really simple &#39;pick the image and click here and here&#39; exercise.) But until clip paths and masks became available in CSS you had to use an external tool to create these effects.</p>
+        <p>It has long been a trivial exercise to create masks and clip path images in Photoshop or Illustrator (and Photoshop CC makes it a really simple exercise as shown in the Lynda.com course <a href=''>Design the Web: Clipping Masks</a>.) But until clip paths and masks became available in CSS you had to use an external tool to create these effects.</p>
 
         <h3>Examples and References</h3>
         <ul>
-          <li><a href="http://alistapart.com/article/css-shapes-101">http://alistapart.com/article/css-shapes-101</a></li>
-          <li><a href="http://www.html5rocks.com/en/tutorials/shapes/getting-started/">http://www.html5rocks.com/en/tutorials/shapes/getting-started/</a></li>
+          <li><a href="http://alistapart.com/article/css-shapes-101">Shapes 101</a> - A List Apart</li>
+          <li><a href="http://www.html5rocks.com/en/tutorials/shapes/getting-started/">Getting Started with CSS Shapes</a> - HTML5 Rocks</li>
           <li><a href="https://css-tricks.com/clipping-masking-css/">Clipping and Masking in CSS</a></li>
           <li><a href="http://www.html5rocks.com/en/tutorials/masking/adobe/">Masking Tutorial</a></li>
         </ul>
@@ -2563,8 +2558,20 @@ div#shapeExample {
 
         <div class='video'>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/ZNpn7FBp_9U" frameborder="0" allowfullscreen></iframe>
-          <p>Jen Simmons presentation at SFHTML5 - May 20, 2015</p>
+          <p>Jen Simmons presentation at SFHTML5 - May 20, 2015 (There are some audio issues, be patient)</p>
         </div>
+
+        <p>Jen makes a great point on her presentation. Where is the awesome layouts that we see in print reflected on the web? We are not tied into the &quot;rectangular boxes&quot; wisdom of the web. We have technologies like shapes, clip paths, masks and many other technologies that make square boxes almost obsolete.</p>
+
+        <p>Don't get me wrong... rectangles have their place and we shouldn't make all out content replicas of printed material but, Rather than takin the challenges and opportunities of print as a source of ideas and inspirations we became stuck in the <a href='http://alistapart.com/article/holygrail'>Holy Grail</a> layout (and we'll leave aside, for the moment, the fact that the Holy Grail Layout only became practical with the advent of CSS Flexbox as <a href='http://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/'>explained</a> by Philip Walton.)</p>
+
+        <p>So what happens when you stop thinking about rectangular, Holy Grail style, layouts? You can start thinking of layouts like this:</p>
+
+        <figure class='sidebyside'>
+          <img src='images/mag_002.png' alt='magazine layout demo'>
+          <img src='images/mag_003.png' alt='magazine layout demo'>
+          <figcaption>Examples of magazine layouts that are possible or should be possible to do on the web</figcaption>
+        </figure>
 
         <p><a href='https://twitter.com/leaverou'>Lea Verou</a>'s <a href='http://shop.oreilly.com/product/0636920031123.do'>CSS Secrets</a> is another good source of inspiration for CSS and how far to push the technologies.</p>
         <h3>Why can't it look like print? Why should it look like print?</h3>
@@ -2574,11 +2581,12 @@ div#shapeExample {
         <ul>
           <li><a href='http://anidealiveson.org/2014/#feature'>An Idea Lives On</a></li>
           <li><a href='http://www.nytimes.com/projects/2012/snow-fall/#/?part=tunnel-creek'>Snow Fall</a></li>
+          <li><a href='http://www.washingtonpost.com/graphics/world/scaling-everest/'>Scaling Everest</a></li>
           <li><a href='https://www.flickr.com/photos/merlin/sets/72157622077100537'>Noise versus Noise</a> Flickr set</li>
           <li><a href='http://www.pixelfable.com/'>Pixel Fable</a></li>
           <li><a href='http://unahistoriaquedalavuelta.com/en/'>Una historia que da la vuelta</a></li>
           <li><a href='http://lostnigeria.com/air-travel/'>Lost Nigeria</a></li>
-          <li><a href='http://www.html5rocks.com/en/tutorials/casestudies/natgeo/'>Forest Giant</a></li>
+          <li><a href='http://www.html5rocks.com/en/tutorials/casestudies/natgeo/'>Forest Giant Case Study</a> -- HTML5 Rocks</li>
           <li><a href='http://webplatform.adobe.com/Demo-for-National-Geographic-Forest-Giant/browser/src/'>Forest Giant Site</a></li>
         </ul>
 
@@ -2620,7 +2628,7 @@ div#shapeExample {
 
         <p>Why do I bring this up? Because we've gotten spoiled by reaches. We talk about critical rendering path, page load and web typography and that's good. But we forget that what may be an acceptable page load in Mountain View, California may not be acceptable in Thailand where the dominant form of Internet access is the mobile smart phone (<a href="http://www.techwireasia.com/1152/mobile-internet-users-up-40pc-in-thailand-iphone-dominant/">Tech Wire Asia</a>).</p>
 
-        <p>As Eric Meyer reminds us the web is more than just Javascript, CSS and the latest and greates APIs or micro services. We need to make sure that the content is accessible whether we have CSS and Javascript enabled or whether they are in a broadband Gigabit connection or in a very slow dial up connection in Africa or India or for people using assistive technology devices.</p>
+        <p>As Eric Meyer reminds us the web is more than just Javascript, CSS and the latest and greatest Framework, API or micro service. We need to make sure that the content is accessible whether we have CSS and Javascript enabled or whether they are in a broadband Gigabit connection or in a very slow dial up connection in Africa or India or for people using assistive technology devices.</p>
 
         <div class='video'>
           <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/r38al1w-h4k" frameborder="0" allowfullscreen></iframe>
