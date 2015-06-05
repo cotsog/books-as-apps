@@ -623,6 +623,28 @@ figure {
   /* line 24, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
   figure img {
     max-width: inherit; }
+  /* line 28, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
+  figure figure .sidebyside {
+    counter-increment: figure_count;
+    margin: 2em auto;
+    max-width: 600px;
+    max-width: -moz-min-content;
+    max-width: -webkit-min-content;
+    max-width: min-content; }
+    /* line 36, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
+    figure figure .sidebyside figcaption {
+      font-family: 'Stone-Humanist-SemiItalic', sans-serif;
+      margin-top: -.25em; }
+    /* line 41, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
+    figure figure .sidebyside figcaption::before {
+      content: 'Figure ' counter(section_count) '-' counter(figure_count) ': '; }
+    /* line 45, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
+    figure figure .sidebyside img {
+      max-width: inherit;
+      width: 100%; }
+      /* line 49, /Users/carlos/code/books-as-apps/sass/partials/_images.scss */
+      figure figure .sidebyside img :last-child {
+        clear: both; }
 
 /* line 1, /Users/carlos/code/books-as-apps/sass/partials/_code.scss */
 div .code-example {
