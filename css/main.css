@@ -655,6 +655,7 @@ figure {
   max-width: min-content;
 }
 figure figcaption {
+  color: #999;
   font-family: 'Stone-Humanist-SemiItalic', sans-serif;
   margin-top: -.25em;
 }

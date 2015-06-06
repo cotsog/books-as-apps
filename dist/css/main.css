@@ -475,7 +475,7 @@ aside.pull {
 }
 
 .opening {
-  coor: #f44336;
+  color: #f44336;
   font-size: 1.5em;
   line-height: 1.2;
 }
@@ -664,6 +664,28 @@ figure figcaption::before {
 figure img {
   max-width: inherit;
 }
+figure figure .sidebyside {
+  counter-increment: figure_count;
+  margin: 2em auto;
+  max-width: 600px;
+  max-width: -moz-min-content;
+  max-width: -webkit-min-content;
+  max-width: min-content;
+}
+figure figure .sidebyside figcaption {
+  font-family: 'Stone-Humanist-SemiItalic', sans-serif;
+  margin-top: -.25em;
+}
+figure figure .sidebyside figcaption::before {
+  content: "Figure " counter(section_count) "-" counter(figure_count) ": ";
+}
+figure figure .sidebyside img {
+  max-width: inherit;
+  width: 100%;
+}
+figure figure .sidebyside img :last-child {
+  clear: both;
+}
 
 div .code-example {
   font-family: 'sourcecodepro-medium-webfont', monospace;
@@ -815,6 +837,39 @@ div .css-example + p:before {
 
   max-width: 33.77778em;
 }
+ul li {
+  list-style-type: square;
+  list-style-position: inside;
+}
+
+ol li {
+  list-style-type: decimal-leading-zero;
+  list-style-position: inside;
+}
+
+.toc ul {
+  list-style-type: none;
+}
+.toc ul li {
+  list-style-type: none;
+  padding: 0;
+}
+.toc ul li a {
+  font-size: 0.75em;
+}
+
+.font-glossary dt {
+  font-family: 'Stone-Humanist-Semi';
+  text-align: center;
+  text-transform: uppercase;
+}
+.font-glossary dd {
+  margin-bottom: 1em;
+}
+.font-glossary dd:last-of-type {
+  margin-bottom: 2em;
+}
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
