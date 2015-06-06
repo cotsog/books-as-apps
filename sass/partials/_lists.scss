@@ -26,3 +26,18 @@ ol {
   }
 }
 
+.font-glossary {
+  dt {
+    font-family: 'Stone-Humanist-Semi';
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  dd {
+    margin-bottom: 1em;
+  }
+
+  dd:last-of-type {
+    margin-bottom: 2em;
+  }
+}

@@ -446,7 +446,7 @@ aside.pull {
 
 /* line 19, /Users/carlos/code/books-as-apps/sass/partials/_marginalia.scss */
 .opening {
-  coor: #f44336;
+  color: #f44336;
   font-size: 1.5em;
   line-height: 1.2; }
 
@@ -782,14 +782,40 @@ div .css-example {
     width: 280em; }
   max-width: 33.77778em; }
 
-/* line 121, /Users/carlos/code/books-as-apps/sass/main.scss */
+/* line 3, /Users/carlos/code/books-as-apps/sass/partials/_lists.scss */
+ul li {
+  list-style-type: square;
+  list-style-position: inside; }
+
+/* line 10, /Users/carlos/code/books-as-apps/sass/partials/_lists.scss */
+ol li {
+  list-style-type: decimal-leading-zero;
+  list-style-position: inside; }
+
+/* line 17, /Users/carlos/code/books-as-apps/sass/partials/_lists.scss */
+.toc ul {
+  list-style-type: none; }
+  /* line 19, /Users/carlos/code/books-as-apps/sass/partials/_lists.scss */
+  .toc ul li {
+    list-style-type: none;
+    padding: 0; }
+    /* line 22, /Users/carlos/code/books-as-apps/sass/partials/_lists.scss */
+    .toc ul li a {
+      font-size: .75em; }
+
+/* line 30, /Users/carlos/code/books-as-apps/sass/partials/_lists.scss */
+.font-glossary dt {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+/* line 123, /Users/carlos/code/books-as-apps/sass/main.scss */
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0; }
 
-/* line 135, /Users/carlos/code/books-as-apps/sass/main.scss */
+/* line 137, /Users/carlos/code/books-as-apps/sass/main.scss */
 .col2 {
   width: 100%;
   /* How many columns? */
@@ -809,7 +835,7 @@ div .css-example {
   -webkit-column-span: none;
   column-span: none; }
 
-/* line 146, /Users/carlos/code/books-as-apps/sass/main.scss */
+/* line 148, /Users/carlos/code/books-as-apps/sass/main.scss */
 .col3 {
   width: 100%;
   /* How many columns? */
