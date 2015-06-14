@@ -42,8 +42,8 @@
 //@include font-declaration('Skolar', '../fonts/skolarlatinweb-light-webfont');
 //@include font-declaration('Skolar-Ita', '../fonts/skolarlatinweb-lightitalic-webfont');
 //@include font-declaration('Skolar-Semi', '../fonts/skolarlatinweb-semibold-webfont');
-//
 //@include font-declaration('Skolar-SemiItalic', '../fonts/skolarlatinweb-semibolditalic-webfont');
+//
 // Alternate body font 2: Fira Sans
 //If you make any changes here, remember to change the values in partials/_styles.scss
 //to match.
@@ -59,8 +59,6 @@
 // First load my set of mixins and partials
 @import 'partials/variables';
 @import 'partials/mixins';
-// Import normalize first
-@import 'partials/normalize';
 // Import the susy partials specific to this project
 @import 'partials/susy';
 // Breakpoint support for sussy and for standalone queries

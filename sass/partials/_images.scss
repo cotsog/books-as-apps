@@ -25,6 +25,7 @@ figure {
   img {
     max-width: inherit;
   }
+}
 
 figure .sidebyside{
   counter-increment: figure_count;
@@ -52,4 +53,3 @@ figure .sidebyside{
       }
     }
   }
-}

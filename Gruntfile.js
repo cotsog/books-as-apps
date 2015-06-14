@@ -172,7 +172,7 @@
       uncss: {
         dist: {
           files: {
-            'css/main.css': [ '*.html', '!docs.html']
+            'dist/css/main.css': [ 'dist/*.html' ]
           }
         }
       },
@@ -292,14 +292,6 @@
             keepalive: true,
             livereload: true
 
-          }
-        },
-        production: {
-          options: {
-            base: 'dist',
-            keepalive: true,
-            livereload: true,
-            port: 2510
           }
         }
       },
