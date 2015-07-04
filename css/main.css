@@ -490,6 +490,13 @@ div .css-example + p:before {
   content: "CSS Example " counter(section_count) "-" counter(css_count) ": ";
 }
 
+iframe .cp_embed_iframe {
+  counter-increment: css_count;
+}
+iframe .cp_embed_iframe + p:before {
+  content: "CSS Example " counter(section_count) "-" counter(css_count) ": ";
+}
+
 /* 400px */
 /* 700px */
 /* 900px */

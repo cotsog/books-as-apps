@@ -478,6 +478,13 @@ div .css-example {
   div .css-example + p:before {
     content: 'CSS Example ' counter(section_count) '-' counter(css_count) ': '; }
 
+/* line 39, /Users/carlos/code/books-as-apps/sass/partials/_code.scss */
+iframe .cp_embed_iframe {
+  counter-increment: css_count; }
+  /* line 42, /Users/carlos/code/books-as-apps/sass/partials/_code.scss */
+  iframe .cp_embed_iframe + p:before {
+    content: 'CSS Example ' counter(section_count) '-' counter(css_count) ': '; }
+
 /* 400px */
 /* 700px */
 /* 900px */

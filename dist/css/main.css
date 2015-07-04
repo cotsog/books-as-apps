@@ -598,7 +598,6 @@ div .css-example + p:before {
   margin-left: auto;
   margin-right: auto;
 }
-
 @media (min-width: 282.5em) {
   .wrapper {
     width: 280em;
@@ -606,8 +605,6 @@ div .css-example + p:before {
 
   max-width: 33.77778em;
 }
-
-
 ul li {
   list-style-type: square;
   list-style-position: inside;

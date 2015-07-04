@@ -36,3 +36,11 @@ div .css-example {
   }
 }
 
+iframe .cp_embed_iframe {
+  counter-increment: css_count;
+
+  + p:before {
+    content: 'CSS Example ' counter(section_count) '-' counter(css_count) ': ';
+  }
+}
+
