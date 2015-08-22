@@ -256,7 +256,7 @@
       // webfont loader stuff or just copy html from the
       // top level directory (which I changed it to do)
       copy: {
-        myCopy: {
+        all: {
           files: [ {
             expand: true,
             src: [
@@ -264,7 +264,9 @@
               'css/**/*',
               'lib/**/*',
               'js/**/*',
-              '*.html' ],
+              '*.html',
+              '!node_modules/'
+            ],
             dest: 'dist/'
           }]
         }
