@@ -256,7 +256,7 @@
       // webfont loader stuff or just copy html from the
       // top level directory (which I changed it to do)
       copy: {
-        dist: {
+        myCopy: {
           files: [ {
             expand: true,
             src: [
@@ -354,7 +354,7 @@
 
     grunt.task.registerTask(
       'default',
-      [ 'clean', 'copy:dist', 'imagemin', 'gh-pages' ]
+      [ 'clean', 'copy:myCopy', 'imagemin', 'gh-pages' ]
     );
 
   };
