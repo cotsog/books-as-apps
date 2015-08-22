@@ -93,21 +93,6 @@
         }
       },
 
-
-      sassdoc: {
-        all: {
-          src: [
-            'sass/partials/*.scss'
-          ],
-          options: {
-            dest: 'sassdocs',
-            display: {
-              access: ['public', 'private']
-            }
-          }
-        }
-      },
-
       perfbudget: {
         all: {
           options: {
@@ -256,7 +241,7 @@
       // webfont loader stuff or just copy html from the
       // top level directory (which I changed it to do)
       copy: {
-        all: {
+        dist: {
           files: [ {
             expand: true,
             src: [
@@ -264,9 +249,7 @@
               'css/**/*',
               'lib/**/*',
               'js/**/*',
-              '*.html',
-              '!node_modules/'
-            ],
+              '*.html'],
             dest: 'dist/'
           }]
         }
@@ -329,7 +312,7 @@
 
     grunt.task.registerTask(
       'local-server',
-      [ 'connect' ]
+      [ 'connect', 'open' ]
     );
 
     grunt.task.registerTask(
@@ -337,7 +320,10 @@
       [ 'jshint' ]
     );
 
-
+    grunt.task.registerTask(
+      'publish',
+      [ 'clean:all', 'copy:dist', 'imagemin', 'gh-pages' ]
+    );
     grunt.task.registerTask(
       'lint-all',
       [ 'scsslint', 'jshint']
@@ -352,11 +338,6 @@
     grunt.task.registerTask(
       'prep-js',
       [ 'jshint', 'uglify' ]
-    );
-
-    grunt.task.registerTask(
-      'default',
-      [ 'clean', 'copy', 'prep-css', 'imagemin', 'gh-pages' ]
     );
 
   };
