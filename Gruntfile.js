@@ -347,7 +347,7 @@
     // Prep CSS starting with SASS, autoprefix et. al
     grunt.task.registerTask(
       'prep-css',
-      [ 'scsslint', 'sass:dev', 'autoprefixer' ]
+      [ 'sass:dev', 'autoprefixer' ]
     );
 
     grunt.task.registerTask(
@@ -357,7 +357,7 @@
 
     grunt.task.registerTask(
       'default',
-      [ 'prep-css', 'publish' ]
+      [ 'sassdoc', 'prep-css', 'publish' ]
     );
 
   };
