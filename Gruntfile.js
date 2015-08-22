@@ -264,7 +264,7 @@
               'css/**/*',
               'lib/**/*',
               'js/**/*',
-              '*.html'],
+              '*.html', ],
             dest: 'dist/'
           }]
         }
@@ -357,7 +357,7 @@
 
     grunt.task.registerTask(
       'default',
-      [ 'sassdoc', 'prep-css', 'publish' ]
+      [ 'publish' ]
     );
 
   };
