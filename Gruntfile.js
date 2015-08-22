@@ -354,7 +354,7 @@
 
     grunt.task.registerTask(
       'default',
-      [ 'clean:all', 'copy:dist', 'imagemin', 'gh-pages' ]
+      [ 'clean:all', 'copy', 'imagemin', 'gh-pages' ]
     );
 
   };
