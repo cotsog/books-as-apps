@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/caraya/books-as-apps"
+    "url": "https://github.com/caraya/books-as-apps.git"
   },
   "author": "Carlos Araya",
   "license": "MIT",
@@ -31,6 +31,7 @@
     "grunt-mkdir": "^0.1.2",
     "grunt-open": "^0.2.3",
     "grunt-perfbudget": "^0.1.6",
+    "grunt-sassdoc": "^2.0.1",
     "grunt-scss-lint": "^0.3.4",
     "grunt-uncss": "^0.4.0",
     "imagemin-mozjpeg": "^5.1.0",

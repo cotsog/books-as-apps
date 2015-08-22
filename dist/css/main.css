@@ -1,42 +1,42 @@
 @font-face {
   font-family: "Stone-Humanist";
   src: url("../fonts/2E02D0_0_0.eot");
-  src: url("../fonts/2E02D0_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_0_0.woff2") format("woff2"), url("../fonts/2E02D0_0_0.woff") format("woff"), url("../fonts/2E02D0_0_0.ttf") format("truetype"), url("../fonts/2E02D0_0_0.svg#wf") format("svg");
+  src: url("../fonts/2E02D0_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_0_0.woff2") format("woff2"), url("../fonts/2E02D0_0_0.woff") format("woff"), url("../fonts/2E02D0_0_0.ttf") format("truetype"), url("../fonts/2E02D0_0_0.svg#Stone-Humanist") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Stone-Humanist-Ita";
   src: url("../fonts/2E02D0_1_0.eot");
-  src: url("../fonts/2E02D0_1_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_1_0.woff2") format("woff2"), url("../fonts/2E02D0_1_0.woff") format("woff"), url("../fonts/2E02D0_1_0.ttf") format("truetype"), url("../fonts/2E02D0_1_0.svg#wf") format("svg");
+  src: url("../fonts/2E02D0_1_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_1_0.woff2") format("woff2"), url("../fonts/2E02D0_1_0.woff") format("woff"), url("../fonts/2E02D0_1_0.ttf") format("truetype"), url("../fonts/2E02D0_1_0.svg#Stone-Humanist-Ita") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Stone-Humanist-Semi";
   src: url("../fonts/2E02D0_2_0.eot");
-  src: url("../fonts/2E02D0_2_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_2_0.woff2") format("woff2"), url("../fonts/2E02D0_2_0.woff") format("woff"), url("../fonts/2E02D0_2_0.ttf") format("truetype"), url("../fonts/2E02D0_2_0.svg#wf") format("svg");
+  src: url("../fonts/2E02D0_2_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_2_0.woff2") format("woff2"), url("../fonts/2E02D0_2_0.woff") format("woff"), url("../fonts/2E02D0_2_0.ttf") format("truetype"), url("../fonts/2E02D0_2_0.svg#Stone-Humanist-Semi") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Stone-Humanist-SemiItalic";
   src: url("../fonts/2E02D0_3_0.eot");
-  src: url("../fonts/2E02D0_3_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_3_0.woff2") format("woff2"), url("../fonts/2E02D0_3_0.woff") format("woff"), url("../fonts/2E02D0_3_0.ttf") format("truetype"), url("../fonts/2E02D0_3_0.svg#wf") format("svg");
+  src: url("../fonts/2E02D0_3_0.eot?#iefix") format("embedded-opentype"), url("../fonts/2E02D0_3_0.woff2") format("woff2"), url("../fonts/2E02D0_3_0.woff") format("woff"), url("../fonts/2E02D0_3_0.ttf") format("truetype"), url("../fonts/2E02D0_3_0.svg#Stone-Humanist-SemiItalic") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto Slab";
   src: url("../fonts/robotoslab-regular-webfont.eot");
-  src: url("../fonts/robotoslab-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/robotoslab-regular-webfont.woff2") format("woff2"), url("../fonts/robotoslab-regular-webfont.woff") format("woff"), url("../fonts/robotoslab-regular-webfont.ttf") format("truetype"), url("../fonts/robotoslab-regular-webfont.svg#wf") format("svg");
+  src: url("../fonts/robotoslab-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/robotoslab-regular-webfont.woff2") format("woff2"), url("../fonts/robotoslab-regular-webfont.woff") format("woff"), url("../fonts/robotoslab-regular-webfont.ttf") format("truetype"), url("../fonts/robotoslab-regular-webfont.svg#Roboto Slab") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "sourcecodepro-medium-webfont";
   src: url("../fonts/sourcecodepro-medium-webfont.eot");
-  src: url("../fonts/sourcecodepro-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcecodepro-medium-webfont.woff2") format("woff2"), url("../fonts/sourcecodepro-medium-webfont.woff") format("woff"), url("../fonts/sourcecodepro-medium-webfont.ttf") format("truetype"), url("../fonts/sourcecodepro-medium-webfont.svg#wf") format("svg");
+  src: url("../fonts/sourcecodepro-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sourcecodepro-medium-webfont.woff2") format("woff2"), url("../fonts/sourcecodepro-medium-webfont.woff") format("woff"), url("../fonts/sourcecodepro-medium-webfont.ttf") format("truetype"), url("../fonts/sourcecodepro-medium-webfont.svg#sourcecodepro-medium-webfont") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -201,20 +201,6 @@ img {
   margin: 0 auto;
 }
 
-/* This mixin will create column attributes for the element
- * it's called in
- *
- * It uses variables to make life easier. Rather than code
- * multiple attribute sets we use a single set that takes 2
- * attributes and defaults the other 2.
- *
- * We use number of columns rather than width for convenience.
- * Counting width means we have to do percentages or be very
- * strict in the width of our content.
- *
- * See https://developer.mozilla.org/en-US/docs/Web/CSS/column-width
- * for more information on specifying column width in CSS
-*/
 a {
   text-decoration: none;
 }
@@ -299,22 +285,14 @@ html {
   color: #554c4d;
   font-family: 'Stone-Humanist';
   line-height: 1.3;
-  /* optional: for older browsers */
   text-rendering: optimizeLegibility;
-  /* for iOS and Safari 6 */
   -webkit-font-variant-ligatures: common-ligatures;
-  /* for up-to-date browsers, including IE10 and Opera 21 */
   font-variant-ligatures: common-ligatures;
-  /* optional: for older browsers */
   text-rendering: optimizeLegibility;
-  /* pre-Firefox 14+ */
   -moz-font-feature-settings: "kern=1";
   -webkit-font-feature-settings: "kern";
-  /* Firefox 14+ */
   -moz-font-feature-settings: "kern";
-  /* standard */
   font-feature-settings: "kern";
-  /* Safari 7+, Firefox 24+, Chrome 33(?)+, Opera 21+*/
   font-kerning: normal;
 }
 
@@ -456,12 +434,12 @@ figure .sidebyside img :last-child {
 }
 
 div .code-example {
-  font-family: 'sourcecodepro-medium-webfont', monospace;
-  display: block;
-  background: #666;
+  font-family: sourcecodepro-medium-webfont, monospace;
+  background-color: #666;
   color: white;
   padding: 20px;
   white-space: pre;
+  display: block;
 }
 
 pre {
@@ -473,20 +451,26 @@ pre code {
 }
 
 style {
-  background: #333;
-  clear: both;
+  font-family: sourcecodepro-medium-webfont, monospace;
+  background-color: #333;
   color: white;
-  display: block;
-  font-family: 'sourcecodepro-medium-webfont', monospace;
-  margin-bottom: .5em;
   padding: 20px;
   white-space: pre;
+  clear: both;
+  margin-bottom: .5em;
 }
 
 div .css-example {
   counter-increment: css_count;
 }
 div .css-example + p:before {
+  content: "CSS Example " counter(section_count) "-" counter(css_count) ": ";
+}
+
+iframe .cp_embed_iframe {
+  counter-increment: css_count;
+}
+iframe .cp_embed_iframe + p:before {
   content: "CSS Example " counter(section_count) "-" counter(css_count) ": ";
 }
 

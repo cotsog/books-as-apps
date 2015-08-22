@@ -93,6 +93,21 @@
         }
       },
 
+
+      sassdoc: {
+        all: {
+          src: [
+            'sass/partials/*.scss'
+          ],
+          options: {
+            dest: 'sassdocs',
+            display: {
+              access: ['public', 'private']
+            }
+          }
+        }
+      },
+
       perfbudget: {
         all: {
           options: {
@@ -312,7 +327,7 @@
 
     grunt.task.registerTask(
       'local-server',
-      [ 'connect', 'open' ]
+      [ 'connect' ]
     );
 
     grunt.task.registerTask(
@@ -338,6 +353,11 @@
     grunt.task.registerTask(
       'prep-js',
       [ 'jshint', 'uglify' ]
+    );
+
+    grunt.task.registerTask(
+      'default',
+      [ 'prep-css', 'publish' ]
     );
 
   };
