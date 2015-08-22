@@ -984,12 +984,13 @@ div#example4 p {
 
         <h3 id='same-or-different'>Same or different fontface?</h3>
 
-        <p>One of the questions that always baffles me is whether to use the same font for headings as I use for the body text. </p>
+        <p>One of the questions that always baffles me is whether to use the same font for headings as I use for the body text. The first example uses the same font (Raleway) for both headings and body text. It looks ok but I'm still not sold out on the idea.</p>
+
 
 <p data-height="355" data-theme-id="2039" data-slug-hash="gpxOwe" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/gpxOwe/'>Headings using body type</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-<p>The second example uses a Serif font, Roboto Slab, in the headings with Stone Humanist as the body font. I like the contrast better but am not 100% sold on the idea, so let's try one more variant.</p>
+<p>The second example uses a Serif font, Roboto Slab, in the headings with Stone Humanist as the body font. I like the contrast I have to keep reminding myself that the contrast must be present but not be jarring to the reader.</p>
 
 <p data-height="338" data-theme-id="2039" data-slug-hash="dozyOW" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/dozyOW/'>Headings in Serif Font</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
@@ -1027,7 +1028,6 @@ div#example4 p {
 
        <p>It may not have al the colors I need and I'm in no way required to use all the colors in the palette but I will set them up anyways so we can see what it looks like in all the colors available to the palette.</p>
 
-<!-- Stopped here today -->
        <div class="css-example">
     <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
 
@@ -1069,147 +1069,24 @@ div#headingColorExample {
 </div>
       <p>Colored headings</p>
 
-      <p>I've chosen a <a href="https://color.adobe.com/Copy-of-Coral-Sea-color-theme-6005348/">second palete</a> from Color CC.</p>
+      <p>The first palette is fairly cool, let's see what other colors look like on our heading text; to do so, I've chosen a <a href="https://color.adobe.com/Copy-of-Coral-Sea-color-theme-6005348/">second palete</a> from Color CC.</p>
 
-       <div class="css-example">
-    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
-
-div#headingColorExample2 {
-  border: 1px solid #cc092f;
-  padding: 1em;
-  width: 100%;
-}
-
-#headingColorExample2 .color1 {
-  color: rgb(83, 178, 156);
-  color: #53B29C;
-}
-
-#headingColorExample2 .color2 {
-  color: rgb(135, 175, 165);
-  color: #87AFA5;
-}
-
-#headingColorExample2 .color3 {
-  color: rgb(138, 255, 227);
-  color: #8AFFE3;
-}
-
-#headingColorExample2 .color4 {
-  color: rgb(237, 114, 74);
-  color: #ED724A;
-}
-
-#headingColorExample2 .color5 {
-  color: rgb(255, 173, 146);
-  color: #FFAD92;
-}
-          </style>
-
-          <div id='headingColorExample2'>
-           <h2>Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
-           <h2 class="color1">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
-           <h2 class="color2">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
-           <h2 class="color3">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
-           <h2 class="color4">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
-           <h2 class="color5">Ad short ribs adipisicing, lorem beef elit eiusmod laborum</h2>
-          </div>
-</div>
-      <p>Colored headings, take 2</p>
+<p data-height="573" data-theme-id="2039" data-slug-hash="ZGJGXq" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/ZGJGXq/'>Colored headings, take 2</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
     <p>We can also test color with our paragraph formatting. I will pick the second color palette for this experiment. Notice how the lighter colors make things harder to read and the darker colors help... When we discuss accessibility concerns we'll touch on color blindness and contrast as necessary elements of your typographical design.</p>
 
-    <p><strong>Technical note:</strong> In the example below there are two values for color in each selector. I coded it that way to provide a fallback solution for older browsers that do not support RGB color syntax. In this case the rule will be ignored and the browser will move to the hexadecimal color and, hopefully, will render it without an issue.</p>
+    <p><strong>Technical note:</strong> In the example below there are two values for color in each selector. I coded it that way to provide a fallback solution for older browsers that do not support RGB color syntax. If the browser doesn't support RGB colors the rule will be ignored and the browser will move to the hexadecimal color and, hopefully, will render it without an issue.</p>
 
-           <div class="css-example">
-    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+<p data-height="969" data-theme-id="2039" data-slug-hash="gpxpXg" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/gpxpXg/'>Colored Paragraph Example</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-div#headingColorExample3 {
-  border: 1px solid #cc092f;
-  padding: 1em;
-  width: 100%;
-}
-
-#headingColorExample3 .color1 {
-  color: rgb(83, 178, 156);
-  color: #53B29C;
-}
-
-#headingColorExample3 .color2 {
-  color: rgb(135, 175, 165);
-  color: #87AFA5;
-}
-
-#headingColorExample3 .color3 {
-  color: rgb(138, 255, 227);
-  color: #8AFFE3;
-}
-
-#headingColorExample3 .color4 {
-  color: rgb(237, 114, 74);
-  color: #ED724A;
-}
-
-#headingColorExample3 .color5 {
-  color: rgb(255, 173, 146);
-  color: #FFAD92;
-}
-          </style>
-
-          <div id='headingColorExample3'>
-           <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-           <p class="color1">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-           <p class="color2">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-           <p class="color3">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-           <p class="color4">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-           <p class="color5">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-          </div>
-</div>
-      <p>Colored paragraphs</p>
 
     <p>Even different shades of gray/grey may have an impact. In the last color example I've picked different shades of grey for each paragraph color. As with many things related to type, the best color for your text will depend on the typeface you choose.</p>
 
-            <div class="css-example">
-    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
-
-div#headingColorExample4 {
-  border: 1px solid #cc092f;
-  padding: 1em;
-  width: 100%;
-}
-
-#headingColorExample4 .color1 {
-  color: #aaaaaa;
-}
-
-#headingColorExample4 .color2 {
-  color: #333333;
-}
-
-#headingColorExample4 .color3 {
-  color: #554c4d;
-}
-
-#headingColorExample4 .color4 {
-  color: #7c6e7f;
-}
-
-#headingColorExample4 .color5 {
-  color: #7d7c9c;
-}
-          </style>
-
-          <div id='headingColorExample4'>
-           <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-           <p class="color1">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-           <p class="color2">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-           <p class="color3">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-           <p class="color4">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-           <p class="color5">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-          </div>
-</div>
-      <p>How different shades of gray/grey look as text color</p>     </section>
+<p data-height="691" data-theme-id="2039" data-slug-hash="XbabOL" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/XbabOL/'>Text Alignment Possibilities</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
      <section>
         <h2 id='media-queries'>Media Queries: Not all displays are equal</h2>
@@ -1426,45 +1303,9 @@ div#alignmentExample .justified {
         <li>There's no way for Javascript to influence the algorithm for laying out text in the browser. Thus we can't control how many hyphens occur on subsequent lines nor can we know which words have actually to be hyphenated. Hyphenator.js just hyphenates all of them.</li>
       </ul>
 
-  <div class="css-example">
-    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+<p data-height="689" data-theme-id="2039" data-slug-hash="PqKPvV" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/PqKPvV/'>Text Alignment Possibilities With Hyphenated Text.</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-div#alignmentExample2 {
-  border: 1px solid #cc092f;
-  padding: 1em;
-  width: 100%;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;}
-
-div#alignmentExample2 .left {
-  text-align: left;
-}
-
-div#alignmentExample2 .center {
-  text-align: center;
-}
-
-div#alignmentExample2 .right {
-  text-align: right;
-}
-
-div#alignmentExample2 .justified {
-  text-align: justify;
-}
-
-        </style>
-
-          <div id='alignmentExample2' lang='en'>
-
-           <p class="left">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-           <p class="center">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-           <p class="right">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-           <p class="justified">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-          </div>
-</div>
-      <p>Text Alignment Possibilities With Hyphenated Text. Currently only works in Firefox</p>
      </section>
 
      <section>
@@ -1483,105 +1324,19 @@ div#alignmentExample2 .justified {
 
        <p>Automatic kerning in CSS depends on <a href="#open-type-features">Open Type Features</a>, particularly in the kerning attribute being enabled. This will change from font to font and is embedded in the font when created.</p>
 
-  <div class="css-example">
-    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+<p data-height="627" data-theme-id="2039" data-slug-hash="RPZrKv" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/RPZrKv/'>Automatic Kerning</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-div#kerningExample {
-  border: 1px solid #cc092f;
-  padding: 1em;
-  width: 100%;
-  text-rendering: optimizeLegibility;
-  -moz-font-feature-settings: "kern";
-  -moz-font-feature-settings: "kern=1";
-  -ms-font-feature-settings: "kern";
-  -o-font-feature-settings: "kern";
-  -webkit-font-feature-settings: "kern";
-  font-feature-settings: "kern";
-}
-        </style>
-
-          <div id='kerningExample' lang='en'>
-
-           <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-           <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-           <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-           <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-          </div>
-</div>
-      <p>Automatic kerning Example</p>
 
        <p>There may situations where you want a less uniform kerning based on specific attributes. We can control the kerning between letters, as in example 8-2, below. The first paragraph has normal kerning; the second paragraph has letters spaced 0.25em; and the third one has a negative kerning of 0.25em.</p>
 
-         <div class="css-example">
-    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
-
-div#kerningExample2 {
-  border: 1px solid #cc092f;
-  padding: 1em;
-  width: 100%;
-}
-
-div#kerningExample2 .normal {
-  /* This is a  normal paragraph */
-}
-
-div#kerningExample2 .wide {
-  letter-spacing: 0.25em;
-}
-
-div#kerningExample2 .narrow {
-  letter-spacing: -0.25em;
-}
-        </style>
-
-          <div id='kerningExample2' lang='en'>
-
-           <p class="normal">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-
-           <p class="wide">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-
-           <p class="narrow">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-
-          </div>
-</div>
-      <p>kerning Example using letter-spacing</p>
+<p data-height="616" data-theme-id="2039" data-slug-hash="RPZrKv" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/RPZrKv/'>Automatic Kerning</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
        <p>Another way to work with kerning is to change letter spacing within words as in example 8-3. Notice the difference between examples 8-2 and 8-3: When we kern letters the text looks significantly different than when we work with words.</p>
 
-  <div class="css-example">
-    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
-
-div#kerningExample3 {
-  border: 1px solid #cc092f;
-  padding: 1em;
-  width: 100%;
-}
-
-div#kerningExample3 .normal {
-  /* This is a  normal paragraph */
-}
-
-div#kerningExample3 .wide {
-  word-spacing: 0.25em;
-}
-
-div#kerningExample3 .narrow {
-  word-spacing: -0.25em;
-}
-
-        </style>
-
-          <div id='kerningExample3' lang='en'>
-
-           <p class="normal">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-
-           <p class="wide">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-
-           <p class="narrow">Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing. Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-
-          </div>
-</div>
-      <p>kerning Example using word-spacing</p>
+<p data-height="475" data-theme-id="2039" data-slug-hash="ZGJQjX" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/ZGJQjX/'>Kerning using letter spacing</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
       <p>As with many other things in the web, different browsers have different levels of support for kerning. This makes the feature another prime candidate for Autoprefixer. If you're not inclined to automate, you can do something like this:</p>
 
@@ -1778,7 +1533,7 @@ $(document).ready(function() {
          <li>Specific Unicode glyphs may not be available in all platforms</li>
         </ul>
 
-        <p>In my opinion he best solution is still to use web fonts you know have all the characters your text uses and you have tested with your content. This is doubly </p>
+        <p>In my opinion he best solution is still to use web fonts you know have all the characters your text uses and you have tested with your content. This is doubly important when looking at the glyphs that appear on your document... we need to make doubly sure that whatever glyphs you use are available in the typeface you've selected.</p>
       </section>
 
 
@@ -1827,67 +1582,16 @@ $(document).ready(function() {
 
         <p>The easiest way to work with columns is to tell CSS how many columns you want using the (prefixed) column-count property. This will tell the bowser how many columns to use. It will stick to that number of columns no matter what. They will be as wide or narrow as they need to be but the browser will always honor the number of clumns you tell it to use.</p>
 
-        <div class="css-example">
-            <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+<p data-height="665" data-theme-id="2039" data-slug-hash="oXexXr" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/oXexXr/'>Counting Columns</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-div#columns1 {
-  border: 1px solid #cc092f;
-  font-family: 'Stone-Humanist', sans-serif;
-  line-height: 1.3;
-  margin-top: 1em;
-  padding: 1em;
-  -moz-column-count: 2;
-  -webkit-column-count: 2;
-  column-count: 2;
-}
-          </style>
-
-<div id='columns1'>
-  <h2>Bacon Title</h2>
-  <div class='content'>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    </div>
-  </div>
-</div>
-         <p>Example counting columns</p>
 
         <h3 id='measuring-width'>Creating multi column text: counting width</h3>
 
         <p>The opposite effect is to use the (also prefixed) column-width property. Where column count takes a single integer without unit as its value, column-width takes a value with unit (like the 150px used in CSS Example 12-2) and will create as many columns of that width as there is space available. Contrast CSS Example 12-1 and 12-2. Where 12-1 sticks to the two columns, 12-2 creates as many 150px columns as it can with the space available. Try narrowing the window and see what happens in example 12-2... the number of columns will shrink a the space available decreases.</p>
 
-        <div class="css-example">
-            <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
-
-div#columns2 {
-  border: 1px solid #cc092f;
-  font-family: 'Stone-Humanist', sans-serif;
-  line-height: 1.3;
-  margin-top: 1em;
-  padding: 1em;
-  -moz-column-width: 150px;
-  -webkit-column-width: 150px;
-  column-width: 150px;
-}
-          </style>
-
-<div id='columns2'>
-  <h2>Bacon Title</h2>
-  <div class='content'>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    </div>
-  </div>
-</div>
-         <p>Example fixed column width</p>
+<p data-height="671" data-theme-id="2039" data-slug-hash="NqvNGj" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/NqvNGj/'>Measuring Columns Width</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
         <h3 id='shorthand1'>Creating multi column text: the shorthand method</h3>
 
@@ -1906,110 +1610,20 @@ div#columns2 {
 
         <p>In both previous examples, the browser took it upon itself to create a gap between columns. In this case it was OK but it is not always the case. Fortunately the multi column spec gives you the option of specifying a gap between the columns of your text.</p>
 
-                <div class="css-example">
-            <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
-
-div#columns3 {
-  border: 1px solid #cc092f;
-  font-family: 'Stone-Humanist', sans-serif;
-  line-height: 1.3;
-  margin-top: 1em;
-  padding: 1em;
-  -moz-column-count: 2;
-  -webkit-column-count: 2;
-  column-count: 2;
-  column-gap: 1em; /* 16px with a base font of 16px */
-  -moz-column-gap: 1em;
-  -webkit-column-gap: 1em;
-}
-          </style>
-
-<div id='columns3'>
-  <h2>Bacon Title</h2>
-  <div class='content'>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    </div>
-  </div>
-</div>
-         <p>Example with a 1em gap between columns</p>
+<p data-height="266" data-theme-id="2039" data-slug-hash="RPZarP" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/RPZarP/'>CSS Column Gap</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
          <p>As you can see in the examples, the further apart we put the columns the easier each column it is to read but we get a smaller space to work with the overall text content.</p>
 
-                <div class="css-example">
-            <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
-
-div#columns4 {
-  border: 1px solid #cc092f;
-  font-family: 'Stone-Humanist', sans-serif;
-  line-height: 1.3;
-  margin-top: 1em;
-  padding: 1em;
-  -moz-column-count: 2;
-  -webkit-column-count: 2;
-  column-count: 2;
-  column-gap: 4em; /* 64px with a base font of 16px */
-  -moz-column-gap: 4em;
-  -webkit-column-gap: 4em;
-}
-          </style>
-
-<div id='columns4'>
-  <h2>Bacon Title</h2>
-  <div class='content'>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    </div>
-  </div>
-</div>
-         <p>Example with a 4em gap between columns</p>
+<p data-height="640" data-theme-id="2039" data-slug-hash="gpxrMM" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/gpxrMM/'>CSS Column Gap - 4em</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
         <h3 id='column-rules'>Column Rules</h3>
 
         <p>In this context, rules are vertical lines between the columns to help differentiate the columns and prevent runon text. We can combine this with gutter/gap as in example 12-4 to create a more pleasing reading experience.</p>
 
-                <div class="css-example">
-            <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
-
-div#columns5 {
-  border: 1px solid #cc092f;
-  font-family: 'Stone-Humanist', sans-serif;
-  line-height: 1.3;
-  margin-top: 1em;
-  padding: 1em;
-  -moz-column-width: 150px;
-  -webkit-column-width: 150px;
-  column-width: 150px;
-  column-gap: 2em; /* 32px with a base font of 16px */
-  -moz-column-gap: 2em;
-  -webkit-column-gap: 2em;
-  -moz-column-rule: 2px solid #cc092f;
-  -webkit-column-rule: 2px solid #cc092f;
-  column-rule: 2px solid #cc092f;
-}
-          </style>
-
-<div id='columns5'>
-  <h2>Bacon Title</h2>
-  <div class='content'>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    </div>
-  </div>
-</div>
-         <p>Example column layout using rules</p>
+<p data-height="677" data-theme-id="2039" data-slug-hash="pJryEa" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/pJryEa/'>Columns with rules between columns</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
         <h3 id='column-rules'>Spanning Columns</h3>
 
@@ -2017,86 +1631,16 @@ div#columns5 {
 
          <p>This is where we see the first deviation from the specification. According to <a href='https://developer.mozilla.org/en-US/docs/Web/CSS/column-span'>MDN</a>, Firefox does not support column-span at all, it displays the content in its own column regardless of the settings authors choose.At least the result is not too bad...</p>
 
-                <div class="css-example">
-            <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
+       <p data-height="748" data-theme-id="2039" data-slug-hash="mJMPOP" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/mJMPOP/'>Spaning Columns with CSS</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-div#columns6 {
-  border: 1px solid #cc092f;
-  font-family: 'Stone-Humanist', sans-serif;
-  line-height: 1.3;
-  margin-top: 1em;
-  padding: 1em;
-  -moz-column-width: 150px;
-  -webkit-column-width: 150px;
-  column-width: 150px;
-  column-gap: 2em; /* 32px with a base font of 16px */
-  -moz-column-gap: 2em;
-  -webkit-column-gap: 2em;
-}
-
-#columns6 .byline {
-  -moz-column-span: all;
-  -webkit-column-span: all;
-  column-span: all;
-  background-color: purple;
-  color: white;
-}
-          </style>
-
-<div id='columns6'>
-
-  <div class='content'>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <div class='byline'>
-       <h2>Bacon Title</h2>
-       <p>By Carlos</p>
-    </div>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    </div>
-  </div>
-</div>
-        <p>Example of text spanning columns using column-span</p>
-
-        <h3 id='filling-columns'>Filling Columns</h3>
+       <h3 id='filling-columns'>Filling Columns</h3>
 
         <p>So far all our column examples are filled unevenly. The right most column is shorter (sometimes considerably so.) The column-fill property will, when supported, make all the columns even in length. Currently only firefox will support the column-fill property.</p>
 
 
-        <div class="css-example">
-            <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
-
-div#columns7 {
-  border: 1px solid #cc092f;
-  font-family: 'Stone-Humanist', sans-serif;
-  line-height: 1.3;
-  margin-top: 1em;
-  padding: 1em;
-  -moz-column-width: 150px;
-  -webkit-column-width: 150px;
-  column-width: 150px;
-  -moz-column-fill: balance;
-  -webkit-column-fill: balance;
-  column-fill: balance;
-}
-          </style>
-
-<div id='columns7'>
-  <h2>Bacon Title</h2>
-  <div class='content'>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    </div>
-  </div>
-</div>
-         <p>Example of balanced column width</p>
+<p data-height="266" data-theme-id="2039" data-slug-hash="XbadMo" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/XbadMo/'>Column Fill</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
         <h3 id='column-breaks'>Column Breaks</h3>
 
@@ -2104,141 +1648,18 @@ div#columns7 {
 
         <p>In this case we'll make the title h2 element stand alone in its own column and move the body text to the right and keep in the two column format. In the older days you'd accompllish this with table-based layouts but now it can be done using only CSS in bowsers that support it.</p>
 
-                <div class="css-example">
-            <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
-
-div#columns8 .content {
-  border: 1px solid #cc092f;
-  font-family: 'Stone-Humanist', sans-serif;
-  line-height: 1.3;
-  margin-top: 1em;
-  padding: 1em;
-  -moz-column-width: 150px;
-  -webkit-column-width: 150px;
-  column-width: 150px;
-  -moz-column-gap: 4em;
-  -webkit-column-gap: 4em;
-  column-gap: 4em;
-}
-
-div#columns8 h2 {
-  -webkit-column-break-after: always;
-  break-after: column;
-}
-          </style>
-
-<div id='columns8'>
-  <div class='content'>
-    <h2>Bacon Title</h2>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    </div>
-  </div>
-</div>
-         <p>First attempt at column break</p>
+<p data-height="512" data-theme-id="2039" data-slug-hash="pJryPV" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/pJryPV/'>CSS Column Break - Take 1</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
          <p>This is easy but it gets more complicated when we look at other values for <code>break-before</code>, <code>break-after</code> and <code>break-inside</code> that describe whether we should break before the element, after the element or inside the element. We'll try another example where we'll tell the browser to explicitly break after a paragraph... the results may not be what you'd expect.</p>
 
-  <div class="css-example">
-  <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
-
-div#columns9 .content {
-  border: 1px solid #cc092f;
-  font-family: 'Stone-Humanist', sans-serif;
-  line-height: 1.3;
-  margin-top: 1em;
-  padding: 1em;
-  -moz-column-width: 150px;
-  -webkit-column-width: 150px;
-  column-width: 150px;
-  -moz-column-gap: 4em;
-  -webkit-column-gap: 4em;
-  column-gap: 4em;
-}
-
-div#columns9 h2 {
-  -webkit-column-break-after: always;
-  break-after: column;
-}
-
-div#columns9 p {
-  -webkit-column-break-after: always;
-  break-after: column;
-}
-          </style>
-
-<div id='columns9'>
-  <div class='content'>
-    <h2>Bacon Title</h2>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    </div>
-  </div>
-</div>
-         <p>Using break attributes to make text look nicer -- Take 1</p>
+<p data-height="368" data-theme-id="2039" data-slug-hash="xGLVdN" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/xGLVdN/'>CSS Column Break - Take 2</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
          <p>I assumed, incorrectly as it turns out, that the break would still keep the content inside the parent's container but as you can see it did not. In order to get the effect I wanted I had to provide smaller gap between columns and give different break styles to even and odd paragraphs. The second try looks better but it is brittle... although my tests have worked consistently I keep thinking there may be a combination of browser width where this will break.</p>
 
-         <div class="css-example">
-  <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
-
-div#columns10 .content {
-  border: 1px solid #cc092f;
-  font-family: 'Stone-Humanist', sans-serif;
-  line-height: 1.3;
-  margin-top: 1em;
-  padding: 1em;
-  -moz-column-width: 150px;
-  -webkit-column-width: 150px;
-  column-width: 150px;
-  -moz-column-gap: 1em;
-  -webkit-column-gap: 1em;
-  column-gap: 1em;
-  break-before: avoid-column;
-  break-after: avoid-column;
-}
-
-div#columns10 h2 {
-  -webkit-column-break-after: always;
-  break-after: column;
-}
-
-div#columns10 p:nth-child(even) {
-  -webkit-column-break-before: avoid;
-  break-before: avoid-column;
-  -webkit-column-break-after: avoid;
-  break-after: avoid-column;
-}
-
-div#columns10 p:nth-child(odd) {
-  -webkit-column-break-after: always;
-  break-after: column;
-  -webkit-column-break-before: avoid;
-  break-before: avoid;
-}
-          </style>
-
-<div id='columns10'>
-  <div class='content'>
-    <h2>Bacon Title</h2>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    </div>
-  </div>
-</div>
-         <p>Using break attributes to make text look nicer -- Take 2</p>
+<p data-height="521" data-theme-id="2039" data-slug-hash="aOyNwx" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/aOyNwx/'>CSS Column Break - Take 3</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
         <h3 id='mixins-and-autoprefixer'>Mixins and Autoprefixer</h3>
 
@@ -2320,39 +1741,8 @@ div#columns10 p:nth-child(odd) {
 
         <p>Compare example 13-1 with 12-5. In 12-5 the middle column has 2 lines ny themselves at the bottom of the box. How can you tell whether they are part of the paragraph in the next column versus a standalone paragraph? Example 13-1 resolves that issue by moving all the text to the next column (the 2 lines are smaller than the value we set for orphans in the CSS)</p>
 
-        <div class="css-example">
-          <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
-
-div#orphans1 {
-  border: 1px solid #cc092f;
-  font-family: 'Stone-Humanist', sans-serif;
-  line-height: 1.3;
-  margin-top: 1em;
-  padding: 1em;
-  -moz-column-width: 150px;
-  -webkit-column-width: 150px;
-  column-width: 150px;
-  column-gap: 1em; /* 16px with a base font of 16px */
-  -moz-column-gap: 1em;
-  -webkit-column-gap: 1em;
-  orphans: 3;
-  widows:3
-}
-          </style>
-
-<div id='orphans1'>
-  <h2>Bacon Title</h2>
-  <div class='content'>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    </div>
-  </div>
-</div>
-         <p>Orphans and Widows in action</p>
+<p data-height="653" data-theme-id="2039" data-slug-hash="xGLLPW" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/xGLLPW/'>Widows and Orphans</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
       </section>
 
@@ -2368,46 +1758,8 @@ div#orphans1 {
 
         <p>We'll start with rotating the header of our content 90 degrees and move it down the column.</p>
 
-        <div class="css-example">
-            <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
-
-div#rotation1 .content {
-  border: 1px solid #cc092f;
-  font-family: 'Stone-Humanist', sans-serif;
-  line-height: 1.3;
-  margin-top: 1em;
-  padding: 1em;
-  -moz-column-width: 150px;
-  -webkit-column-width: 150px;
-  column-width: 150px;
-  -moz-column-gap: 4em;
-  -webkit-column-gap: 4em;
-  column-gap: 4em;
-}
-
-div#rotation1 h2 {
-  -webkit-transform: rotate(-90deg) translateX(-1em);
-  -moz-transform: rotate(-90deg) translateX(-1em);
-  transform: rotate(-90deg) translateX(-1em);
-
-  -webkit-column-break-after: always;
-  break-after: column;
-}
-          </style>
-
-<div id='rotation1'>
-  <div class='content'>
-    <h2>Bacon Title</h2>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    <p>Bacon ipsum dolor amet sint t-bone et aliquip proident ex dolor. Landjaeger tail duis, nostrud brisket strip steak shankle turducken. Laborum sausage aliqua, non quis laboris est brisket reprehenderit ball tip cow capicola. Meatloaf commodo jerky adipisicing.</p>
-    <p>Ad short ribs adipisicing, lorem beef elit eiusmod laborum pork belly labore. Aliqua jowl id, ut cupim in swine short ribs. Nulla short loin enim drumstick in, minim rump pancetta. Fatback qui corned beef, strip steak spare ribs elit minim pig. Cupidatat aliquip pariatur, pork belly tenderloin flank cillum.</p>
-    </div>
-  </div>
-</div>
-        <p>CSS Content Rotation - Take 1</p>
+<p data-height="373" data-theme-id="2039" data-slug-hash="ZGJJvy" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/ZGJJvy/'>CSS Content Rotation - Take 1</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
         <p>It looks good but I think it can look better. When we move it sideways the text, all of a sudden, looks very small and when we make the font larger it forces the text into 2 rows... and that's not what I want... I want the larger text to stay in one column.</p>
 
@@ -2415,8 +1767,7 @@ div#rotation1 h2 {
 
         <p>Transformations are very dependent on the dimensions of the content you're working with. The codepen below shows the heading rotated 90 degrees but placed over the text.</p>
 
-<p data-height="700" data-theme-id="2039" data-slug-hash="xGrBWq" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/xGrBWq/'>CSS Content Rotation Example#2</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+[codepen_embed height="373" theme_id="2039" slug_hash="QbMLKO" default_tab="result" user="caraya"]See the Pen <a href='http://codepen.io/caraya/pen/QbMLKO/'>CSS Content Rotation Example#2</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.[/codepen_embed]
 
      <p>But if you look at a screenshot below, you'll see what the code work when you set the screen as wide as possible. </p>
 
@@ -2427,9 +1778,8 @@ div#rotation1 h2 {
 
       <p>Media queries would be the best solution to acommodate for both situations. You will have to decide if the combination of Media Queries and Vendor Prefizxes is worth the effort. THe code looks like this:
 
-      <p data-height="471" data-theme-id="2039" data-slug-hash="928aa177a70fc259c97a2837a65c54d6" data-default-tab="css" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/928aa177a70fc259c97a2837a65c54d6/'>CSS Content Rotation Using Media Queries</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<p data-height="266" data-theme-id="2039" data-slug-hash="MwvWYd" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/MwvWYd/'>CSS Content Rotation Using Media Queries</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-      </p>
 
       <p>It's not perfect, the boundary between the medium and large queries needs to be adjusted but it gives you an idea of where you can go with transformations.</p>
 
@@ -2520,27 +1870,8 @@ div#rotation1 h2 {
           <figcaption>Example of text wrapping around shapes in a page</figcaption>
         </figure>
 
-      <div class="css-example">
-    <style scoped contenteditable>/* You can edit this text and copy it to your own stylesheet */
-
-div#shapeExample {
-  border: 1px solid #cc092f;
-  padding: 1em;
-  width: 100%;
-}
-#shapeExample .element{
-  shape-outside: url(images/espresso.jpg);
-  shape-image-threshold: 0.5;
-  float: left;
-}
-          </style>
-
-          <div id='shapeExample'>
-             <img class="element" src="images/espresso.jpg" />
-<p>Lorem ipsum…</p>
-          </div>
-</div>
-      <p>Shape outside an image</p>
+<p data-height="462" data-theme-id="2039" data-slug-hash="MwvvLE" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/MwvvLE/'>Shape Outside Example</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
       <p>In the future we'll be able to use shape inside and <a href="http://dev.w3.org/csswg/css-exclusions/">exclusions</a> to create magazine equivalent layouts and where creativity will be the driving force, not browser constaints.</p>
 
@@ -2572,7 +1903,7 @@ div#shapeExample {
         </ul>
       </section>
 
-      <section >
+      <section>
         <h2 id='blend-modes'>Getting Fancy: Blend Modes</h2>
 
         <p><a href='http://dev.w3.org/fxtf/compositing-1/'>Compositing and Blending Level 1</a> candidate recommendation provides a way to composite elements in HTML and SVG using CSS. Think of the way you can create non destructive clips and masks in Photoshop; the idea is the same but rather than use Photoshop we can use CSS in the browser. We'll look at the basics of CSS Blend Modes and some examples of their applications to text.</p>
@@ -2581,7 +1912,7 @@ div#shapeExample {
 
         <p>One of the first examples I found interesting is how to create masks in CSS. This pen, from Dudley Storey, illustrates the idea. The text, and only the text, will show the underlying image. The rest of the screen. See the <a href='http://demosthenes.info/blog/1032/Easy-Cross-Browser-Text-Masks-with-Blend-Modes'>acompanying article</a> for more detail of the process and how to incorporate this into your own work.</p>
 
-        <p data-height="573" data-theme-id="2039" data-slug-hash="pJPyRq" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/pJPyRq/'>Text Clipping Masks with Blend CSS Blend Modes</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+        <p data-height="573" data-theme-id="2039" data-slug-hash="pJPyRq" data-default-tab="result" data-user="caraya" class='codepen'>See the Pen <a href='http://codepen.io/caraya/pen/pJPyRq/'>Text Clipping Masks with CSS Blend Modes</a> by Carlos Araya (<a href='http://codepen.io/caraya'>@caraya</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
         <p>When you highlight the word Chicago you can see other parts of the image that were not used as part of the mask. The image itself has not been edited. THis is similar to how you can move the image when you do layer blending in Photoshop. The underlying image will move but the text will remain the same.</p>
@@ -2623,7 +1954,7 @@ div#shapeExample {
 
         <p>For the longest time we've been told that &apos;the web is not print&apos; and we grew into holy grail layouts. A fair question would be to ask what's next. How can we push the boundaries of the web even further without loosing sight of accessibility and universal access?</p>
 
-        <p>Some examples that show how much and how far we can use web technogies are:</p>
+        <p>The examples below</p>
 
         <ul>
           <li><a href='http://anidealiveson.org/2014/#feature'>An Idea Lives On</a></li>
@@ -2647,6 +1978,8 @@ div#shapeExample {
       <section>
 
         <h2 id='test'>Test the hell out of the project</h2>
+
+        <p>When I use the term test in the context of typography I mean to test in as many systems and devices as you can nget your hands on. Not just to make sure that whatever bells and whistles you use work as intended but to make sure that the different form factors, smaller screen sizes and devices in particular, display the content in a way that matches the design as specified.</p>
 
         <p></p>
 
