@@ -335,10 +335,7 @@
       [ 'jshint' ]
     );
 
-    grunt.task.registerTask(
-      'publish',
-      [ 'clean:all', 'copy:dist', 'imagemin', 'gh-pages' ]
-    );
+
     grunt.task.registerTask(
       'lint-all',
       [ 'scsslint', 'jshint']
@@ -357,7 +354,7 @@
 
     grunt.task.registerTask(
       'default',
-      [ 'publish' ]
+      [ 'clean:all', 'copy:dist', 'imagemin', 'gh-pages' ]
     );
 
   };
