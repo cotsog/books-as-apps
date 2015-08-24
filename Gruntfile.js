@@ -214,7 +214,7 @@
       'gh-pages': {
         options: {
           message: 'Content committed from Grunt gh-pages',
-          dotfiles: true,
+          dotfiles: false,
           base: 'dist',
           only: ['**/*']
         },
