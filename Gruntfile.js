@@ -214,13 +214,11 @@
       'gh-pages': {
         options: {
           message: 'Content committed from Grunt gh-pages',
-          dotfiles: false,
-          base: 'dist',
-          only: ['**/*']
+          dotfiles: false
         },
         // These files will get pushed to the `
         // gh-pages` branch (the default)
-        src: ['**']
+        src: ['dist/**/*']
       },
 
       // FILE MANAGEMENT
@@ -252,14 +250,6 @@
               'js/**/*',
               '*.html'],
             dest: 'dist/'
-          }]
-        },
-        travis: {
-          files: [ {
-            expand: true,
-            src: [
-              'dist/**/*'],
-            dest: '..'
           }]
         }
       },
